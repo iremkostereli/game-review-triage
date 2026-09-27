@@ -1,0 +1,19 @@
+[project]
+name = "review-triage"
+version = "0.1.0"
+description = "Triage mobile game reviews into actionable LiveOps issues, with pluggable per-game jargon packs and a reproducible eval."
+requires-python = ">=3.10"
+
+# Runtime dependencies are deliberately minimal so that the offline path
+# (run the tests, recompute the metrics) works without heavy installs.
+dependencies = [
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+# Only the data preparation step needs pandas.
+prepare = ["pandas>=2.0"]
+dev = ["pytest>=7.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

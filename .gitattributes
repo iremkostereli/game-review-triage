@@ -1,0 +1,19 @@
+# Keep line endings LF everywhere.
+#
+# This project asserts that generated artifacts are byte-identical across runs
+# and machines (see tests/test_splits.py and the determinism claim in the
+# README). Letting git rewrite LF to CRLF on Windows checkouts would break that,
+# so normalization is disabled for the files whose bytes we reason about.
+* text=auto eol=lf
+
+*.jsonl text eol=lf
+*.json  text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.py    text eol=lf
+*.md    text eol=lf
+*.html  text eol=lf
+
+*.png binary
+*.jpg binary
+*.csv text eol=lf

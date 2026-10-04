@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golden set labeling</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #fff; --ink: #14181f; --muted: #667085;
+    --line: #dfe3ea; --accent: #2d5bd7; --accent-soft: #e8eeff;
+    --warn: #b4341f; --ok: #11734b;
+    --high: #b4341f; --medium: #b4721f; --low: #4a5568;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.5 -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 16px 16px 80px; }
+
+  header { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+  header h1 { font-size: 17px; margin: 0; }
+  .progress-text { color: var(--muted); font-size: 13px; }
+  .bar { height: 5px; background: var(--line); border-radius: 3px; overflow: hidden; margin-bottom: 14px; }
+  .bar > div { height: 100%; background: var(--accent); width: 0; transition: width .2s; }
+
+  .tabs { display: flex; gap: 6px; margin-bottom: 12px; }
+  .tabs button {
+    font: inherit; font-size: 13px; padding: 5px 11px; border: 1px solid var(--line);
+    background: var(--card); border-radius: 6px; cursor: pointer; color: var(--ink);
+  }
+  .tabs button[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px; margin-bottom: 14px; }
+  .meta { display: flex; gap: 14px; flex-wrap: wrap; color: var(--muted); font-size: 13px; margin-bottom: 10px; }
+  .meta .game { color: var(--ink); font-weight: 600; }
+  .stars { font-variant-numeric: tabular-nums; }
+  .review {
+    font-size: 19px; line-height: 1.55; white-space: pre-wrap; word-break: break-word;
+    padding: 4px 0 2px; user-select: text;
+  }
+
+  h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 8px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 7px; }
+  .opt {
+    display: flex; gap: 9px; align-items: flex-start; text-align: left;
+    font: inherit; padding: 9px 11px; border: 1px solid var(--line);
+    background: var(--card); border-radius: 8px; cursor: pointer; color: var(--ink); width: 100%;
+  }
+  .opt:hover { border-color: #b9c2d2; }
+  .opt[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); }
+  .opt .key {
+    flex: none; width: 20px; height: 20px; border-radius: 4px; background: var(--line);
+    color: var(--ink); font-size: 12px; font-weight: 700; display: grid; place-items: center;
+  }
+  .opt[aria-pressed="true"] .key { background: var(--accent); color: #fff; }
+  .opt .label { font-weight: 600; }
+  .opt .hint { display: block; font-weight: 400; color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+
+  .row { display: flex; gap: 7px; flex-wrap: wrap; }
+  .sev { min-width: 150px; flex: 1; }
+  .sev[data-level="high"][aria-pressed="true"] { background: #fdecea; border-color: var(--high); }
+  .sev[data-level="medium"][aria-pressed="true"] { background: #fdf3e5; border-color: var(--medium); }
+  .sev[data-level="low"][aria-pressed="true"] { background: #eef0f4; border-color: var(--low); }
+  .sev-disabled { opacity: .45; pointer-events: none; }
+
+  .flags { display: flex; gap: 7px; flex-wrap: wrap; }
+  .flags .opt { width: auto; }
+
+  textarea {
+    width: 100%; min-height: 58px; font: inherit; padding: 9px 11px;
+    border: 1px solid var(--line); border-radius: 8px; resize: vertical; background: var(--card); color: var(--ink);
+  }
+  textarea:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+
+  footer {
+    position: fixed; left: 0; right: 0; bottom: 0; background: var(--card);
+    border-top: 1px solid var(--line); padding: 10px 16px;
+  }
+  .footer-inner { max-width: 920px; margin: 0 auto; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .btn {
+    font: inherit; padding: 8px 14px; border-radius: 7px; border: 1px solid var(--line);
+    background: var(--card); cursor: pointer; color: var(--ink);
+  }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 600; }
+  .btn:disabled { opacity: .45; cursor: not-allowed; }
+  .msg { font-size: 13px; }
+  .msg.warn { color: var(--warn); }
+  .msg.ok { color: var(--ok); }
+  .spacer { flex: 1; }
+  .keys { color: var(--muted); font-size: 12px; }
+  .done { text-align: center; padding: 40px 16px; }
+  .noted-empty { color: var(--muted); }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Golden set labeling</h1>
+    <span class="progress-text" id="progress"></span>
+  </header>
+  <div class="bar"><div id="bar-fill"></div></div>
+
+  <div class="tabs">
+    <button id="tab-all" aria-pressed="true">All reviews</button>
+    <button id="tab-noted" aria-pressed="false">Noted only (<span id="noted-count">0</span>)</button>
+    <button id="tab-next">Jump to first unlabeled</button>
+  </div>
+
+  <div id="main">
+    <div class="card">
+      <div class="meta">
+        <span class="game" id="m-game"></span>
+        <span class="stars" id="m-stars"></span>
+        <span id="m-date"></span>
+        <span id="m-words"></span>
+        <span id="m-pos"></span>
+        <span id="m-saved" class="msg ok"></span>
+      </div>
+      <div class="review" id="review-text"></div>
+    </div>
+
+    <div class="card">
+      <h2>Categories — press 1–8</h2>
+      <div class="grid" id="categories"></div>
+    </div>
+
+    <div class="card">
+      <h2>Severity — H / M / L</h2>
+      <div class="row" id="severity"></div>
+    </div>
+
+    <div class="card">
+      <h2>Flags & note</h2>
+      <div class="flags" id="flags"></div>
+      <div style="margin-top:10px">
+        <textarea id="note" placeholder="Optional note (N to focus, Esc to leave). Use it whenever you hesitate — you can review all noted reviews together at the end."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div id="noted-empty" class="card noted-empty" hidden>
+    No noted reviews yet. Press <b>N</b> on a review you are unsure about.
+  </div>
+
+  <div id="finished" class="card done" hidden>
+    <h2 style="font-size:15px;text-transform:none;letter-spacing:0;color:var(--ink)">All 180 reviews labeled</h2>
+    <p class="noted-empty">Review your noted reviews, then export the golden set.</p>
+    <button class="btn primary" id="export">Export golden set</button>
+    <p class="msg" id="export-msg"></p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <button class="btn" id="prev">&larr; Back</button>
+    <button class="btn primary" id="next">Save &amp; next &rarr;</button>
+    <span class="msg" id="message"></span>
+    <span class="spacer"></span>
+    <span class="keys">1–8 categories · H/M/L severity · J jargon · U unclear · N note · ←/→ navigate</span>
+  </div>
+</footer>
+
+<script>
+"use strict";
+
+const state = {
+  pool: [], categories: [], severityLevels: [], severityDefs: {},
+  labels: {},            // reviewId -> saved record
+  draft: {},             // reviewId -> in-progress answers
+  mode: "all",
+  index: 0,
+  noIssueId: "no_issue",
+  otherIssueId: "other_issue",
+};
+
+const el = (id) => document.getElementById(id);
+
+function currentList() {
+  if (state.mode === "noted") {
+    return state.pool.filter((r) => {
+      const d = answersFor(r.reviewId);
+      return (d.note || "").trim().length > 0;
+    });
+  }
+  return state.pool;
+}
+
+function answersFor(reviewId) {
+  if (state.draft[reviewId]) return state.draft[reviewId];
+  const saved = state.labels[reviewId];
+  const base = saved
+    ? { categories: [...(saved.categories || [])], severity: saved.severity || null,
+        has_jargon: !!saved.has_jargon, unclear: !!saved.unclear, note: saved.note || "" }
+    : { categories: [], severity: null, has_jargon: false, unclear: false, note: "" };
+  state.draft[reviewId] = base;
+  return base;
+}
+
+function current() {
+  const list = currentList();
+  if (!list.length) return null;
+  state.index = Math.max(0, Math.min(state.index, list.length - 1));
+  return list[state.index];
+}
+
+// ---------------------------------------------------------------- rendering
+
+function buildCategoryButtons() {
+  const host = el("categories");
+  host.innerHTML = "";
+  state.categories.forEach((cat, i) => {
+    const btn = document.createElement("button");
+    btn.className = "opt";
+    btn.type = "button";
+    btn.dataset.id = cat.id;
+    btn.setAttribute("aria-pressed", "false");
+    const hintParts = [];
+    if (cat.typical_severity) hintParts.push("usually " + cat.typical_severity);
+    btn.innerHTML =
+      '<span class="key">' + (i + 1) + "</span>" +
+      '<span><span class="label"></span><span class="hint"></span></span>';
+    btn.querySelector(".label").textContent = cat.name;
+    btn.querySelector(".hint").textContent = hintParts.join(" · ");
+    btn.title = cat.definition +
+      (cat.escalate ? "\n\nHigher when: " + cat.escalate : "") +
+      (cat.de_escalate ? "\n\nLower when: " + cat.de_escalate : "");
+    btn.addEventListener("click", () => toggleCategory(cat.id));
+    host.appendChild(btn);
+  });
+}
+
+function buildSeverityButtons() {
+  const host = el("severity");
+  host.innerHTML = "";
+  state.severityLevels.forEach((level) => {
+    const btn = document.createElement("button");
+    btn.className = "opt sev";
+    btn.type = "button";
+    btn.dataset.level = level;
+    btn.setAttribute("aria-pressed", "false");
+    btn.innerHTML = '<span class="key">' + level[0].toUpperCase() + "</span>" +
+      '<span><span class="label"></span><span class="hint"></span></span>';
+    btn.querySelector(".label").textContent = level;
+    btn.querySelector(".hint").textContent = (state.severityDefs[level] || "").slice(0, 110);
+    btn.addEventListener("click", () => setSeverity(level));
+    host.appendChild(btn);
+  });
+}
+
+function buildFlagButtons(jargonHelp, unclearHelp) {
+  const host = el("flags");
+  host.innerHTML = "";
+  [["has_jargon", "J", "Contains game jargon", jargonHelp],
+   ["unclear", "U", "Unclear / cannot label", unclearHelp]].forEach(([key, k, label, help]) => {
+    const btn = document.createElement("button");
+    btn.className = "opt";
+    btn.type = "button";
+    btn.dataset.flag = key;
+    btn.setAttribute("aria-pressed", "false");
+    btn.title = help || "";
+    btn.innerHTML = '<span class="key">' + k + '</span><span class="label"></span>';
+    btn.querySelector(".label").textContent = label;
+    btn.addEventListener("click", () => toggleFlag(key));
+    host.appendChild(btn);
+  });
+}
+
+function render() {
+  const review = current();
+  const list = currentList();
+
+  el("noted-empty").hidden = !(state.mode === "noted" && list.length === 0);
+  el("main").hidden = !review;
+
+  const allLabeled = state.pool.every((r) => state.labels[r.reviewId]);
+  el("finished").hidden = !(allLabeled && state.mode === "all");
+
+  renderProgress();
+  if (!review) return;
+
+  el("m-game").textContent = review.game;
+  el("m-stars").textContent = review.score + "/5 stars";
+  el("m-date").textContent = (review.date || "").slice(0, 10);
+  el("m-words").textContent = review.words + " words";
+  el("m-pos").textContent = (state.index + 1) + " of " + list.length +
+    (state.mode === "noted" ? " noted" : "");
+  el("m-saved").textContent = state.labels[review.reviewId] ? "saved" : "";
+  el("review-text").textContent = review.content;
+
+  const a = answersFor(review.reviewId);
+
+  document.querySelectorAll("#categories .opt").forEach((btn) => {
+    btn.setAttribute("aria-pressed", a.categories.includes(btn.dataset.id) ? "true" : "false");
+  });
+  const severityOff = a.categories.includes(state.noIssueId);
+  el("severity").classList.toggle("sev-disabled", severityOff);
+  document.querySelectorAll("#severity .opt").forEach((btn) => {
+    btn.setAttribute("aria-pressed", a.severity === btn.dataset.level ? "true" : "false");
+  });
+  document.querySelectorAll("#flags .opt").forEach((btn) => {
+    btn.setAttribute("aria-pressed", a[btn.dataset.flag] ? "true" : "false");
+  });
+  el("note").value = a.note;
+
+  el("prev").disabled = state.index === 0;
+  setMessage("");
+}
+
+function renderProgress() {
+  const total = state.pool.length;
+  const labeled = state.pool.filter((r) => state.labels[r.reviewId]).length;
+  const noted = state.pool.filter((r) => (answersFor(r.reviewId).note || "").trim()).length;
+  el("progress").textContent = labeled + " / " + total + " labeled";
+  el("bar-fill").style.width = total ? (100 * labeled / total) + "%" : "0";
+  el("noted-count").textContent = noted;
+}
+
+function setMessage(text, kind) {
+  const node = el("message");
+  node.textContent = text;
+  node.className = "msg" + (kind ? " " + kind : "");
+}
+
+// ---------------------------------------------------------------- answers
+
+function toggleCategory(id) {
+  const review = current();
+  if (!review) return;
+  const a = answersFor(review.reviewId);
+  const on = a.categories.includes(id);
+
+  if (on) {
+    a.categories = a.categories.filter((c) => c !== id);
+  } else if (id === state.noIssueId || id === state.otherIssueId) {
+    // no_issue is exclusive by definition; other_issue is a fallback, so both
+    // replace whatever else was selected rather than stacking onto it.
+    a.categories = [id];
+    if (id === state.noIssueId) a.severity = null;
+  } else {
+    a.categories = a.categories
+      .filter((c) => c !== state.noIssueId && c !== state.otherIssueId)
+      .concat(id);
+  }
+  render();
+}
+
+function setSeverity(level) {
+  const review = current();
+  if (!review) return;
+  const a = answersFor(review.reviewId);
+  if (a.categories.includes(state.noIssueId)) return;
+  a.severity = a.severity === level ? null : level;
+  render();
+}
+
+function toggleFlag(key) {
+  const review = current();
+  if (!review) return;
+  const a = answersFor(review.reviewId);
+  a[key] = !a[key];
+  render();
+}
+
+function validate(a) {
+  if (a.unclear && a.categories.length === 0) return null;
+  if (a.categories.length === 0) return "Pick at least one category, or mark it unclear (U).";
+  if (a.categories.includes(state.noIssueId)) {
+    if (a.categories.length > 1) return "no_issue cannot be combined with other labels.";
+    return null;
+  }
+  if (!a.severity) return "Set severity: H, M or L.";
+  return null;
+}
+
+async function saveCurrent() {
+  const review = current();
+  if (!review) return true;
+  const a = answersFor(review.reviewId);
+  a.note = el("note").value;
+
+  const problem = validate(a);
+  if (problem) { setMessage(problem, "warn"); return false; }
+
+  const payload = {
+    reviewId: review.reviewId,
+    categories: a.categories,
+    severity: a.categories.includes(state.noIssueId) ? null : a.severity,
+    has_jargon: a.has_jargon,
+    unclear: a.unclear,
+    note: a.note,
+  };
+
+  try {
+    const response = await fetch("/api/label", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const data = await response.json();
+    if (!response.ok) { setMessage(data.error || "Save failed", "warn"); return false; }
+    state.labels[review.reviewId] = data.saved;
+    return true;
+  } catch (error) {
+    setMessage("Could not reach the labeling server: " + error.message, "warn");
+    return false;
+  }
+}
+
+async function goNext() {
+  if (!(await saveCurrent())) return;
+  const list = currentList();
+  if (state.index < list.length - 1) state.index += 1;
+  render();
+}
+
+async function goPrev() {
+  // Save silently if the current answers are complete, so going back never
+  // discards work, but an unfinished review does not block navigation.
+  const review = current();
+  if (review) {
+    const a = answersFor(review.reviewId);
+    a.note = el("note").value;
+    if (!validate(a)) await saveCurrent();
+  }
+  if (state.index > 0) state.index -= 1;
+  render();
+}
+
+function jumpToFirstUnlabeled() {
+  state.mode = "all";
+  syncTabs();
+  const idx = state.pool.findIndex((r) => !state.labels[r.reviewId]);
+  state.index = idx === -1 ? state.pool.length - 1 : idx;
+  render();
+}
+
+function syncTabs() {
+  el("tab-all").setAttribute("aria-pressed", state.mode === "all" ? "true" : "false");
+  el("tab-noted").setAttribute("aria-pressed", state.mode === "noted" ? "true" : "false");
+}
+
+// ---------------------------------------------------------------- keyboard
+
+document.addEventListener("keydown", (event) => {
+  const note = el("note");
+  if (document.activeElement === note) {
+    if (event.key === "Escape") note.blur();
+    return;
+  }
+  if (event.ctrlKey || event.metaKey || event.altKey) return;
+
+  const key = event.key.toLowerCase();
+
+  if (key >= "1" && key <= "8") {
+    const i = parseInt(key, 10) - 1;
+    if (i < state.categories.length) { event.preventDefault(); toggleCategory(state.categories[i].id); }
+    return;
+  }
+  if (key === "h") { event.preventDefault(); setSeverity("high"); return; }
+  if (key === "m") { event.preventDefault(); setSeverity("medium"); return; }
+  if (key === "l") { event.preventDefault(); setSeverity("low"); return; }
+  if (key === "j") { event.preventDefault(); toggleFlag("has_jargon"); return; }
+  if (key === "u") { event.preventDefault(); toggleFlag("unclear"); return; }
+  if (key === "n") { event.preventDefault(); note.focus(); return; }
+  if (key === "arrowright" || key === "enter") { event.preventDefault(); goNext(); return; }
+  if (key === "arrowleft") { event.preventDefault(); goPrev(); return; }
+});
+
+el("next").addEventListener("click", goNext);
+el("prev").addEventListener("click", goPrev);
+el("tab-all").addEventListener("click", () => { state.mode = "all"; state.index = 0; syncTabs(); render(); });
+el("tab-noted").addEventListener("click", () => { state.mode = "noted"; state.index = 0; syncTabs(); render(); });
+el("tab-next").addEventListener("click", jumpToFirstUnlabeled);
+el("note").addEventListener("input", () => {
+  const review = current();
+  if (review) answersFor(review.reviewId).note = el("note").value;
+  renderProgress();
+});
+
+el("export").addEventListener("click", async () => {
+  const msg = el("export-msg");
+  msg.textContent = "Exporting...";
+  msg.className = "msg";
+  try {
+    const response = await fetch("/api/export", { method: "POST" });
+    const data = await response.json();
+    if (!response.ok) { msg.textContent = data.error; msg.className = "msg warn"; return; }
+    msg.textContent = "Wrote " + data.written + " labeled reviews to " + data.path +
+      " (" + data.noted + " noted, " + data.unclear + " unclear).";
+    msg.className = "msg ok";
+  } catch (error) {
+    msg.textContent = "Export failed: " + error.message;
+    msg.className = "msg warn";
+  }
+});
+
+// ---------------------------------------------------------------- startup
+
+(async function init() {
+  const response = await fetch("/api/bootstrap");
+  const data = await response.json();
+  state.pool = data.pool;
+  state.categories = data.categories;
+  state.severityLevels = data.severity_levels;
+  state.severityDefs = data.severity_definitions;
+  state.labels = data.labels || {};
+  state.noIssueId = data.no_issue_id;
+  state.otherIssueId = data.other_issue_id;
+
+  buildCategoryButtons();
+  buildSeverityButtons();
+  buildFlagButtons(data.jargon_help, data.unclear_help);
+  jumpToFirstUnlabeled();
+})();
+</script>
+</body>
+</html>

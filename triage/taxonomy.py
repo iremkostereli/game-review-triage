@@ -216,7 +216,13 @@ def validate_labels(
 
 
 def validate_label_record(record: dict[str, Any], taxonomy: Taxonomy | None = None) -> None:
-    """Validate one row of the golden set."""
+    """Validate one row of the golden set.
+
+    A record flagged `unclear` is allowed to carry no categories at all: the
+    annotator is saying the text cannot be labeled, and forcing a guess there
+    would put noise into the answer key. Such rows are excluded from the primary
+    metrics and counted separately.
+    """
     taxonomy = taxonomy or get_taxonomy()
 
     for key in ("reviewId", "categories", "has_jargon"):
@@ -229,5 +235,10 @@ def validate_label_record(record: dict[str, Any], taxonomy: Taxonomy | None = No
         raise LabelError("'has_jargon' must be a boolean")
     if not isinstance(record.get("unclear", False), bool):
         raise LabelError("'unclear' must be a boolean")
+    if not isinstance(record.get("note", ""), str):
+        raise LabelError("'note' must be a string")
+
+    if record.get("unclear") and not record["categories"]:
+        return
 
     validate_labels(record["categories"], record.get("severity") or None, taxonomy)

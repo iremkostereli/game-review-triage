@@ -1,0 +1,635 @@
+# Issue taxonomy for mobile game review triage.
+#
+# This file is the single source of truth for the label space. The skill reads it
+# (via the MCP server's get_taxonomy tool), the labeling UI renders it, and the
+# scorer validates against it. Changing a category id here changes it everywhere.
+#
+# Provenance: drafted by reading the DEV split only. No golden-set review was read
+# while writing this file, and every example below cites a dev-split review id.
+# tests/test_taxonomy.py enforces that the cited ids are not in the golden set.
+
+version: 1
+
+description: >-
+  Six issue categories covering what players actually complain about in this
+  corpus, plus a catch-all and an explicit "nothing actionable here" label. The
+  categories are deliberately broad: with 180 hand-labeled reviews, finer
+  categories would land 2-5 examples each and per-category scores would be
+  anecdote rather than measurement.
+
+labeling_rules:
+  multi_label: >-
+    A review may carry several issues at once ("the game crashes AND it is a cash
+    grab"). Select every category that applies.
+  one_problem_or_two: >-
+    The deciding question is how many distinct problems the review reports. Two
+    distinct problems means two labels. One problem means one label, and it should
+    be the most specific category that covers it. See the `boundaries` section for
+    the cases where this is genuinely hard.
+  no_issue_exclusive: >-
+    `no_issue` can never be combined with another label. If any actionable issue
+    is present, do not use `no_issue`.
+  other_issue_is_a_fallback: >-
+    Use `other_issue` only when no listed category fits any issue in the review.
+    Do not add it alongside a category that already fits.
+  severity_is_review_level: >-
+    Severity describes the review as a whole, taken from its most severe issue.
+    It is left empty when the label is `no_issue`.
+  severity_is_not_fixed_per_category: >-
+    Each category has a typical severity, but the text decides. Every category
+    below lists what escalates and what de-escalates it.
+  star_rating_is_not_a_label: >-
+    Ignore the star rating when choosing labels. Players frequently report real
+    problems while giving 4 or 5 stars; 192 of the 652 reviews with >=4 stars and
+    >=10 words in this corpus contain an explicit complaint. Label the text.
+  praise_plus_complaint: >-
+    "Great game, but please fix X" is an issue, not `no_issue`. Praise wrapped
+    around a complaint does not neutralise the complaint.
+  vague_negativity: >-
+    A review that is only negative sentiment with no identifiable problem
+    ("worst game", "boring now") is `other_issue` with severity `low`, not
+    `no_issue`. Reserve `no_issue` for praise and neutral chatter.
+  keywords_are_not_categories: >-
+    A review can mention losing something, or paying, or ads, and still not belong
+    to that category. Read what actually happened. See `boundaries.keyword_traps`.
+
+categories:
+  - id: stability_performance
+    name: Stability & performance
+    definition: >-
+      The game fails to run correctly on the device: crashes, freezes, failures to
+      launch, disconnections mid-session, lost matches caused by connection drops,
+      and resource complaints such as battery drain, storage size or lag.
+    includes:
+      - Crash, freeze, black screen, app will not open
+      - Server errors or "connection lost" that interrupt or void a session
+      - Lag, stutter, long load times
+      - Battery drain, storage footprint, overheating, device compatibility
+    excludes:
+      - Crashes that happen specifically while watching an ad also get `ads`.
+      - Losing an account or saved progress is `account_progress_loss`, even
+        though it often starts with a technical fault.
+    severity_guidance:
+      typical: medium, often high
+      escalate_to_high_when:
+        reason: The player cannot play at all, or the fault repeatedly destroys effort they already spent.
+        examples:
+          - review_id: e5567994-d1c6-4971-aef6-a95570020769
+            score: 5
+            quote: my game is not opening it is stuck at the loading screen
+            why: Cannot launch the game. A 5-star rating does not soften a total block.
+          - review_id: 3e735544-f790-4957-8e8a-4bfa7fa43ea1
+            score: 2
+            quote: my attack is gone and counted as a loss
+            why: A completed attack is voided by a server fault, repeatedly.
+      de_escalate_to_low_when:
+        reason: The fault is small, intermittent or already resolved, and does not block play.
+        examples:
+          - review_id: a902005a-0744-4477-ac58-2e77be27b39c
+            score: 4
+            quote: build time had a little bug but that's fixed
+            why: Minor and already fixed, mentioned in passing.
+    examples:
+      - review_id: 8a6be9f9-4aff-43e0-9cb8-dd1b1840150f
+        game: Clash of Clans
+        score: 1
+        quote: the app just refuse to open even when i have a high speed net connection
+        why: Cannot play at all. Severity high.
+      - review_id: 1d0bc7ca-c39f-4a09-9ab8-d6edfaf083d7
+        game: Clash of Clans
+        score: 3
+        quote: After new update the battery draining more than ever.
+        why: Resource complaint, game still playable. Severity medium.
+      - review_id: 11b8955b-acc1-47f9-ab7b-6a7d64008a38
+        game: Clash of Clans
+        score: 3
+        quote: It takes a lot of space... Like 2.5Gbs
+        why: Storage footprint counts here, not as a feature request. Severity medium.
+      - review_id: a7524320-0a2a-4b9f-ae86-be26f0c08dea
+        game: Clash of Clans
+        score: 5
+        quote: I got disconnected from the match just because of a slight network ping issue
+        why: A 5-star review reporting a real stability fault.
+
+  - id: account_progress_loss
+    name: Account & progress loss
+    definition: >-
+      The player has lost, or cannot regain access to, something they persistently
+      own: the account itself, saved progress, or purchased and earned items and
+      currency. Includes failed account recovery and compromised accounts.
+    includes:
+      - Account lost, deleted, hacked, or inaccessible after a device change
+      - Progress reset or rolled back
+      - Purchased or earned items and currency disappearing
+      - Recovery or support process failing to restore access
+    excludes:
+      - Paying and never receiving the item is `monetization` (a transaction
+        failure), because nothing already owned was lost.
+      - A single voided match or session is `stability_performance` alone.
+      - Support being slow on a non-account matter is `other_issue`.
+    severity_guidance:
+      typical: high
+      escalate_to_high_when:
+        reason: The loss is permanent, or recovery has already failed, or the account was compromised.
+        examples:
+          - review_id: 10a25306-b58d-42e8-ad97-ba07cd7c0799
+            score: 1
+            quote: My th17 not opening, asking for supercell id and password ... no mail is receiving in my reg mail
+            why: Locked out and the recovery path itself is broken.
+          - review_id: f1654df9-beee-4ed1-8349-efc98a387709
+            score: 3
+            quote: I suddenly lost my boosters, pin collection, gold!!
+            why: Owned inventory gone, despite the mild 3-star rating.
+      de_escalate_when:
+        reason: >-
+          The loss turned out to be recoverable, or what was lost is a transient
+          standing (a streak, a weekly rank) rather than owned property. If the
+          player got it back and is not complaining, the review usually leaves
+          this category entirely.
+        examples:
+          - review_id: 82f3a5a0-4ece-49ba-bfe3-43389dcbcc1f
+            score: 5
+            quote: OMG I RECOVERED MY 7 YEAR OLD ACCOUNT INSTANTLY THANK YOU SUPERCELL
+            why: Mentions account recovery but reports no problem. This is `no_issue`.
+    examples:
+      - review_id: 414eafff-d3cd-4955-bb9b-57d4a101e61b
+        game: Clash of Clans
+        score: 1
+        quote: My account was lost because I didn't create a Supercell account, I only used a Google Play account.
+        why: Permanent loss of the account. Severity high.
+      - review_id: fdb731d6-d9e0-4a74-9ac2-0d95d133fcdb
+        game: Candy Crush Saga
+        score: 4
+        quote: I must of been on level 6K and I changed phones and lost my progress
+        why: A 4-star review reporting total progress loss. Stars are not the label.
+
+  - id: monetization
+    name: Monetization & purchases
+    definition: >-
+      Complaints about how the game asks for real money, or about a real-money
+      transaction that went wrong: paywalls, pricing, perceived pay-to-win,
+      pressure to spend, removal of free routes to a reward, and purchases that
+      were paid for but never delivered.
+    includes:
+      - Cash-grab framing, pay-to-win, paywalled content or helpers
+      - Prices too high, regional pricing complaints, poor value
+      - Timers or difficulty that exist to push a purchase
+      - Paid but did not receive the item or currency
+      - A purchase changing the game for the worse (e.g. removing ad rewards)
+    excludes:
+      - Ad volume, or an ad reward that was not granted, is `ads`. Real money has
+        to be involved for `monetization`.
+      - Difficulty that is simply hard, with no spending angle, is
+        `difficulty_balance`.
+    severity_guidance:
+      typical: medium
+      escalate_to_high_when:
+        reason: Real money left the player's pocket and nothing came back.
+        examples:
+          - review_id: 2a1ec472-9012-4837-a792-b1d9fe162897
+            score: 1
+            quote: i paid for 10 gold bars but i didn't receive any
+            why: A failed paid transaction. Money lost, so high.
+      de_escalate_to_low_when:
+        reason: >-
+          A general wish for lower prices or better value, with no content locked
+          away and no transaction failure.
+        examples: []
+        note: >-
+          No clean example of this in the dev split - monetization complaints in
+          this corpus are almost all angry rather than mild. Apply the rule from
+          the description.
+    examples:
+      - review_id: 90c237cc-15d0-44a6-afad-4a818c2f32ce
+        game: Clash of Clans
+        score: 1
+        quote: Keeping it locked behind paywalls is a blatant slap in the face to free-to-play players.
+        why: Paywalled progression helper. Severity medium.
+      - review_id: 965cb487-a5f5-4156-a749-dea3b61701bd
+        game: Clash of Clans
+        score: 3
+        quote: upgrade timers are very long and it pushes players toward buying gems
+        why: Timers framed as spending pressure, so `monetization` and `difficulty_balance`.
+      - review_id: 9a692204-5e5a-4cd7-a335-99d230f76136
+        game: Candy Crush Saga
+        score: 1
+        quote: once you make even a small purchase, they stop providing you the ADS
+        why: Paying made the game worse. Both `monetization` and `ads`.
+
+  - id: difficulty_balance
+    name: Difficulty, balance & fairness
+    definition: >-
+      The game feels unfairly hard, badly tuned, or rigged. Covers level
+      difficulty, resource economies, grind and long timers, matchmaking and
+      ranking systems, and the perception that the game or other players cheat.
+    includes:
+      - Levels impossible, too few moves, difficulty spikes
+      - Grind, long upgrade timers, progression too slow
+      - Matchmaking or league/ranking systems that feel unfair
+      - Perceived rigging or manipulated randomness
+      - Other players cheating or exploiting
+      - Repetitive or stale content structure
+    excludes:
+      - If the complaint is that difficulty exists to force spending, add
+        `monetization` too.
+      - A request for a specific new feature is `content_ux`.
+    severity_guidance:
+      typical: medium
+      escalate_to_high_when:
+        reason: Progression is completely blocked for an extended period, so the player effectively cannot continue.
+        examples:
+          - review_id: 9762e2bf-967d-4fc4-8133-4af663518514
+            score: 3
+            quote: The levels have become nearly impossible to defeat to the extent that I can be stuck on a level for days.
+            why: Blocked for days, not merely hard.
+      de_escalate_to_low_when:
+        reason: A tuning suggestion or preference, with nothing actually blocked.
+        examples:
+          - review_id: ba5d81a2-09d4-4127-9bc6-7993b924d480
+            score: 4
+            quote: I hope there are more moves in hard levels especially 19k plus levels
+            why: Politely worded suggestion, still an issue, but low.
+          - review_id: dd40962f-cc61-4df8-b2f9-52e479c0021e
+            score: 5
+            quote: the season bank capacity has remained at 5 million since 2015
+            why: Economy observation from a happy long-term player.
+    examples:
+      - review_id: 12c3518a-cd29-4d3c-a163-0dcefb3fd03e
+        game: Candy Crush Saga
+        score: 2
+        quote: the easy levels have more moves than the hard level
+        why: Tuning complaint. Severity medium.
+      - review_id: 328d75cc-1449-4420-b905-7a17c4e5d3ff
+        game: Clash of Clans
+        score: 2
+        quote: I love it when I get matched against people there's no way in hell I'm ever beating
+        why: Sarcastic matchmaking complaint. Read intent, not tone.
+      - review_id: a0ee0204-2a06-4aad-9405-9991dcc58668
+        game: Clash of Clans
+        score: 2
+        quote: New league system ... Migration didn't happen according in League floors desired for th level
+        why: Ranking system complaint, heavy jargon. Severity medium.
+      - review_id: 7b3c3981-5d2b-42d5-ad6a-fb9d1182d35b
+        game: Candy Crush Saga
+        score: 1
+        quote: the game cheats now ... when u get certain abilities they will randomly turn off
+        why: Perceived rigging. Belongs here, not `stability_performance`.
+
+  - id: ads
+    name: Advertising
+    definition: >-
+      Anything about advertisements: how many there are, when they interrupt, ads
+      that fail or crash, rewards promised for watching an ad that never arrive,
+      and misleading or inappropriate ad content.
+    includes:
+      - Too many ads, unskippable or forced ads, bad placement
+      - Ads failing to load, freezing, or crashing the game
+      - Ad rewards not granted after watching
+      - Misleading, false or inappropriate ad creative
+    excludes:
+      - Ads disappearing after a purchase is `monetization` as well.
+    severity_guidance:
+      typical: low to medium
+      escalate_to_high_when:
+        reason: The ad system makes the game unplayable - it crashes, loops, or cannot be dismissed.
+        examples:
+          - review_id: 27c587d7-7c88-4c50-ad97-4bac2b57ba76
+            score: 1
+            quote: Game constantly crashes when watching ads, keeps taking me to the ads website
+            why: Ads break the game itself. Also `stability_performance`.
+          - review_id: 544d1230-0323-4373-b1be-653adfedd0ad
+            score: 1
+            quote: Ads constantly crash, or never finish and freeze.
+            why: Player is stuck rather than merely annoyed.
+      de_escalate_to_low_when:
+        reason: >-
+          The complaint is about ad content, length or repetition only, and play is
+          not interrupted or blocked.
+        examples: []
+        note: >-
+          No clean example of this in the dev split - ad complaints here are almost
+          all about interruption or failure. Apply the rule from the description.
+    examples:
+      - review_id: e5fa3987-3b64-4308-9b6f-8b01c4e1084d
+        game: Candy Crush Saga
+        score: 1
+        quote: why am I forced to watch 10 seconds of automated matching at the end of every level?
+        why: Forced interruption. Severity medium.
+      - review_id: a9800af7-bd95-43f8-8fce-70a35385f17b
+        game: Candy Crush Saga
+        score: 2
+        quote: this new thing of having to watch 10 random ads so I can have the option to watch 2 ads for a couple of moves
+        why: Ad economy made worse. Severity medium.
+      - review_id: 55373dd3-4ffa-45f1-b513-5071a3c4c322
+        game: Candy Crush Saga
+        score: 1
+        quote: after watching ad there is no prize given
+        why: Ad reward not granted. `ads` only - no real money involved.
+
+  - id: content_ux
+    name: Content, features & UX
+    definition: >-
+      Requests for new or returned content and features, complaints about removed
+      or changed content, and friction in the interface itself: clutter, popups,
+      navigation, missing settings, localisation and social features.
+    includes:
+      - Feature requests and "bring back X"
+      - Removed, changed or missed content and modes
+      - UI clutter, popups, confusing navigation, missing options
+      - Localisation and language requests
+      - Chat, friends, clan and other social features
+      - Art, music and sound changes
+    excludes:
+      - If content was removed specifically to sell it back, add `monetization`.
+      - Repetitive content because progression is stale is `difficulty_balance`.
+    severity_guidance:
+      typical: low
+      escalate_when:
+        reason: >-
+          The missing option or UI gap blocks something the player genuinely cannot
+          work around, or the game interferes with the device outside itself.
+        examples:
+          - review_id: f99e05b0-3b9b-4d32-83a2-bfe5374f4d92
+            score: 1
+            quote: the game incorrectly flagged me as under 16. There's no option to fix this
+            why: A wrong flag with no remedy, blocking a core social feature. High.
+          - review_id: 3ef0a91d-e23a-4dee-8502-89cd5c1e5c97
+            score: 3
+            quote: controlling my music app while playing. you keep turning it off
+            why: Affects the device beyond the game. Medium.
+      de_escalate_to_low_when:
+        reason: The request is cosmetic or a matter of taste.
+        examples:
+          - review_id: a277fcb7-5a57-4821-bbf2-db22e034c802
+            score: 2
+            quote: plz try to bring back the old music of this game
+            why: Taste. Low.
+          - review_id: 16803359-6d2c-4dcf-a886-2b6433e0d0b0
+            score: 4
+            quote: "make the clan emblem's border: frame editable instead of fixed"
+            why: Cosmetic feature request. Low.
+    examples:
+      - review_id: e47581c3-1da2-49a9-ac49-880073122d84
+        game: Candy Crush Saga
+        score: 3
+        quote: too many pop-ups. this race, that team, this competition ... making too long to start a game
+        why: UI friction. Severity medium.
+      - review_id: 554f5dad-0aff-4522-b987-c0971ec2759e
+        game: Clash of Clans
+        score: 2
+        quote: please bring back global chat
+        why: Removed social feature. Severity low.
+      - review_id: 7c0258b2-ae9a-45ff-955f-f6676c60065f
+        game: Clash of Clans
+        score: 1
+        quote: there is no option to share the resources such as elixir and coins with clanmates
+        why: Missing feature. Also `difficulty_balance` for the random war targeting.
+
+  - id: other_issue
+    name: Other issue
+    definition: >-
+      A real, actionable issue that none of the six categories above covers. Use
+      this sparingly and only when nothing else fits. The two common cases in this
+      corpus are customer support being slow or unresponsive on a non-account
+      matter, and vague negativity with no identifiable problem.
+    includes:
+      - Customer support responsiveness and quality (when not account recovery)
+      - Vague negativity with no identifiable problem
+      - Anything genuinely uncategorised
+    excludes:
+      - Never combine with another category. If a category fits, use that instead.
+    severity_guidance:
+      typical: medium for a process that failed the player, low for vague negativity
+      escalate_when:
+        reason: A support or process failure has left the player stuck with no route forward.
+        examples:
+          - review_id: dc21dba2-b0d8-438c-9214-688a6f5151d2
+            score: 2
+            quote: help and support is not help or support. its a book that you can read through
+            why: Support channel does not function as one. Medium.
+      de_escalate_to_low_when:
+        reason: Only sentiment, with no identifiable problem to act on.
+        examples:
+          - review_id: 64e02865-6617-4f87-a0a7-b18e71eda759
+            score: 1
+            quote: supoort system very very ... slow and bad
+            why: A real but unspecific complaint. Low to medium depending on detail.
+    examples:
+      - review_id: 64e02865-6617-4f87-a0a7-b18e71eda759
+        game: Clash of Clans
+        score: 1
+        quote: supoort system very very ... slow and bad
+        why: Support quality, no other category fits.
+
+  - id: no_issue
+    name: No actionable issue
+    definition: >-
+      Praise, neutral chatter, nostalgia, or off-topic text with no problem and no
+      request. This is the correct label for most 5-star reviews, and getting it
+      right matters: a model that calls a 5-star complaint `no_issue` is making
+      exactly the mistake this project is built to measure.
+    includes:
+      - Pure praise
+      - Neutral description of the game
+      - Off-topic or unintelligible chatter with no complaint
+    excludes:
+      - Any complaint or request, however politely phrased, is not `no_issue`.
+    exclusive: true
+    severity_guidance:
+      typical: none - severity is always empty for `no_issue`
+    examples:
+      - review_id: a44060a2-009e-4794-9b0f-59f9c4648bf8
+        game: Clash of Clans
+        score: 5
+        quote: Clash of clans is a legendary game. It has good strategy and gameplay
+        why: Pure praise.
+      - review_id: ba21399f-edc9-4693-9522-8919de9b9fc8
+        game: Candy Crush Saga
+        score: 4
+        quote: best relaxing game
+        why: Praise with no request.
+      - review_id: 49aab737-2f80-4a0f-b2e2-4057705fba93
+        game: Candy Crush Saga
+        score: 5
+        quote: if you run out of lives you don't have to pay you can just watch a ad for another life
+        why: Mentions ads and paying, but approvingly. Not `ads`, not `monetization`.
+
+# --------------------------------------------------------------------------
+# The hard cases. These are the overlaps that make multi-label annotation
+# inconsistent if they are not decided once, up front.
+# --------------------------------------------------------------------------
+boundaries:
+  general_rule: >-
+    Count the distinct problems. Two problems means two labels. One problem means
+    one label, and it should be the most specific category that covers it.
+
+  cases:
+    - id: crash_causing_loss
+      question: A technical fault destroyed something. Is that one label or two?
+      rule: >-
+        `account_progress_loss` is about PERSISTENT property: the account, saved
+        progress, or owned and earned inventory. A single voided match or session
+        is `stability_performance` alone, because the loss is just that fault's
+        immediate effect. When a fault repeatedly destroys owned inventory, that
+        is a second problem and gets both labels.
+      both_labels:
+        review_id: dbd0cbb0-1684-40f1-8de0-a618c248d294
+        score: 3
+        quote: Everytime I get kicked out, I lose lives and any special items I tried to use
+        labels: [stability_performance, account_progress_loss]
+        why: A fault (kicked out) plus repeated loss of owned inventory.
+      single_label:
+        review_id: 3e735544-f790-4957-8e8a-4bfa7fa43ea1
+        score: 2
+        quote: my attack is gone and counted as a loss
+        labels: [stability_performance]
+        why: One voided session. Nothing persistently owned was lost.
+
+    - id: paid_but_not_delivered
+      question: Money was paid and nothing arrived. `monetization` or `account_progress_loss`?
+      rule: >-
+        `monetization`. It is a failed transaction, not a loss of property,
+        because the player never received the goods. Severity high, since real
+        money is gone. Contrast with inventory the player already owned
+        disappearing, which is `account_progress_loss`.
+      both_labels: null
+      single_label:
+        review_id: 2a1ec472-9012-4837-a792-b1d9fe162897
+        score: 1
+        quote: i paid for 10 gold bars but i didn't receive any
+        labels: [monetization]
+        why: Paid, never delivered. High.
+      contrast:
+        review_id: f1654df9-beee-4ed1-8349-efc98a387709
+        quote: I suddenly lost my boosters, pin collection, gold!!
+        labels: [account_progress_loss]
+        why: Already-owned inventory vanished.
+
+    - id: ad_reward_not_granted
+      question: An ad was watched but the reward never came. `ads` or `monetization`?
+      rule: >-
+        `ads` only. The ad system failed. `monetization` requires real money or a
+        paywall; watching an ad costs attention, not money.
+      single_label:
+        review_id: 55373dd3-4ffa-45f1-b513-5071a3c4c322
+        score: 1
+        quote: after watching ad there is no prize given
+        labels: [ads]
+        why: Ad reward failure, no money involved.
+
+    - id: difficulty_forcing_spending
+      question: Levels are impossible without paying. One label or both?
+      rule: >-
+        Both, when the review claims the difficulty exists in order to extract
+        money - that is two assertions: the tuning is unfair, and it is unfair by
+        design to sell something. Only `difficulty_balance` if it merely says the
+        game is too hard. Only `monetization` if it merely says things cost too
+        much.
+      both_labels:
+        review_id: 508605e4-dadf-4ed5-96ef-fd9b0bdc29be
+        score: 2
+        quote: packed with levels that are impossible to beat without spending money ... specifically designed so that you would spend
+        labels: [difficulty_balance, monetization]
+        why: States both the unfair tuning and the commercial intent.
+      single_label:
+        review_id: 498058a6-d309-46f7-89ed-be027daeff42
+        score: 2
+        quote: at a certain level, it's impossible to pass and not fun anymore
+        labels: [difficulty_balance]
+        why: Hard, with no spending claim.
+      three_labels:
+        review_id: 77657114-4bdb-4069-80ae-71299409bde9
+        score: 1
+        quote: level 600+ is just impossible to beat without golds and watching ads
+        labels: [difficulty_balance, monetization, ads]
+        why: Difficulty, paid currency and ad-gating are all asserted.
+
+  keyword_traps:
+    - review_id: 82f3a5a0-4ece-49ba-bfe3-43389dcbcc1f
+      score: 5
+      quote: OMG I RECOVERED MY 7 YEAR OLD ACCOUNT INSTANTLY THANK YOU SUPERCELL
+      labels: [no_issue]
+      why: Account recovery is mentioned, but nothing went wrong. Praise.
+    - review_id: 2a8e62d9-eace-477d-aada-c29e950becd0
+      score: 3
+      quote: relaxing. lost my winning streak at 92
+      labels: [no_issue]
+      why: >-
+        "Lost" appears, but losing a streak by playing badly is ordinary
+        gameplay, not a loss of property and not a fault.
+    - review_id: 49aab737-2f80-4a0f-b2e2-4057705fba93
+      score: 5
+      quote: you can just watch a ad for another life
+      labels: [no_issue]
+      why: Ads mentioned approvingly.
+
+severity:
+  applies_when: At least one issue category is selected. Empty for `no_issue`.
+  rule: Take the most severe issue mentioned in the review.
+  levels:
+    - id: high
+      name: High
+      definition: >-
+        The player cannot play, or has lost money, an account, progress or owned
+        items, or a defect repeatedly destroys effort they already spent.
+      anchors:
+        - App will not open or crashes on every launch
+        - Account or progress lost, items or currency gone
+        - Paid and never received the purchase
+        - Completed match or attack voided by a server fault
+        - Progression blocked for days with no route forward
+    - id: medium
+      name: Medium
+      definition: >-
+        The game is playable but materially degraded, or the player is repeatedly
+        frustrated or pressured. The bulk of real complaints sit here.
+      anchors:
+        - Frequent lag, battery drain, long load times
+        - Aggressive paywalls or spending pressure
+        - Excessive or interruptive ads
+        - Unfair matchmaking, difficulty spikes, heavy grind
+        - Support unresponsive on a non-account matter
+    - id: low
+      name: Low
+      definition: >-
+        A minor annoyance, a matter of taste, or a request for something that does
+        not block play.
+      anchors:
+        - Feature or content requests
+        - Cosmetic and UI preferences
+        - Music, art or wording complaints
+        - Mild balance suggestions
+        - A small glitch, already resolved or easily ignored
+
+flags:
+  has_jargon:
+    type: boolean
+    definition: >-
+      True if the review uses game-specific vocabulary that someone who does not
+      play this game would not reliably understand: abbreviations, item and mode
+      names, slang. Examples: "th14", "CWL", "war weight", "color bomb", "piggy
+      bank", "19k plus levels". Generic gaming words like "level", "coins",
+      "update" or "lag" do not count.
+    why_it_matters: >-
+      This flag, set by hand, defines the jargon slice used to measure the pack
+      OFF/ON effect. The sampling heuristic in triage/sampling_terms.py decided
+      which reviews were offered for labeling; it does NOT define this flag.
+  unclear:
+    type: boolean
+    definition: >-
+      True if the text cannot be labeled confidently: unintelligible, not enough
+      context, or not in a language the annotator reads.
+    why_it_matters: >-
+      Reviews flagged unclear are excluded from the primary metrics and their
+      count is reported separately, so the headline numbers are not computed over
+      text a human could not label either.
+  note:
+    type: string
+    optional: true
+    definition: >-
+      A short free-text note from the annotator, for reviews they were unsure
+      about or want to revisit.
+    why_it_matters: >-
+      The labeling tool can list every noted review afterwards so they can be
+      re-reviewed together, which is more consistent than deciding a hard case
+      once in isolation. Notes are not scored.

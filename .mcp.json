@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "review-triage": {
+      "command": "uv",
+      "args": ["run", "mcp_server/server.py"],
+      "env": {
+        "TRIAGE_PACK_MODE": "on"
+      }
+    }
+  }
+}

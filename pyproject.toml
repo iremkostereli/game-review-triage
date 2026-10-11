@@ -4,16 +4,22 @@ version = "0.1.0"
 description = "Triage mobile game reviews into actionable LiveOps issues, with pluggable per-game jargon packs and a reproducible eval."
 requires-python = ">=3.10"
 
-# Runtime dependencies are deliberately minimal so that the offline path
-# (run the tests, recompute the metrics) works without heavy installs.
 dependencies = [
     "PyYAML>=6.0",
+    # Official Model Context Protocol SDK. In 2.x the FastMCP class is named
+    # MCPServer and lives in mcp.server.mcpserver.
+    "mcp>=2.3,<3",
 ]
 
 [project.optional-dependencies]
 # Only the data preparation step needs pandas.
 prepare = ["pandas>=2.0"]
 dev = ["pytest>=7.0"]
+
+[tool.uv]
+# This is an application, not a library: there is nothing to build or install,
+# so uv only resolves the dependencies into .venv.
+package = false
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

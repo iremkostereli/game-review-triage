@@ -1,0 +1,46 @@
+# Jargon pack template.
+#
+# To add a new game to the triage skill, copy this file to
+# packs/<game_name_in_snake_case>.yaml and fill it in. That is the only change
+# required: no code, no skill edits. Games are discovered by scanning this
+# directory, and the `game` field below is the name the skill will use.
+#
+# Files beginning with "_" are ignored by the loader, so this template is never
+# treated as a real pack.
+#
+# Rules for every term:
+#   * Write the meaning in YOUR OWN WORDS. Never copy text from a source.
+#   * `source: official` means a publisher source actually defines the term.
+#     It requires `source_url` pointing at that page (help centre, FAQ, patch
+#     notes, official site).
+#   * `source: inferred_from_reviews` means no official source defines it, so
+#     the meaning was worked out from how players use it. It requires at least
+#     one `evidence_review_ids` entry and must NOT have a source_url.
+#     Never invent a URL.
+#   * Evidence ids must come from the dev split. A test fails the build if any
+#     of them belongs to the held-out golden set.
+#   * Put player slang and abbreviations in `aliases`, mapped to the main term.
+
+game: Example Game
+version: 1
+description: >-
+  One or two lines on what this game is and what kind of vocabulary its players
+  use, so the skill has some context before the term list.
+
+terms:
+  - term: Example Official Term
+    aliases: [eot, example term]
+    meaning: >-
+      What the term refers to and why a player would mention it, in our own
+      words, in one or two sentences.
+    source: official
+    source_url: https://example.com/publisher/help/article
+
+  - term: Example Slang Term
+    aliases: [est]
+    meaning: >-
+      What players appear to mean by this, worked out from how they use it in
+      reviews, in our own words.
+    source: inferred_from_reviews
+    evidence_review_ids:
+      - 00000000-0000-0000-0000-000000000000

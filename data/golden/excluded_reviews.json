@@ -1,0 +1,14 @@
+{
+  "count": 2,
+  "description": "Review ids withheld from eval runs. They remain in golden_set.jsonl and are reported separately; they are not scored.",
+  "excluded": [
+    {
+      "reason": "unclear",
+      "reviewId": "4ad1fda1-ae4f-4d32-9c27-2285c93d2f8c"
+    },
+    {
+      "reason": "unclear",
+      "reviewId": "bcfbdd8a-5aee-4e81-9700-536e996fb518"
+    }
+  ]
+}

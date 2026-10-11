@@ -20,6 +20,11 @@ GOLDEN_DIR = REPO_ROOT / "data" / "golden"
 GOLDEN_SET = GOLDEN_DIR / "golden_set.jsonl"
 LABELS_PARTIAL = GOLDEN_DIR / "labels.partial.jsonl"
 
+# Review ids held back from eval runs, with a reason but no labels. Written at
+# export time. This exists so the tools can skip unlabelable reviews without
+# ever reading the answer key.
+EXCLUDED_REVIEWS = GOLDEN_DIR / "excluded_reviews.json"
+
 PACKS_DIR = REPO_ROOT / "packs"
 TAXONOMY_FILE = REPO_ROOT / "taxonomy" / "categories.yaml"
 

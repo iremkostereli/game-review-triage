@@ -86,6 +86,49 @@ def test_get_reviews_ignores_the_exported_golden_set(tmp_path, monkeypatch):
         assert "categories" not in review and "severity" not in review
 
 
+@needs_corpus
+def test_unclear_reviews_are_never_sent_to_the_model():
+    """Reviews the annotator could not label are withheld from eval runs.
+
+    They stay in the golden set and are reported separately. Scoring a model on
+    text a person could not label would measure nothing.
+    """
+    withheld = tools.excluded_review_ids()
+    if not withheld:
+        pytest.skip("no reviews are currently withheld")
+
+    page = tools.get_reviews(limit=200)
+    returned = {review["reviewId"] for review in page["reviews"]}
+    assert returned & withheld == set()
+    assert page["withheld"] == len(withheld)
+
+
+def test_the_exclusions_file_carries_no_labels(tmp_path, monkeypatch):
+    """It may contain ids and reasons only, never a hint of the answer."""
+    from triage.labels import write_exclusions
+
+    out = tmp_path / "excluded_reviews.json"
+    write_exclusions(
+        [
+            {"reviewId": "r1", "unclear": True, "categories": ["ads"], "severity": "high",
+             "has_jargon": True, "note": "secret"},
+            {"reviewId": "r2", "unclear": False, "categories": ["no_issue"]},
+        ],
+        out,
+    )
+    payload = json.loads(out.read_text(encoding="utf-8"))
+    assert payload["count"] == 1
+    assert payload["excluded"] == [{"reviewId": "r1", "reason": "unclear"}]
+    serialised = out.read_text(encoding="utf-8")
+    for leak in ("ads", "high", "secret", "has_jargon", "no_issue"):
+        assert leak not in serialised
+
+
+def test_missing_exclusions_file_means_nothing_is_withheld(tmp_path, monkeypatch):
+    monkeypatch.setattr(paths, "EXCLUDED_REVIEWS", tmp_path / "nope.json")
+    assert tools.excluded_review_ids() == set()
+
+
 def test_no_code_path_in_the_tools_touches_the_answer_key():
     """Belt and braces: no executable code may reference golden_set.
 

@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Any, Iterable
 
 from triage import paths
-from triage.jsonl_io import append_jsonl, iter_jsonl, write_jsonl
+from triage.jsonl_io import append_jsonl, iter_jsonl, write_json, write_jsonl
 from triage.taxonomy import LabelError, Taxonomy, validate_label_record
 
 #: Fields of a label record, in the order they are written.
@@ -129,10 +129,39 @@ def export_golden_set(
         raise LabelError("invalid label records:\n  " + "\n  ".join(problems))
 
     write_jsonl(out_path, rows)
+    excluded = write_exclusions(rows, out_path.parent / paths.EXCLUDED_REVIEWS.name)
     return {
         "written": len(rows),
         "path": str(out_path),
         "unlabeled": len(missing),
         "noted": sum(1 for row in rows if row.get("note")),
-        "unclear": sum(1 for row in rows if row.get("unclear")),
+        "unclear": excluded["count"],
+        "excluded_path": excluded["path"],
     }
+
+
+def write_exclusions(rows: list[dict[str, Any]], out_path: Path) -> dict[str, Any]:
+    """List the reviews that must not be sent to the model, with no labels attached.
+
+    Reviews the annotator marked `unclear` stay in the golden set - throwing away
+    a human judgement would be worse - but they are withheld from eval runs,
+    because scoring a model on text a person could not label measures nothing.
+
+    Only ids and a reason are written. The tools read this file instead of the
+    answer key, so nothing about the labels can reach the system under test.
+    """
+    excluded = [
+        {"reviewId": row["reviewId"], "reason": "unclear"}
+        for row in rows
+        if row.get("unclear")
+    ]
+    payload = {
+        "description": (
+            "Review ids withheld from eval runs. They remain in golden_set.jsonl "
+            "and are reported separately; they are not scored."
+        ),
+        "count": len(excluded),
+        "excluded": sorted(excluded, key=lambda item: item["reviewId"]),
+    }
+    write_json(out_path, payload)
+    return {"count": len(excluded), "path": str(out_path)}

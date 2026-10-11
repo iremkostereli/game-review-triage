@@ -23,7 +23,7 @@ from pathlib import Path
 from typing import Any
 
 from triage import packs, paths
-from triage.jsonl_io import read_jsonl, write_json
+from triage.jsonl_io import read_json, read_jsonl, write_json
 from triage.taxonomy import load_taxonomy
 
 PACK_MODE_ENV = "TRIAGE_PACK_MODE"
@@ -136,17 +136,36 @@ def get_reviews(
     if game:
         rows = [row for row in rows if row["game"].lower() == game.lower()]
 
+    withheld = excluded_review_ids()
+    before = len(rows)
+    rows = [row for row in rows if row["reviewId"] not in withheld]
+
     window = rows[offset : offset + limit]
     return {
         "split": split,
         "game": game or "all",
         "total_matching": len(rows),
+        "withheld": before - len(rows),
         "offset": offset,
         "returned": len(window),
         "reviews": [
             {field: row.get(field) for field in REVIEW_PUBLIC_FIELDS} for row in window
         ],
     }
+
+
+def excluded_review_ids() -> set[str]:
+    """Reviews withheld from eval runs.
+
+    Reads a file of ids and reasons only, never the answer key: reviews the
+    annotator could not label would otherwise be scored as if the model had
+    failed at something a human managed.
+    """
+    path = paths.EXCLUDED_REVIEWS
+    if not path.exists():
+        return set()
+    payload = read_json(path)
+    return {str(item["reviewId"]) for item in payload.get("excluded", [])}
 
 
 def _load_reviews(split: str) -> list[dict[str, Any]]:

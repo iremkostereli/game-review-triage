@@ -110,6 +110,10 @@ def get_jargon_pack(game: str) -> dict[str, Any]:
     # trusted. The eval runner aborts a run whose traces disagree with the
     # condition it asked for.
     payload["pack_mode"] = mode
+    # `reason` is present in both conditions, empty when there is nothing to
+    # explain, so the two payloads are key-for-key identical and the skill cannot
+    # infer its condition from the shape of what it received.
+    payload.setdefault("reason", "")
     return payload
 
 

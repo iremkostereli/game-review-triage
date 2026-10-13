@@ -42,14 +42,20 @@ class Term:
     term: str
     meaning: str
     source: str
+    triage_hint: str
     aliases: tuple[str, ...] = ()
     source_url: str | None = None
     evidence_review_ids: tuple[str, ...] = ()
+    #: Aliases attested in the cited official page rather than in the corpus.
+    #: Declared explicitly so the claim can be checked against source_url, the
+    #: same way the meaning can.
+    source_aliases: tuple[str, ...] = ()
 
     def as_dict(self) -> dict[str, Any]:
         payload: dict[str, Any] = {"term": self.term, "meaning": self.meaning}
         if self.aliases:
             payload["aliases"] = list(self.aliases)
+        payload["triage_hint"] = self.triage_hint
         payload["source"] = self.source
         if self.source_url:
             payload["source_url"] = self.source_url
@@ -132,7 +138,7 @@ def load_pack_file(path: Path) -> Pack:
     for entry in raw["terms"]:
         if not isinstance(entry, dict):
             raise PackError(f"{path.name}: each term must be a mapping, got {entry!r}")
-        for key in ("term", "meaning", "source"):
+        for key in ("term", "meaning", "source", "triage_hint"):
             if not entry.get(key):
                 raise PackError(f"{path.name}: term {entry.get('term')!r} is missing '{key}'")
 
@@ -170,14 +176,31 @@ def load_pack_file(path: Path) -> Pack:
         if key in {alias.lower() for alias in aliases}:
             raise PackError(f"{path.name}: term '{name}' lists itself as an alias")
 
+        source_aliases = tuple(
+            str(alias).strip() for alias in entry.get("source_aliases", ()) or ()
+        )
+        if source_aliases and source != SOURCE_OFFICIAL:
+            raise PackError(
+                f"{path.name}: term '{name}' declares source_aliases but is not sourced "
+                "officially, so there is no page to check them against"
+            )
+        unlisted = [alias for alias in source_aliases if alias not in aliases]
+        if unlisted:
+            raise PackError(
+                f"{path.name}: term '{name}' declares source_aliases that are not in its "
+                f"aliases list: {unlisted}"
+            )
+
         terms.append(
             Term(
                 term=name,
                 meaning=str(entry["meaning"]).strip(),
                 source=source,
+                triage_hint=str(entry["triage_hint"]).strip(),
                 aliases=aliases,
                 source_url=str(source_url).strip() if source_url else None,
                 evidence_review_ids=evidence,
+                source_aliases=source_aliases,
             )
         )
 

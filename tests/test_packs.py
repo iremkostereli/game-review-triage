@@ -29,6 +29,7 @@ def test_official_term_requires_a_source_url(tmp_path):
         pack_with(
             "  - term: Gold Pass\n"
             "    meaning: A paid seasonal subscription.\n"
+            "    triage_hint: Mentions usually point at monetization.\n"
             "    source: official\n"
         ),
     )
@@ -42,6 +43,7 @@ def test_inferred_term_requires_evidence_reviews(tmp_path):
         pack_with(
             "  - term: barch\n"
             "    meaning: A cheap raiding army composition.\n"
+            "    triage_hint: Mentions usually point at monetization.\n"
             "    source: inferred_from_reviews\n"
         ),
     )
@@ -56,6 +58,7 @@ def test_inferred_term_must_not_invent_a_url(tmp_path):
         pack_with(
             "  - term: barch\n"
             "    meaning: A cheap raiding army composition.\n"
+            "    triage_hint: Mentions usually point at monetization.\n"
             "    source: inferred_from_reviews\n"
             "    source_url: https://example.com/invented\n"
             "    evidence_review_ids: [dev-1]\n"
@@ -71,6 +74,7 @@ def test_unknown_source_is_rejected(tmp_path):
         pack_with(
             "  - term: Gold Pass\n"
             "    meaning: A paid seasonal subscription.\n"
+            "    triage_hint: Mentions usually point at monetization.\n"
             "    source: fan_wiki\n"
             "    source_url: https://example.com\n"
         ),
@@ -82,9 +86,28 @@ def test_unknown_source_is_rejected(tmp_path):
 def test_missing_meaning_is_rejected(tmp_path):
     path = write(
         tmp_path,
-        pack_with("  - term: Gold Pass\n    source: official\n    source_url: https://e.com\n"),
+        pack_with("  - term: Gold Pass\n    triage_hint: x\n    source: official\n    source_url: https://e.com\n"),
     )
     with pytest.raises(packs.PackError, match="missing 'meaning'"):
+        packs.load_pack_file(path)
+
+
+def test_missing_triage_hint_is_rejected(tmp_path):
+    """A pack term has to say what it means FOR TRIAGE, not just what it is.
+
+    A glossary alone would only teach vocabulary; the hint is what connects a
+    term to a category decision, which is the thing being measured.
+    """
+    path = write(
+        tmp_path,
+        pack_with(
+            "  - term: Gold Pass\n"
+            "    meaning: A paid seasonal subscription.\n"
+            "    source: official\n"
+            "    source_url: https://e.com/a\n"
+        ),
+    )
+    with pytest.raises(packs.PackError, match="missing 'triage_hint'"):
         packs.load_pack_file(path)
 
 
@@ -92,10 +115,12 @@ def test_duplicate_terms_are_rejected(tmp_path):
     body = pack_with(
         "  - term: Town Hall\n"
         "    meaning: The central building.\n"
+        "    triage_hint: Mentions usually point at monetization.\n"
         "    source: official\n"
         "    source_url: https://e.com/a\n"
         "  - term: town hall\n"
         "    meaning: Same thing again.\n"
+        "    triage_hint: Mentions usually point at monetization.\n"
         "    source: official\n"
         "    source_url: https://e.com/b\n"
     )
@@ -108,6 +133,7 @@ def test_term_cannot_be_its_own_alias(tmp_path):
         "  - term: Town Hall\n"
         "    aliases: [town hall, th]\n"
         "    meaning: The central building.\n"
+        "    triage_hint: Mentions usually point at monetization.\n"
         "    source: official\n"
         "    source_url: https://e.com/a\n"
     )
@@ -125,10 +151,12 @@ def test_valid_pack_exposes_evidence_ids_for_the_leakage_check(tmp_path):
     body = pack_with(
         "  - term: Gold Pass\n"
         "    meaning: A paid seasonal subscription.\n"
+        "    triage_hint: Mentions usually point at monetization.\n"
         "    source: official\n"
         "    source_url: https://e.com/a\n"
         "  - term: barch\n"
         "    meaning: A cheap raiding army composition.\n"
+        "    triage_hint: Mentions usually point at monetization.\n"
         "    source: inferred_from_reviews\n"
         "    evidence_review_ids: [dev-1, dev-2]\n"
     )

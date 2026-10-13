@@ -19,10 +19,12 @@ terms:
   - term: Nexus Core
     aliases: [nc, nexus]
     meaning: The structure a team defends, worded in our own words.
+    triage_hint: Complaints about it being destroyed too fast are difficulty_balance.
     source: official
     source_url: https://example.com/help/nexus-core
   - term: gigacamp
     meaning: Players appear to use this for holding one position for a long time.
+    triage_hint: Usually a fairness complaint, so difficulty_balance.
     source: inferred_from_reviews
     evidence_review_ids: [dev-review-1]
 """

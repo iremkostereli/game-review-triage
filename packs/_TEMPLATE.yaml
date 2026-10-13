@@ -20,6 +20,16 @@
 #   * Evidence ids must come from the dev split. A test fails the build if any
 #     of them belongs to the held-out golden set.
 #   * Put player slang and abbreviations in `aliases`, mapped to the main term.
+#   * `triage_hint` is required: one or two sentences telling the triager what a
+#     mention of this term usually signals, in terms of the taxonomy's category
+#     ids. This is what turns a glossary into a triage aid.
+#
+# Which terms belong in a pack:
+#   Include a term if either
+#     (a) it appears in the DEV split of the review corpus, or
+#     (b) the publisher's own documentation lists it as a game element.
+#   Never pick terms by reading the golden set - that would fit the pack to the
+#   test set and invalidate the comparison.
 
 game: Example Game
 version: 1
@@ -33,6 +43,9 @@ terms:
     meaning: >-
       What the term refers to and why a player would mention it, in our own
       words, in one or two sentences.
+    triage_hint: >-
+      What a mention usually means for triage, e.g. "complaints about its cost
+      are monetization; it failing to work is stability_performance".
     source: official
     source_url: https://example.com/publisher/help/article
 
@@ -40,7 +53,9 @@ terms:
     aliases: [est]
     meaning: >-
       What players appear to mean by this, worked out from how they use it in
-      reviews, in our own words.
+      the cited reviews, in our own words. Say only what the evidence shows; do
+      not fill in general knowledge.
+    triage_hint: Which category a mention of this points to, and when.
     source: inferred_from_reviews
     evidence_review_ids:
       - 00000000-0000-0000-0000-000000000000

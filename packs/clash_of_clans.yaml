@@ -1,0 +1,627 @@
+# Jargon pack: Clash of Clans
+#
+# Term selection rule (applied without ever looking at the golden set):
+#   A term is included if either
+#     (a) it appears in the DEV split of the review corpus, or
+#     (b) Supercell's official help centre names it as a game element.
+#   Rule (b) is what stops the pack being quietly fitted to the test set: the
+#   publisher's own documentation decides, not what happens to turn up in the
+#   held-out reviews.
+#
+# Meanings are written in our own words from the official support pages (local
+# copies under sources/, gitignored because the pages are copyrighted). Terms the
+# official pages do not cover are marked `inferred_from_reviews`, and their
+# meanings say only what the cited dev reviews actually show.
+#
+# A note on triage hints: several official pages explain that a complaint has a
+# designed cause (trophies reset at season end, resources do not vanish by
+# themselves). Those explanations are recorded as POSSIBLE CAUSES only. They must
+# never be used to dismiss a review. Category and severity follow what the review
+# itself claims.
+
+game: Clash of Clans
+version: 1
+description: >-
+  A base-building strategy game. Players upgrade a village gated by its Town Hall
+  level, train troops, join clans, and compete in wars and ranked ladders. Its
+  vocabulary is unusually opaque: progression is discussed as "TH" plus a number,
+  there are four separate currencies, several parallel game modes (Home Village,
+  Builder Base, Clan Capital), and a league system that was recently reworked.
+
+terms:
+  # -------------------------------------------------------------- progression
+  - term: Town Hall
+    aliases: [th, townhall, th 13, th17, town hall 12]
+    meaning: >-
+      The building whose level gates what a player can unlock, such as the
+      Blacksmith at level 8 or the Pet House at level 14. Ranked matchmaking
+      pairs players of a similar Town Hall level, so players use "TH" plus a
+      number as shorthand for how far along they are. It also holds some
+      resources, released only when it is fully destroyed.
+    triage_hint: >-
+      A Town Hall number is usually context, not a complaint. Being matched
+      against a much higher Town Hall is difficulty_balance. Losing access to a
+      village at a given Town Hall is account_progress_loss.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/trophy-matchmaking-and-calculation-in-multiplayer-2.html
+
+  - term: Home Village
+    aliases: [village]
+    meaning: >-
+      A player's primary base, as opposed to the separate Builder Base reached by
+      boat.
+    triage_hint: Context on its own; account_progress_loss if the village is reported lost or reset.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/builder-base-the-basics-2.html
+
+  - term: Builder
+    aliases: [builders]
+    meaning: >-
+      A worker that performs upgrades to defences, storages, mines and heroes.
+      The number of builders a player has limits how many upgrades can run at
+      once.
+    triage_hint: >-
+      "No free builder" or "all builders busy" is difficulty_balance for the
+      progression block, and monetization as well when the player notes extra
+      builders cost gems.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/builders-4.html
+
+  - term: Builder's Hut
+    aliases: [builder hut, builder huts]
+    meaning: >-
+      The building that houses a builder. Players start with one and buy further
+      huts with gems. From Town Hall 14 a hut can be upgraded into a defensive
+      building whose builder repairs defences during an attack.
+    triage_hint: >-
+      Wanting more huts is difficulty_balance plus monetization, since the extra
+      huts are sold for gems.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/builders-4.html
+
+  - term: Builder's Apprentice
+    aliases: [apprentice]
+    source_aliases: [apprentice]
+    meaning: >-
+      One of the builder options sold in the Shop, priced at 500 gems.
+    triage_hint: monetization when its price is the complaint.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/builders-4.html
+
+  - term: B.O.B
+    aliases: [bob]
+    source_aliases: [bob]
+    meaning: >-
+      An extra bot builder unlocked through the Builder Base, at Builder Hall 9
+      plus a set of Builder Base tasks, rather than bought with gems.
+    triage_hint: Context; difficulty_balance if the unlock requirement is the complaint.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/builders-4.html
+
+  - term: Laboratory
+    aliases: [lab]
+    meaning: >-
+      The building where troop, spell and siege machine upgrades are researched.
+      The Gold Pass makes that research cheaper and faster.
+    triage_hint: >-
+      Research taking too long is difficulty_balance; add monetization when the
+      player ties it to buying a pass or gems.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/gold-pass-4.html
+
+  - term: Maxed
+    aliases: [max, maxed out]
+    meaning: >-
+      How players describe having everything available at their current level
+      fully upgraded. The cited reviews use it for a long-held account the player
+      has invested years in.
+    triage_hint: >-
+      Usually context. When a maxed account is reported lost or locked out, that
+      is account_progress_loss at high severity, because of the effort described.
+    source: inferred_from_reviews
+    evidence_review_ids:
+      - f2d4077b-8870-4d95-a662-c6c35bc86d48
+
+  # --------------------------------------------------------------- currencies
+  - term: Gold
+    aliases: [coins]
+    meaning: >-
+      One of the two basic resources, produced by Gold Mines and taken as loot
+      from an opponent's collectors and storages.
+    triage_hint: >-
+      Gold described as missing follows the review's claim: a theft in an attack
+      is ordinary play, a sudden unexplained loss is account_progress_loss.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/about-multiplayer-and-trophies-3.html
+
+  - term: Elixir
+    aliases: [elixirs]
+    meaning: >-
+      The other basic resource, produced by Elixir Collectors and taken as loot.
+      The Blacksmith is upgraded with it.
+    triage_hint: Context; account_progress_loss when reported as vanishing without explanation.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/about-multiplayer-and-trophies-3.html
+
+  - term: Dark Elixir
+    aliases: [dark elixirs]
+    meaning: >-
+      A separate, scarcer resource, produced by Dark Elixir Pumps and taken as
+      loot. It is not the same thing as elixir, and the two are not
+      interchangeable.
+    triage_hint: Context; account_progress_loss when reported as vanishing without explanation.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/about-multiplayer-and-trophies-3.html
+
+  - term: Gems
+    aliases: [gem, green gems]
+    meaning: >-
+      The currency bought through in-app purchases. It pays for extra builder's
+      huts and can unlock Gold Pass reward tiers instantly.
+    triage_hint: >-
+      Pressure to spend gems is monetization. Gems reported as disappearing is
+      account_progress_loss when the player says they did not spend them;
+      possible causes Supercell lists include spending not noticed, another
+      person using the account, and a refund reversal, but the category follows
+      the player's own claim rather than those explanations.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/why-have-my-gems-resources-disappeared.html
+
+  - term: Ore
+    aliases: [ores, starry ore, shiny ore, glowy ore]
+    meaning: >-
+      A resource used only at the Blacksmith, to upgrade hero equipment. It comes
+      in three kinds, shiny, glowy and starry, earned from the star bonus, hero
+      journey, clan wars and events. Starry ore is handed out in very small
+      amounts at lower Town Hall levels.
+    triage_hint: >-
+      Complaints that ore arrives too slowly to upgrade equipment are
+      difficulty_balance, and monetization as well when tied to buying a pass.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/hero-equipment-ore-5.html
+
+  - term: Loot
+    aliases: [looting]
+    meaning: >-
+      The gold, elixir and dark elixir taken from an opponent's collectors and
+      storages in an attack. An attacker can never take everything, and weaker
+      opponents hold less.
+    triage_hint: >-
+      Too little loot available is difficulty_balance. Loot lost to an attack on
+      the player's own village is ordinary play, so no_issue unless they report
+      a fault alongside it.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/about-multiplayer-and-trophies-3.html
+
+  - term: Star Bonus
+    aliases: [star bonuses]
+    meaning: >-
+      An extra resource reward for winning five stars across battles, delivered
+      to the treasury. A new one becomes available a day after the last, and
+      higher leagues improve it.
+    triage_hint: Context; difficulty_balance if the player complains about its size or frequency.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/about-multiplayer-and-trophies-3.html
+
+  - term: Treasury
+    aliases: [treasuries]
+    meaning: >-
+      Where war win bonuses and star bonus rewards are delivered, reached through
+      the clan castle.
+    triage_hint: >-
+      Complaints about its capacity, or about being unable to move resources into
+      it, are content_ux or difficulty_balance depending on what the player asks for.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/about-multiplayer-and-trophies-3.html
+
+  # --------------------------------------------------------------- the pass
+  - term: Gold Pass
+    aliases: [monthly pass, season pass]
+    source_aliases: [season pass]
+    meaning: >-
+      A paid season pass, available from Town Hall 7, whose rewards unlock
+      through points from season tasks. Buying it adds perks on top of the free
+      track, including cheaper and faster building and research, one-gem troop
+      donations, a monthly hero skin, an extra forging slot and a larger
+      end-of-season payout.
+    triage_hint: >-
+      Its price, its value, or perks moving behind it is monetization. Players
+      calling changes to it a betrayal of free-to-play players is monetization at
+      medium or high severity depending on what they say they lose.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/gold-pass-4.html
+
+  - term: Hero Skin
+    aliases: [skin, skins]
+    meaning: >-
+      A cosmetic appearance for a hero, chosen from the Hero Hall. One is given
+      each month to Gold Pass holders.
+    triage_hint: >-
+      Requests for skins are content_ux. Complaints that skins are paid-only are
+      monetization.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/about-heroes-pets-9.html
+
+  - term: Prospector
+    aliases: [prospectors]
+    meaning: >-
+      A helper, included with the Gold Pass, that converts one kind of ore into
+      another once a day.
+    triage_hint: >-
+      Complaints that it sits behind the pass are monetization; the cited support
+      page confirms it is a pass perk.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/gold-pass-4.html
+
+  - term: Hoggy Bank
+    aliases: [hoggy]
+    source_aliases: [hoggy]
+    meaning: >-
+      A store that pays out at the end of the season. The Gold Pass includes a
+      multiplier that makes that payout five times bigger.
+    triage_hint: monetization when the multiplier being paid-only is the complaint.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/gold-pass-4.html
+
+  # ----------------------------------------------------------------- heroes
+  - term: Hero
+    aliases: [heroes]
+    meaning: >-
+      The most powerful troops, six of them in the Home Village, each unlocked at
+      a given Town Hall and Hero Hall level and each with a battle ability. They
+      are never permanently lost: a defeated hero is ready for the next battle.
+    triage_hint: >-
+      Heroes being unusable while upgrading is difficulty_balance. Requests to
+      change that are content_ux.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/about-heroes-pets-9.html
+
+  - term: Hero Hall
+    aliases: [hero halls]
+    meaning: >-
+      The building, unlocked at Town Hall 4, that houses every hero and acts as
+      the hub for upgrading them and for their equipment and pets. Its level caps
+      how far heroes can be upgraded.
+    triage_hint: >-
+      Complaints that it made hero upgrading more complicated or slower are
+      difficulty_balance, or content_ux when the complaint is about the interface.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/about-heroes-pets-9.html
+
+  - term: Hero Equipment
+    aliases: [equipment, hero equipments]
+    meaning: >-
+      Items a hero carries, two at a time, that grant special abilities. They are
+      upgraded at the Blacksmith using ore, and come in common and epic rarities.
+    triage_hint: >-
+      Wanting to recover or move materials between pieces of equipment is
+      content_ux. Ore scarcity blocking upgrades is difficulty_balance.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/hero-equipment-ore-5.html
+
+  - term: Blacksmith
+    aliases: [black smith]
+    meaning: >-
+      The building, unlocked at Town Hall 8, where hero equipment is upgraded and
+      equipped. Upgrading it with elixir unlocks more equipment.
+    triage_hint: Context; difficulty_balance if the complaint is about its upgrade cost or pace.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/hero-equipment-ore-5.html
+
+  - term: Hero Journey
+    aliases: [journey]
+    meaning: >-
+      A progression track, from Town Hall 7, that rewards unlocking and upgrading
+      heroes. Each hero level counts as a point, and milestones pay out magic
+      items, resources, ore chests, skins and epic equipment.
+    triage_hint: Context; difficulty_balance when the pace of its rewards is the complaint.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/about-heroes-pets-9.html
+
+  - term: Hero Pet
+    aliases: [pet, pets, pet house]
+    meaning: >-
+      A companion assigned to a hero for extra abilities, unlocked by building the
+      Pet House at Town Hall 14.
+    triage_hint: Context; difficulty_balance when the complaint is about unlock requirements or upgrade times.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/about-heroes-pets-9.html
+
+  # ------------------------------------------------------------------ troops
+  - term: Troops
+    aliases: [troop]
+    meaning: >-
+      The units a player trains, upgrades in the Laboratory and deploys in
+      attacks.
+    triage_hint: >-
+      Troops being weakened in an update is difficulty_balance. Troops that fail
+      to deploy or vanish mid-attack is stability_performance.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/about-heroes-pets-9.html
+
+  - term: Spell
+    aliases: [spells]
+    meaning: >-
+      Support items deployed alongside troops, upgraded in the Laboratory and
+      carried in their own slots rather than in troop housing space.
+    triage_hint: Context; difficulty_balance when upgrade cost or pace is the complaint.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/siege-machines-3.html
+
+  - term: Siege Machine
+    aliases: [siege, siege machines, wall wrecker]
+    source_aliases: [wall wrecker]
+    meaning: >-
+      A machine that carries clan castle troops into an enemy base. Crafted in
+      the Workshop from Town Hall 12, or received as a clanmate donation earlier.
+      It is immune to spells and releases its troops when tapped or destroyed.
+    triage_hint: Context; difficulty_balance when the complaint is about availability or balance.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/siege-machines-3.html
+
+  - term: Clan Castle
+    aliases: [castle, clan castle troops]
+    meaning: >-
+      The building that holds troops donated by clanmates. The war base has its
+      own, separate from the village one.
+    triage_hint: >-
+      Being unable to receive donated troops is stability_performance when
+      described as a fault, content_ux when described as a missing option.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/about-clan-wars-2.html
+
+  - term: Temporary Troops
+    aliases: [temporary troop]
+    source_aliases: [temporary troop]
+    meaning: >-
+      Event troops that cannot be used in ranked battles, clan wars or Clan War
+      Leagues.
+    triage_hint: >-
+      Complaints that they are unusable in competitive modes are
+      difficulty_balance or content_ux, depending on whether the player calls it
+      unfair or asks for a change.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/ranked-leagues-4.html
+
+  # ------------------------------------------------------------------ ranked
+  - term: Ranked Battle
+    aliases: [ranked, ranked mode, rank match, ranked battles]
+    meaning: >-
+      The competitive multiplayer mode, which uses a separate defensive layout
+      and allows a limited number of attacks per week. Regular battles are the
+      casual alternative and do not affect ranked standing.
+    triage_hint: >-
+      The weekly attack cap, or matchmaking inside it, is difficulty_balance.
+      Losing an attack to a disconnection is stability_performance.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/battle-vs-ranked-battle-whats-the-difference.html
+
+  - term: Trophies
+    aliases: [trophy, cups]
+    source_aliases: [cups]
+    meaning: >-
+      The score earned by attacking and defending in ranked battles, worth up to
+      forty per battle. In the ranked leagues a defender can gain trophies but
+      not lose them; Legend I is the exception, where defending does lose them.
+    triage_hint: >-
+      "Lost my trophies" follows the review's claim. Possible designed causes
+      include a season reset, league demotion and Legend I defences, but a review
+      reporting an unexplained loss is still an issue; use
+      account_progress_loss if the player says progress was taken, or
+      difficulty_balance if they call the system unfair.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/trophy-matchmaking-and-calculation-in-multiplayer-2.html
+
+  - term: Ranked League
+    aliases: [league, leagues, league system]
+    meaning: >-
+      The ladder that measures player skill, available from Town Hall 7. Players
+      sign up each week for a tournament in their league and are promoted, kept
+      or demoted on the result. Missing sign-ups counts as inactivity, which
+      eventually demotes a player one league at a time.
+    triage_hint: >-
+      Complaints about having to sign up, about weekly attack counts, or about the
+      system replacing the older one are difficulty_balance, or content_ux when
+      the player asks for the old system back. Demotion complaints are real
+      issues even where inactivity is the designed cause.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/ranked-leagues-4.html
+
+  - term: Town Hall Floor
+    aliases: []
+    meaning: >-
+      The lowest league a player can decay to for their Town Hall level, below
+      which continued inactivity makes them unranked.
+    triage_hint: Context for demotion complaints, which stay difficulty_balance.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/ranked-leagues-4.html
+
+  - term: Legend League
+    aliases: [legend i, legend ii, legend iii]
+    source_aliases: [legend i, legend ii, legend iii]
+    meaning: >-
+      The top competitive tier, in three levels, reached by promotion from the
+      league below. Its highest level runs on daily attack sets rather than
+      weekly tournaments, everyone starts a week at five thousand trophies, and
+      defending there does cost trophies.
+    triage_hint: >-
+      Complaints that it demands daily play, or that trophies are lost on
+      defence, are difficulty_balance. The one-day-off and shield mechanics are
+      context, not grounds to dismiss the complaint.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/legend-league-4.html
+
+  # -------------------------------------------------------------------- clan
+  - term: Clan War
+    aliases: [war, wars, clan wars]
+    meaning: >-
+      A set of battles between two clans of similar strength, with a preparation
+      day for arranging war bases and a battle day on which each participant gets
+      two attacks. The clan with more stars wins.
+    triage_hint: >-
+      War matchmaking being unfair is difficulty_balance. An attack voided by a
+      connection fault is stability_performance. Being dropped from a clan over
+      upgrading heroes is difficulty_balance plus content_ux.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/about-clan-wars-2.html
+
+  - term: War Base
+    aliases: [war bases]
+    meaning: >-
+      The separate defensive layout used in clan wars. Changes stop counting once
+      battle day begins, and troops donated to it only defend.
+    triage_hint: >-
+      Complaints that war bases have become too complicated to attack are
+      difficulty_balance; problems editing or copying a layout are content_ux or
+      stability_performance depending on whether a fault is described.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/about-clan-wars-2.html
+
+  - term: Clan War League
+    aliases: [cwl, war league, clan war leagues]
+    meaning: >-
+      A monthly, season-based structure for clan wars: a clan plays one war a day
+      for a week against clans of similar skill, across eight league tiers, with
+      a roster of eligible members and a war size of fifteen or thirty a side.
+    triage_hint: >-
+      An attack lost or closed mid-war is stability_performance. Reward or medal
+      fairness is difficulty_balance. Roster and eligibility confusion is content_ux.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/about-cwl-3.html
+
+  - term: League Medals
+    aliases: [league medal]
+    meaning: >-
+      The Clan War League reward, scaled by the clan's league and its final
+      placement. A player needs at least eight war stars in the season for the
+      full amount, and otherwise receives a fifth of it. Leaders can hand out
+      bonus medals.
+    triage_hint: >-
+      Medals being too few for the effort is difficulty_balance. Medals that
+      never arrive at all is stability_performance, since that describes a
+      fault. These are in-game rewards, so not monetization unless the review
+      also complains about real-money spending. The war-star threshold is a
+      possible cause to note, not a reason to dismiss the complaint.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/clan-war-leagues-rewards-2.html
+
+  - term: War Stars
+    aliases: [war star]
+    meaning: >-
+      Stars earned by attacking in wars during a Clan War League season. They
+      decide how much of the placement reward a player receives.
+    triage_hint: Context for reward complaints, which stay difficulty_balance.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/clan-war-leagues-rewards-2.html
+
+  - term: Clan Capital
+    aliases: [capital, capital peak]
+    source_aliases: [capital peak]
+    meaning: >-
+      A shared base a clan builds together, available from Town Hall 6. Members
+      convert their own resources into capital gold, contribute it to districts,
+      and attack other clans' capitals on raid weekends.
+    triage_hint: >-
+      Complaints that it needs many accounts or heavy spending to progress are
+      difficulty_balance plus monetization.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/what-is-the-clan-capital-3.html
+
+  - term: Raid Weekend
+    aliases: [raid weekends]
+    meaning: >-
+      The weekend event in which a clan attacks other clans' capitals. Each
+      member gets five attacks, damage carries over between attackers, and
+      destroying districts pays out raid medals.
+    triage_hint: Context; difficulty_balance when attack counts or rewards are the complaint.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/what-is-the-clan-capital-3.html
+
+  - term: Raid Medals
+    aliases: [raid medal]
+    meaning: >-
+      The reward for destroying districts and capitals on a raid weekend, spent
+      with the Trader.
+    triage_hint: >-
+      Earning too few of them, or the Trader's prices in medals, is
+      difficulty_balance. Medals not being awarded at all is
+      stability_performance. They are an in-game reward, so not monetization.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/what-is-the-clan-capital-3.html
+
+  # ---------------------------------------------------------- builder base
+  - term: Builder Base
+    aliases: [builder hall, bh]
+    source_aliases: [builder hall]
+    meaning: >-
+      A second, separate base reached by boat from Town Hall 6, with its own hall
+      level, its own resources, its own league and trophies, and its own
+      two-stage battles.
+    triage_hint: >-
+      Complaints that it is neglected or never updated are content_ux. Its
+      scheduled trophy reset at season end is a possible cause for
+      "I lost trophies", but the review's own claim decides the category.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/builder-base-the-basics-2.html
+
+  - term: Builder Battle
+    aliases: [builder battles]
+    meaning: >-
+      The Builder Base attack mode. Troops that survive the first stage continue
+      into the second, and the fewer stars an attacker takes, the more builder
+      elixir the defender earns.
+    triage_hint: Context; difficulty_balance when balance or matchmaking is the complaint.
+    source: official
+    source_url: https://support.supercell.com/clash-of-clans/en/articles/builder-base-the-basics-2.html
+
+  # ------------------------------------------- inferred from dev reviews only
+  - term: Nerf
+    aliases: [nerfed, nerfing]
+    meaning: >-
+      How players describe a unit being made weaker in an update. The cited
+      reviews use it as a complaint that troops were weakened while opponents got
+      harder.
+    triage_hint: difficulty_balance, since the claim is about balance after a change.
+    source: inferred_from_reviews
+    evidence_review_ids:
+      - 873d489f-aaef-4150-b423-65d11249c4c4
+      - b5642af4-53b1-46fe-a80d-cb674d8ea62f
+      - 576d9ffb-6b5b-48e7-bb5e-2e3ee145c7d3
+
+  - term: Alt
+    aliases: [alts, alt accounts]
+    meaning: >-
+      A secondary account a player runs alongside their main one. The cited
+      review describes needing several of them to make progress in the Clan
+      Capital.
+    triage_hint: >-
+      difficulty_balance when the complaint is that progress requires several
+      accounts, plus monetization when spending is mentioned alongside it.
+    source: inferred_from_reviews
+    evidence_review_ids:
+      - e9da083e-81e0-4054-bb5b-b7e18687d7fe
+
+  - term: Meta
+    aliases: [metas]
+    meaning: >-
+      How players refer to the currently strongest way to play. The cited review
+      uses it approvingly about hero equipment making attacks more strategic.
+    triage_hint: >-
+      Usually context and often praise, so no_issue unless the player complains
+      the meta is unbalanced, which is difficulty_balance.
+    source: inferred_from_reviews
+    evidence_review_ids:
+      - e2ddff62-2f1e-4a66-94e3-eb846c6cb097
+
+  - term: Ping
+    aliases: [ping spike, high ping]
+    meaning: >-
+      Network latency, which the cited reviews describe spiking during attacks
+      and ranked battles and costing them the attack.
+    triage_hint: >-
+      stability_performance. Severity rises when the player says a completed
+      attack was voided by it.
+    source: inferred_from_reviews
+    evidence_review_ids:
+      - 93807e6d-4507-4d66-9f3f-09c5d544e23c
+      - a7524320-0a2a-4b9f-ae86-be26f0c08dea

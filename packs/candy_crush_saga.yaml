@@ -1,0 +1,555 @@
+# Jargon pack: Candy Crush Saga
+#
+# Term selection rule (applied without ever looking at the golden set):
+#   A term is included if either
+#     (a) it appears in the DEV split of the review corpus, or
+#     (b) King's official help centre lists it as a Booster, a Special Candy or
+#         a Blocker.
+#   Rule (b) is what keeps the pack from being quietly fitted to the test set:
+#   the publisher's own catalogue decides, not what happens to show up in the
+#   held-out reviews.
+#
+# Meanings are written in our own words from the official help-centre pages
+# (local copies under sources/, which is gitignored because the pages are
+# copyrighted). Terms the official pages do not cover are marked
+# `inferred_from_reviews`, and their meanings say only what the cited dev
+# reviews actually show - no general knowledge is filled in.
+
+game: Candy Crush Saga
+version: 1
+description: >-
+  A match-three puzzle game. Players swap adjacent candies to complete a level
+  objective within a limited number of moves. Its vocabulary splits into three
+  families that a non-player will not recognise: boosters (consumable
+  power-ups), special candies (made by matching more than three), and blockers
+  (obstacles on the board). On top of that sit the live-service features -
+  races, teams, episodes, streaks - and two currencies, lives and gold bars.
+
+terms:
+  # ---------------------------------------------------------------- currencies
+  - term: Gold Bars
+    aliases: [gold bar, gold, golds]
+    meaning: >-
+      The paid currency. Players spend it on boosters, extra moves and extra
+      lives, and it can be bought with real money or earned slowly in play.
+    triage_hint: >-
+      Being pushed to spend gold bars, or paying and not receiving them, is
+      monetization. Gold bars disappearing from an account is
+      account_progress_loss. Simply having or earning them is no_issue.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000750998-What-are-Boosters
+
+  - term: Lives
+    aliases: [life, 5 lives]
+    meaning: >-
+      Attempts at a level. A player starts with five, loses one each time they
+      fail a level, and then either waits about half an hour per life to refill,
+      buys more, or receives them from friends. Sending a life costs the sender
+      nothing.
+    triage_hint: >-
+      Waiting for lives or wanting more is difficulty_balance. Lives vanishing
+      after a crash or disconnect is account_progress_loss. Being unable to
+      spend lives at all is stability_performance.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000750878-How-do-lives-work
+
+  # ---------------------------------------------------------------- core rules
+  - term: Moves
+    aliases: [move, moves meter, no available moves, out of moves]
+    meaning: >-
+      The limited number of candy swaps allowed in a level, shown on a meter.
+      The level's objective has to be reached before the moves run out.
+    triage_hint: >-
+      "Too few moves" or "needs 20 more moves" is difficulty_balance. Claiming
+      the game says there are no moves left when legal moves remain is a
+      fairness or rigging complaint, so also difficulty_balance, not a bug,
+      unless the player describes the board visibly malfunctioning.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000750278-Controls-how-to-switch-and-match-candies
+
+  - term: Booster
+    aliases: [boosters, power up]
+    meaning: >-
+      A consumable power-up that makes a hard level easier. Some are switched on
+      before a level starts, some are used during play, and some are offered
+      once the moves have run out. They are bought with gold bars or handed out
+      free through events and challenges.
+    triage_hint: >-
+      Levels described as impossible without boosters is difficulty_balance plus
+      monetization. Boosters that fail to activate is stability_performance.
+      Boosters missing from an inventory is account_progress_loss.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000750998-What-are-Boosters
+
+  - term: Blocker
+    aliases: [blockers, obstacle, obstacles]
+    meaning: >-
+      A tile that gets in the way on the board. Most do not fall like candies,
+      stay put until cleared, and can have several layers. They are removed by
+      matching beside them, by special-candy blasts, or with a booster.
+    triage_hint: >-
+      Complaints that a board is packed with blockers are difficulty_balance. A
+      blocker that cannot be cleared by the documented method is a possible bug,
+      so stability_performance.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000754717-Which-Blockers-can-I-find-in-the-game
+
+  # ------------------------------------------------------------ special candies
+  - term: Striped Candy
+    aliases: [striped, stripe, striped candies]
+    meaning: >-
+      A special candy made by matching four in a row or column. When matched it
+      clears the whole row or column it lies on.
+    triage_hint: >-
+      Usually mentioned while describing gameplay, so on its own it is
+      no_issue. A striped candy behaving differently from this description is
+      stability_performance.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/211939685-Creating-and-combining-Special-Candies
+
+  - term: Wrapped Candy
+    aliases: [wrapped, wrapped candies]
+    meaning: >-
+      A special candy made by matching five in a T or L shape. It clears a three
+      by three area around itself when matched.
+    triage_hint: >-
+      Descriptive on its own, so no_issue unless the player reports it failing
+      to behave as described.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/211939685-Creating-and-combining-Special-Candies
+
+  - term: Color Bomb
+    aliases: [colour bomb, color bombs, colour bombs]
+    meaning: >-
+      A special candy made by matching five in a row. Swapped with an ordinary
+      candy, it removes every candy of that colour from the board. It is also
+      sold as a pre-game booster.
+    triage_hint: >-
+      Losing a color bomb without playing the level, or one not firing, is
+      stability_performance. Wanting more of them is difficulty_balance.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/211939685-Creating-and-combining-Special-Candies
+
+  - term: Super Candy
+    aliases: [super candies]
+    meaning: >-
+      The result of combining a wrapped candy with a striped candy. It clears
+      several rows and columns at once.
+    triage_hint: Descriptive gameplay vocabulary; no_issue on its own.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/211939685-Creating-and-combining-Special-Candies
+
+  - term: Fish
+    aliases: [jelly fish, fishes]
+    meaning: >-
+      A special candy made by matching four of the same colour in a square.
+      Each fish swims to a tile and clears it, and as a booster each one removes
+      three extra pieces of jelly of its own colour.
+    triage_hint: >-
+      Mentioned while describing a combo, so no_issue. A fish not clearing what
+      the player expected is stability_performance or difficulty_balance
+      depending on whether they call it a fault or unfair.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/211320729-What-types-of-Boosters-are-available
+
+  # ------------------------------------------------------------------- boosters
+  - term: Lollipop Hammer
+    aliases: [lollipop, lollipops, hammer, lolli]
+    meaning: >-
+      An in-game booster that smashes one candy, blocker or obstacle at a point
+      the player picks, without spending a move.
+    triage_hint: >-
+      Running out of them, or needing them to pass a level, is
+      difficulty_balance plus monetization. Losing owned ones is
+      account_progress_loss.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000750998-What-are-Boosters
+
+  - term: Free Switch
+    aliases: [switch hand, hand switch, free switches]
+    meaning: >-
+      An in-game booster that swaps any two neighbouring candies without using a
+      move and without needing to form a match.
+    triage_hint: >-
+      Its removal from a reward source is content_ux. Needing it to progress is
+      difficulty_balance.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000750998-What-are-Boosters
+
+  - term: UFO
+    aliases: [ufos]
+    meaning: >-
+      A booster that drops help onto the board when tapped, placing three
+      wrapped candies and setting them off.
+    triage_hint: >-
+      Receiving a UFO instead of an expected prize is a monetization or fairness
+      complaint about the reward, not a bug report.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/211320729-What-types-of-Boosters-are-available
+
+  - term: Extra Moves
+    aliases: [extra moves x3, extra moves x5, more moves]
+    meaning: >-
+      A booster that adds moves to a level, offered before play begins or once
+      the moves have run out.
+    triage_hint: >-
+      Having to buy extra moves to finish a level is monetization plus
+      difficulty_balance. Not being offered the ad that grants them is ads.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000750998-What-are-Boosters
+
+  - term: Coconut Wheel
+    aliases: [coconut]
+    meaning: >-
+      A pre-game booster. Matched in a line it rolls across the board, turning
+      the candies it passes into striped candies.
+    triage_hint: Gameplay vocabulary; no_issue unless the player reports a fault.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/211320729-What-types-of-Boosters-are-available
+
+  - term: Striped and Wrapped
+    aliases: [striped & wrapped, striped and wrapped booster]
+    meaning: >-
+      A pre-game booster that starts the level with one striped candy and one
+      wrapped candy already on the board.
+    triage_hint: Gameplay vocabulary; no_issue unless reported as faulty.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/211320729-What-types-of-Boosters-are-available
+
+  - term: Lucky Candy
+    aliases: [lucky candies]
+    meaning: >-
+      A pre-game booster that becomes whichever candy or blocker the player
+      still needs on a level whose goal is to collect specific orders.
+    triage_hint: Gameplay vocabulary; no_issue unless reported as faulty.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/211320729-What-types-of-Boosters-are-available
+
+  - term: Striped Brush
+    aliases: [brush]
+    meaning: >-
+      A booster that turns any ordinary candy into a striped candy, with the
+      player choosing which way the stripes run.
+    triage_hint: Gameplay vocabulary; no_issue unless reported as faulty.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/211320729-What-types-of-Boosters-are-available
+
+  - term: Party Booster
+    aliases: [party]
+    meaning: >-
+      A booster that clears the board once and leaves four random exploding
+      boosters behind.
+    triage_hint: Gameplay vocabulary; no_issue unless reported as faulty.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/211320729-What-types-of-Boosters-are-available
+
+  - term: Super Color Bomb
+    aliases: [super colour bomb]
+    meaning: >-
+      A booster that makes the player's first three colour bombs roughly twice
+      as effective by giving each an extra blast.
+    triage_hint: >-
+      Losing one without having played the level is stability_performance or
+      account_progress_loss, depending on whether the player says it vanished or
+      was consumed in error.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/211320729-What-types-of-Boosters-are-available
+
+  - term: Bomb Cooler
+    aliases: [cooler]
+    meaning: >-
+      An end-of-level booster, available from level 96, that adds five moves to
+      every bomb currently on screen. It can be bought more than once.
+    triage_hint: Gameplay vocabulary; no_issue unless reported as faulty.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000750998-What-are-Boosters
+
+  # ------------------------------------------------------------------- blockers
+  - term: Jelly
+    aliases: [jellies, jelly layers]
+    meaning: >-
+      A blocker found on many levels that often has to be cleared to win. It can
+      have one or several layers and is removed by matching candies on top of it.
+    triage_hint: >-
+      Jelly left uncleared when the player believes they cleared it is a
+      possible bug, so stability_performance; otherwise difficulty_balance.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000754717-Which-Blockers-can-I-find-in-the-game
+
+  - term: Chocolate
+    aliases: [chocolates, multiplying chocolate]
+    meaning: >-
+      A blocker that multiplies and spreads across the board, swallowing
+      candies as it grows.
+    triage_hint: >-
+      Complaints about chocolate overrunning the board are difficulty_balance.
+      Note that the "chocolate box" is a separate reward feature, not this
+      blocker.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000754717-Which-Blockers-can-I-find-in-the-game
+
+  - term: Dark Chocolate
+    aliases: [dark chocolates]
+    meaning: >-
+      A thicker version of chocolate, twice as hard to clear, which also
+      spreads. It starts appearing after level 3000.
+    triage_hint: Difficulty_balance when complained about.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000754717-Which-Blockers-can-I-find-in-the-game
+
+  - term: Frosting
+    aliases: [frostings]
+    meaning: >-
+      The basic blocker, cleared by matching next to it or by a special-candy
+      blast.
+    triage_hint: Gameplay vocabulary; difficulty_balance when complained about.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000754717-Which-Blockers-can-I-find-in-the-game
+
+  - term: Honey
+    aliases: [honeys]
+    meaning: >-
+      A blocker that traps candies so they cannot move, though they can still be
+      matched. It clears through matches inside or next to it, and once empty it
+      behaves like frosting.
+    triage_hint: Gameplay vocabulary; difficulty_balance when complained about.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000754717-Which-Blockers-can-I-find-in-the-game
+
+  - term: Licorice Lock
+    aliases: [licorice, liquorice lock, lock]
+    meaning: >-
+      A blocker that pins a candy in place so it can neither fall nor be
+      swapped, until the locked candy itself is matched.
+    triage_hint: Gameplay vocabulary; difficulty_balance when complained about.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000754717-Which-Blockers-can-I-find-in-the-game
+
+  - term: Licorice Swirl
+    aliases: [swirl, liquorice swirl]
+    meaning: >-
+      A blocker that can fall and move around, resists blasts and stops them
+      spreading, and is best removed by matching next to it.
+    triage_hint: Gameplay vocabulary; difficulty_balance when complained about.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000754717-Which-Blockers-can-I-find-in-the-game
+
+  - term: Licorice Shell
+    aliases: [shell]
+    meaning: >-
+      A blocker broken open with special candies to reveal a colour bomb inside.
+    triage_hint: Gameplay vocabulary; difficulty_balance when complained about.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000754717-Which-Blockers-can-I-find-in-the-game
+
+  - term: Magic Mixer
+    aliases: [mixer]
+    meaning: >-
+      A blocker that keeps generating new items onto the board. It is destroyed
+      by matches beside it or by wrapped and striped blasts.
+    triage_hint: Gameplay vocabulary; difficulty_balance when complained about.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000754717-Which-Blockers-can-I-find-in-the-game
+
+  - term: Cake Bomb
+    aliases: [cake]
+    meaning: >-
+      A blocker of eight slices, destroyed by matches next to it and by
+      special-candy blasts.
+    triage_hint: Gameplay vocabulary; difficulty_balance when complained about.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000754717-Which-Blockers-can-I-find-in-the-game
+
+  - term: Sugar Chest
+    aliases: [chest]
+    meaning: >-
+      A blocker that may hold an item needed to finish the level. It is opened
+      by collecting matching sugar keys.
+    triage_hint: Gameplay vocabulary; difficulty_balance when complained about.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000754717-Which-Blockers-can-I-find-in-the-game
+
+  - term: Sugar Key
+    aliases: [sugar keys]
+    meaning: >-
+      The key that opens a sugar chest. Keys behave like ordinary candies but
+      cannot be combined with special candies.
+    triage_hint: Gameplay vocabulary; difficulty_balance when complained about.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000754717-Which-Blockers-can-I-find-in-the-game
+
+  - term: Fish Bobber
+    aliases: [bobber]
+    meaning: >-
+      An indestructible blocker that releases fish when hit by a special candy,
+      three of them if the hit comes from a combo.
+    triage_hint: Gameplay vocabulary; difficulty_balance when complained about.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000754717-Which-Blockers-can-I-find-in-the-game
+
+  - term: Crystal Candy
+    aliases: [crystal]
+    meaning: >-
+      A candy with a translucent, glass-like centre, cleared by making matches
+      underneath it.
+    triage_hint: >-
+      Complaints that it is not being cleared or counted are
+      difficulty_balance, or stability_performance if the player describes it as
+      a fault.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000754717-Which-Blockers-can-I-find-in-the-game
+
+  - term: Sugar Coat
+    aliases: [sugar coating, coat]
+    meaning: >-
+      A blocker removed by matching the candy sitting beneath it.
+    triage_hint: Gameplay vocabulary; difficulty_balance when complained about.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000754717-Which-Blockers-can-I-find-in-the-game
+
+  - term: Citrus Chew
+    aliases: [citrus]
+    meaning: >-
+      A wrapped box holding nine citrus slices. Each hit strips off a layer, and
+      more than one hit can land in a single move.
+    triage_hint: Gameplay vocabulary; difficulty_balance when complained about.
+    source: official
+    source_url: https://candycrush.zendesk.com/hc/en-us/articles/360000754717-Which-Blockers-can-I-find-in-the-game
+
+  # ------------------------------------------- inferred from dev reviews only
+  - term: Hard Level
+    aliases: [super hard level, super hard, hard levels]
+    meaning: >-
+      How players refer to levels they find far harder than the surrounding
+      ones. In the cited reviews they describe being stuck on such a level for
+      days, and say the move limit is too tight to finish it.
+    triage_hint: >-
+      difficulty_balance. Add monetization when the player says it cannot be
+      passed without buying something.
+    source: inferred_from_reviews
+    evidence_review_ids:
+      - 4bd75c3c-9a48-4194-976d-f3a96aeb6a0c
+      - 9762e2bf-967d-4fc4-8133-4af663518514
+      - cb9b39bf-b0c3-4605-b333-e98c3fac677a
+
+  - term: Legendary Level
+    aliases: [legendary levels, legendary]
+    meaning: >-
+      A category of level that players in the cited reviews single out as the
+      hardest in the game, and describe as impossible to pass without gold bars
+      or boosters.
+    triage_hint: >-
+      difficulty_balance plus monetization, because the complaint is almost
+      always that passing it requires spending.
+    source: inferred_from_reviews
+    evidence_review_ids:
+      - 64d99988-6690-4167-8c78-356b8f49082d
+      - 6268c990-b42e-4475-941e-9f15199ebcc0
+      - 850a50e9-b2a5-4a8a-9e76-ea5e3f5f1bf0
+
+  - term: Streak
+    aliases: [winning streak, streaks]
+    meaning: >-
+      A run of consecutive level wins that players track and try to protect. The
+      cited reviews mention spending gold bars to keep a streak alive, and
+      losing a streak after a run of wins.
+    triage_hint: >-
+      Follow what the review itself claims: spending to protect a streak is
+      monetization; a streak said to be lost by failing a level describes
+      ordinary play; a streak said to be lost to a crash or disconnect is
+      stability_performance.
+    source: inferred_from_reviews
+    evidence_review_ids:
+      - a27fac9e-3b9c-4d6a-a1d7-e1c85025c95a
+      - a7555c51-146a-4fee-9c30-abfd04b36aff
+      - 2a8e62d9-eace-477d-aada-c29e950becd0
+
+  - term: Race
+    aliases: [races, champion race, episode race]
+    meaning: >-
+      A timed side competition against other players for rewards, which the
+      cited reviews describe as starting automatically, being explained again
+      every time, and paying out gold bars to the winner.
+    triage_hint: >-
+      A race starting without consent, or its result being lost on
+      disconnection, is stability_performance plus account_progress_loss if
+      rewards vanished. Being told about it repeatedly is content_ux.
+    source: inferred_from_reviews
+    evidence_review_ids:
+      - 03a54d78-9934-4aa4-89a0-4dfe4efb42c3
+      - da411133-16bc-40e2-8753-0ecc6bc29dd5
+      - 6e6d1e30-ff67-4c52-b54a-9b48203ea7c7
+
+  - term: Episode
+    aliases: [episodes]
+    meaning: >-
+      A themed block of consecutive levels. The cited reviews mention episodes
+      alongside races and sales as one of the things interrupting the start of
+      a game.
+    triage_hint: content_ux when named among interruptions and popups.
+    source: inferred_from_reviews
+    evidence_review_ids:
+      - 64d99988-6690-4167-8c78-356b8f49082d
+      - e47581c3-1da2-49a9-ac49-880073122d84
+
+  - term: Team
+    aliases: [teams]
+    meaning: >-
+      A group players belong to for shared rewards, mentioned in the cited
+      reviews next to races and competitions.
+    triage_hint: content_ux for requests about teams; ads or monetization only if the complaint is about what joining costs.
+    source: inferred_from_reviews
+    evidence_review_ids:
+      - 878e3354-5cfb-4afb-b1f4-e42a17b0cb09
+      - 00a0d126-930d-4c8d-80d0-a9684b3ba655
+      - 99067f0a-1dd6-44f3-8f90-1cc78a3a861d
+
+  - term: Sweet Cinema
+    aliases: [cinema]
+    meaning: >-
+      A place in the game where players collect rewards, including boosters, in
+      exchange for watching something. The cited reviews complain that a
+      specific booster was removed from its rewards and that it disappears after
+      a purchase.
+    triage_hint: >-
+      ads when the complaint is about the watching itself; content_ux when a
+      reward was removed; monetization when it stopped after a purchase.
+    source: inferred_from_reviews
+    evidence_review_ids:
+      - 6268c990-b42e-4475-941e-9f15199ebcc0
+      - fbdcbf58-db2f-49bd-af3c-de49a021e244
+
+  - term: Pin Collection
+    aliases: [pins]
+    meaning: >-
+      A set of collectables players accumulate. The one cited review mentions it
+      alongside boosters and gold as something that vanished from the account.
+    triage_hint: account_progress_loss when reported as lost.
+    source: inferred_from_reviews
+    evidence_review_ids:
+      - f1654df9-beee-4ed1-8349-efc98a387709
+
+  - term: Tournament
+    aliases: [tournaments, star tournament]
+    meaning: >-
+      A ranked competition with a prize for the top finisher. The cited reviews
+      describe a themed tournament whose advertised gold-bar prize was not
+      received, and tournaments that feel repetitive.
+    triage_hint: >-
+      A promised prize not arriving is monetization. Tournaments feeling
+      repetitive is difficulty_balance.
+    source: inferred_from_reviews
+    evidence_review_ids:
+      - 59915f6b-585f-4eca-ac07-9c611e408821
+      - 97b93f4f-4ff8-4d38-9d9a-dd150bb42a4b
+
+  - term: Dinosaur
+    aliases: [dinosaurs, pink dinosaurs]
+    meaning: >-
+      A level objective players describe having to clear, as in needing to get
+      rid of three pink dinosaurs within the move limit. The cited review names
+      it only as a goal to be removed, not as a mechanic.
+    triage_hint: difficulty_balance when the complaint is about clearing them in the moves available.
+    source: inferred_from_reviews
+    evidence_review_ids:
+      - 4bd75c3c-9a48-4194-976d-f3a96aeb6a0c

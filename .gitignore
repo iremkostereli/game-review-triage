@@ -1,6 +1,10 @@
 # Local working notes, intentionally not shared.
 CLAUDE.md
 
+# Local copies of publisher help-centre pages, used to write pack meanings.
+# Copyrighted text: kept out of the repo. Packs paraphrase and cite the URL.
+sources/
+
 # Raw dataset is not committed. See README for how to obtain it.
 data/raw/
 data/interim/

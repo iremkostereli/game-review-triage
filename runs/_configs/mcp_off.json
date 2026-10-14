@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "review-triage": {
+      "args": [
+        "run",
+        "mcp_server/server.py"
+      ],
+      "command": "uv",
+      "env": {
+        "TRIAGE_PACK_MODE": "off",
+        "TRIAGE_RUNS_DIR": "C:\\Users\\user\\Desktop\\game_review\\runs"
+      }
+    }
+  }
+}

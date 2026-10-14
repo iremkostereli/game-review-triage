@@ -1,0 +1,181 @@
+{
+  "attempted": 4,
+  "generated_at": "2026-10-14T15:59:17+00:00",
+  "golden_set_sha256": "b38d5821c3f1307e6749c636826e380817848e4b79a2cabf39e280d35e8b5dea",
+  "planned_batches": 4,
+  "runs": [
+    {
+      "api_error": null,
+      "batch": 1,
+      "cost_usd": 0.1726,
+      "elapsed_seconds": 41.8,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 4,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 0,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "5e34d640fe32aebb",
+      "repeat": 1,
+      "result_count": 20,
+      "run_id": "clash_of_clans-off-r1-b1",
+      "started_at": "2026-10-14T15:56:27+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 28,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 1,
+      "cost_usd": 0.2027,
+      "elapsed_seconds": 39.3,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 0,
+      "pack": {
+        "file": "clash_of_clans.yaml",
+        "present": true,
+        "sha256": "be63babfee146b67",
+        "terms": 50
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "542244092c76fd3f",
+      "repeat": 1,
+      "result_count": 20,
+      "run_id": "clash_of_clans-on-r1-b1",
+      "started_at": "2026-10-14T15:57:09+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 25,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          50
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 1,
+      "cost_usd": 0.1755,
+      "elapsed_seconds": 41.9,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 0,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "e413aef88d3fe199",
+      "repeat": 1,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-off-r1-b1",
+      "started_at": "2026-10-14T15:57:48+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 27,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 1,
+      "cost_usd": 0.2138,
+      "elapsed_seconds": 46.8,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 4,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 0,
+      "pack": {
+        "file": "candy_crush_saga.yaml",
+        "present": true,
+        "sha256": "e25ae7d361de7dc4",
+        "terms": 47
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "4f0440ffc6f416bf",
+      "repeat": 1,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-on-r1-b1",
+      "started_at": "2026-10-14T15:58:30+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 27,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          47
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    }
+  ],
+  "status_counts": {
+    "ok": 4
+  },
+  "stopped_early": null,
+  "total_cost_usd": 0.7646
+}

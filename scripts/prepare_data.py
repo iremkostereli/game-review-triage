@@ -181,6 +181,23 @@ def main() -> int:
     ]
     pool.sort(key=lambda r: sampling.selection_key(r["reviewId"]))
     write_jsonl(paths.GOLDEN_DIR / "golden_pool.jsonl", pool)
+
+    # Slice membership, committed separately from the pool. Scoring needs it to
+    # report the random and enriched slices apart; the labeling UI must not see
+    # it, because knowing a review was picked for its jargon would bias the
+    # annotator's has_jargon flag, and that flag defines the headline slice.
+    write_json(
+        paths.GOLDEN_SLICES,
+        {
+            "description": (
+                "Sampling slice per golden review. Not shown during labeling; used "
+                "only to break scoring down by slice."
+            ),
+            "slices": {
+                r["reviewId"]: r["slice"] for r in reviews if r["split"] == "golden"
+            },
+        },
+    )
     write_json(paths.SPLIT_MANIFEST, manifest)
 
     print(f"Loaded {before} reviews for {', '.join(paths.EVAL_GAMES)}")
@@ -201,6 +218,7 @@ def main() -> int:
     print(f"Dev split (available for jargon-pack mining): {dev_count}")
     print(f"\nWrote {paths.REVIEWS_JSONL}")
     print(f"Wrote {paths.GOLDEN_DIR / 'golden_pool.jsonl'}")
+    print(f"Wrote {paths.GOLDEN_SLICES}")
     print(f"Wrote {paths.SPLIT_MANIFEST}")
     return 0
 

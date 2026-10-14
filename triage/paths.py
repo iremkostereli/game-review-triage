@@ -25,6 +25,11 @@ LABELS_PARTIAL = GOLDEN_DIR / "labels.partial.jsonl"
 # ever reading the answer key.
 EXCLUDED_REVIEWS = GOLDEN_DIR / "excluded_reviews.json"
 
+# Which sampling slice each golden review belongs to (random or enriched).
+# Kept out of the labeling pool so the annotator never sees why a review was
+# picked, but committed so scoring can break results down without the raw data.
+GOLDEN_SLICES = GOLDEN_DIR / "slices.json"
+
 PACKS_DIR = REPO_ROOT / "packs"
 TAXONOMY_FILE = REPO_ROOT / "taxonomy" / "categories.yaml"
 

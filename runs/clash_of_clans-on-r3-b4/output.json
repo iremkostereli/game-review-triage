@@ -1,0 +1,282 @@
+{
+  "game": "Clash of Clans",
+  "issue_groups": [
+    {
+      "category": "difficulty_balance",
+      "evidence": [
+        "the building time is kind of slow",
+        "The upgrade took so long and gems are hard to obtain",
+        "Upgrade times take so long in this game"
+      ],
+      "review_ids": [
+        "46111864-08d4-46ad-ae7e-2db9edd52eb8",
+        "0992e09f-de5c-4c48-bd91-171eaea2d3d2",
+        "8a91f24a-85b9-49d5-83e4-08975408d21e",
+        "fcfc0c4a-0ddd-4c3e-8bd6-0f70eb1e736a"
+      ],
+      "severity": "low",
+      "title": "Upgrade and building times feel too slow"
+    },
+    {
+      "category": "difficulty_balance",
+      "evidence": [
+        "I am not goin to play every week just so that I don't get demoted",
+        "this last tournament league system update has killed it for myself and many many players"
+      ],
+      "review_ids": [
+        "eb14a980-00ea-4aee-a599-e88f17029550",
+        "f16d89bc-7f39-4a17-8fad-1bb9e0423a4f"
+      ],
+      "severity": "medium",
+      "title": "New ranked league system punishes inactivity and drives players away"
+    },
+    {
+      "category": "monetization",
+      "evidence": [
+        "signaling the end for free to play players sadly",
+        "NO WAY after the newly announced changes"
+      ],
+      "review_ids": [
+        "6b44b8d9-af45-4fd1-b41c-7751d19f5216",
+        "fcfc0c4a-0ddd-4c3e-8bd6-0f70eb1e736a"
+      ],
+      "severity": "medium",
+      "title": "Announced Gold Pass changes seen as hostile to free players"
+    }
+  ],
+  "pack_mode": "on",
+  "result_count": 20,
+  "results": [
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "Town Hall 8",
+        "town hall 11"
+      ],
+      "rationale": "Mild complaint that building time is slow, otherwise praise.",
+      "reviewId": "46111864-08d4-46ad-ae7e-2db9edd52eb8",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Praise for the update reducing building time.",
+      "reviewId": "37827ac0-6714-4816-a8e2-c4c6749c2ac2",
+      "severity": null
+    },
+    {
+      "categories": [
+        "stability_performance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Game cannot be played; stuck reloading at entering state.",
+      "reviewId": "0121dbcc-539f-468e-a6e2-d54c208699d9",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "monetization"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "Gold Pass"
+      ],
+      "rationale": "Complains announced Gold Pass changes hurt free-to-play players.",
+      "reviewId": "6b44b8d9-af45-4fd1-b41c-7751d19f5216",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Long upgrade times and scarce gems mentioned lightheartedly.",
+      "reviewId": "0992e09f-de5c-4c48-bd91-171eaea2d3d2",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "shovel"
+      ],
+      "rationale": "Request to lower shovel cost and make it easier to obtain.",
+      "reviewId": "0ba243b0-a839-42c6-9276-2acf5bdfcbd6",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Praise, says game is playable for free.",
+      "reviewId": "18077857-f420-4118-b66a-0f7697ad4fa6",
+      "severity": null
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "95a9e8af-eb47-4964-8a40-38f27a692deb",
+      "severity": null
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "th 18",
+        "star bonus",
+        "demoted",
+        "electro 32",
+        "ranked"
+      ],
+      "rationale": "Ranked update forces weekly play to avoid demotion and limits star bonus.",
+      "reviewId": "eb14a980-00ea-4aee-a599-e88f17029550",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "account_progress_loss"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Cannot recover village because the recovery code email never arrives.",
+      "reviewId": "a2bf4c59-744b-4aba-a1d8-ff8e4bd9c110",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Praise and personal anecdote.",
+      "reviewId": "4de0c278-f530-4a4e-b1f1-24dd366bd6ea",
+      "severity": null
+    },
+    {
+      "categories": [
+        "monetization",
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "gold pass"
+      ],
+      "rationale": "Will not buy Gold Pass after announced changes and says upgrade times are too long.",
+      "reviewId": "fcfc0c4a-0ddd-4c3e-8bd6-0f70eb1e736a",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "cwl",
+        "th"
+      ],
+      "rationale": "Clan war league matchmaking pairs mismatched Town Halls.",
+      "reviewId": "9cec854c-286c-4d7f-9c0c-39e84378901a",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Upgrade building time costs a star; mild complaint.",
+      "reviewId": "8a91f24a-85b9-49d5-83e4-08975408d21e",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Dislikes automatic leadership change when clan leader is inactive.",
+      "reviewId": "97e0b507-c803-484b-a829-18dd7a9f09f2",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "trophy push",
+        "revenge",
+        "barracks"
+      ],
+      "rationale": "Dislikes the new revenge time limit and the attack flow returning to barracks.",
+      "reviewId": "8ac09b04-67cc-42b1-a8e7-6302d208afe8",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Feels ratings are overrated, opponents seem like bots, upgrades disappointing.",
+      "reviewId": "6e450c5e-f03d-4ea9-a0af-d4761347a043",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "tournament league system",
+        "max account"
+      ],
+      "rationale": "League system update is driving players and small clans away.",
+      "reviewId": "f16d89bc-7f39-4a17-8fad-1bb9e0423a4f",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "builder battles",
+        "builder points"
+      ],
+      "rationale": "Builder battle points and rank drop despite gaining points, seems unfair.",
+      "reviewId": "7578a5fe-723e-43d8-abd9-11fd15267d2f",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "7145e63c-a77b-4c55-b35a-4a483676fc7e",
+      "severity": null
+    }
+  ],
+  "run_id": "clash_of_clans-on-r3-b4",
+  "saved_at": "2026-10-15T18:37:27+00:00"
+}

@@ -1,0 +1,283 @@
+{
+  "game": "Candy Crush Saga",
+  "issue_groups": [
+    {
+      "category": "stability_performance",
+      "evidence": [
+        "the game keeps freezing i keep losing all my goodies",
+        "only to have the app crash then lose lives",
+        "the game don't want to open from this morning"
+      ],
+      "review_ids": [
+        "fe607934-362e-4526-be6b-015adf4c676c",
+        "cb0575a4-29e7-454d-bb08-420f72247b5d",
+        "ea2d7cbc-6c78-46cf-9db4-6b5e5d2c9aae"
+      ],
+      "severity": "high",
+      "title": "Game crashes or freezes and destroys lives or items"
+    },
+    {
+      "category": "difficulty_balance",
+      "evidence": [
+        "i stuck from 6 days in 1 level 17810",
+        "Very often I'm stuck on a level for a week",
+        "the game won't let me advance in the next level anymore"
+      ],
+      "review_ids": [
+        "5b0bb8d8-ed1b-478c-927a-e8f181bc342e",
+        "eaa4c86c-a8fb-47ef-8d95-b17af012d668",
+        "ce8bb37b-8362-48f7-82f0-26a3d2f41dda"
+      ],
+      "severity": "high",
+      "title": "Players stuck for days on very hard levels"
+    },
+    {
+      "category": "account_progress_loss",
+      "evidence": [
+        "I LOOSED MY ALL BOOSTERS",
+        "the next time it had vanished",
+        "u win 250 gold bars but never got them"
+      ],
+      "review_ids": [
+        "503abaf9-0365-4754-b08e-7d2975fdcff3",
+        "50f19e2e-e1db-4363-8b5c-82bac6dc2075",
+        "08286878-d969-4cfa-930e-7f598cce45a4"
+      ],
+      "severity": "high",
+      "title": "Gold bars or boosters missing or not granted"
+    }
+  ],
+  "pack_mode": "off",
+  "result_count": 20,
+  "results": [
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "f9a0b579-a5ec-4edb-9be9-5152d305b9d6",
+      "severity": null
+    },
+    {
+      "categories": [
+        "stability_performance",
+        "account_progress_loss"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "SUPER COLOUR BOMB",
+        "BOOSTERS",
+        "GOLD"
+      ],
+      "rationale": "A feature banner fails to appear and reinstalling wiped all boosters.",
+      "reviewId": "503abaf9-0365-4754-b08e-7d2975fdcff3",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "stability_performance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Player is ejected from a challenge despite winning, a functional fault.",
+      "reviewId": "6f583892-aa38-4ed4-ad5c-2b3d7c680963",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "ads"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Mild annoyance at ads needed to receive boosts.",
+      "reviewId": "722a6207-6ba7-4459-ba50-7e931e27d41a",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "wooden block"
+      ],
+      "rationale": "Stuck on one level for six days, progression blocked.",
+      "reviewId": "5b0bb8d8-ed1b-478c-927a-e8f181bc342e",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "difficulty_balance",
+        "monetization"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "color bombs",
+        "win streak"
+      ],
+      "rationale": "Claims randomness is rigged and wants ways to earn lives without paying.",
+      "reviewId": "26b506b6-0d7b-4588-a547-ba0465fae46f",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Praise and off-topic chatter.",
+      "reviewId": "aaf283ba-09d5-4b2a-ae76-c1e06f646440",
+      "severity": null
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Mild frustration at running out of moves just short of the goal.",
+      "reviewId": "a8aa727f-0b08-444e-8979-429243705659",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "stability_performance",
+        "account_progress_loss"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Game keeps freezing and repeatedly loses owned items.",
+      "reviewId": "fe607934-362e-4526-be6b-015adf4c676c",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Perceived rigging: claims out of moves when not.",
+      "reviewId": "c8956c76-e461-45fb-ab8a-dbb921440b2b",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "boosters",
+        "legendary",
+        "nightmare",
+        "very hard levels",
+        "race"
+      ],
+      "rationale": "Stuck on levels for a week, effectively blocked.",
+      "reviewId": "eaa4c86c-a8fb-47ef-8d95-b17af012d668",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "ads"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Objects to the content of a specific ad.",
+      "reviewId": "d8617e65-ead6-4ae0-8aef-46dc0c28d405",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "account_progress_loss"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "gold bars"
+      ],
+      "rationale": "Gold bars vanished unexpectedly.",
+      "reviewId": "50f19e2e-e1db-4363-8b5c-82bac6dc2075",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Asks for easier play and more lives; unclear wording.",
+      "reviewId": "c08a6c62-71ef-4445-a52a-9eaa0dbe8c7e",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "ads",
+        "stability_performance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "App crashes after ads and lives are lost.",
+      "reviewId": "cb0575a4-29e7-454d-bb08-420f72247b5d",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "stability_performance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "gold bars"
+      ],
+      "rationale": "Promised race reward of gold bars never granted.",
+      "reviewId": "08286878-d969-4cfa-930e-7f598cce45a4",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Cannot pass a level with too few moves for the goal, uninstalling.",
+      "reviewId": "ce8bb37b-8362-48f7-82f0-26a3d2f41dda",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "ads"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Ads for help are not available since a certain level.",
+      "reviewId": "cadd02cc-3086-4a55-a26e-023bb5e63025",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "stability_performance",
+        "account_progress_loss"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Game will not open and race rewards or a level are lost on unexpected stop.",
+      "reviewId": "ea2d7cbc-6c78-46cf-9db4-6b5e5d2c9aae",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "Candy Royale",
+        "gold bar challenges"
+      ],
+      "rationale": "Forced pop-ups with no skip option interrupt play.",
+      "reviewId": "7f754b8f-917e-4341-923e-3a40081e6673",
+      "severity": "low"
+    }
+  ],
+  "run_id": "candy_crush_saga-off-r2-b1",
+  "saved_at": "2026-10-15T18:43:26+00:00"
+}

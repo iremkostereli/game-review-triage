@@ -1,0 +1,264 @@
+{
+  "game": "Candy Crush Saga",
+  "issue_groups": [
+    {
+      "category": "ads",
+      "evidence": [
+        "it reverts to the game without rewards and breaking the chain",
+        "after watch all those lengthy adds there's no booster to collect"
+      ],
+      "review_ids": [
+        "8198e2a5-6ce6-43fd-8e69-2954458e3ea6",
+        "50c061b6-3199-4411-90cf-e3f4629c72f3"
+      ],
+      "severity": "medium",
+      "title": "Ad rewards not granted after watching ads"
+    },
+    {
+      "category": "account_progress_loss",
+      "evidence": [
+        "it goes back to game one",
+        "found my account empty.... zero",
+        "my account was deleted I want to reactivate it but it's not working"
+      ],
+      "review_ids": [
+        "49dafcb6-8c64-4003-87c6-c7e1ba778abc",
+        "627005c1-fcc3-4eca-8180-2c3c58729690",
+        "076c66cf-f207-47e0-a437-a04ae54312e2"
+      ],
+      "severity": "high",
+      "title": "Progress or inventory lost or reset"
+    },
+    {
+      "category": "difficulty_balance",
+      "evidence": [
+        "after 80 levels the levels get impossible",
+        "the heads do not want you to win",
+        "it deafantly requires some extra moves"
+      ],
+      "review_ids": [
+        "427a099e-be60-4ecd-86bc-bdb80de696ce",
+        "c69aad9f-db7b-4f72-ae1d-169a787a3239",
+        "2f4b6e4b-119d-4e34-8f79-0f39269583f9"
+      ],
+      "severity": "medium",
+      "title": "Levels feel rigged or impossible"
+    }
+  ],
+  "pack_mode": "off",
+  "result_count": 19,
+  "results": [
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Suggestion to show in-game marks besides stars; a minor feature request.",
+      "reviewId": "26b18092-64eb-4051-9f37-2e9e0f281a4f",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "account_progress_loss"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Account was deleted and reactivation is not working.",
+      "reviewId": "076c66cf-f207-47e0-a437-a04ae54312e2",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "ads"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "A long ad gives no reward and breaks the chain of ad rewards.",
+      "reviewId": "8198e2a5-6ce6-43fd-8e69-2954458e3ea6",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "difficulty_balance",
+        "monetization"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Levels cannot be won without extra moves and the game forces spending.",
+      "reviewId": "2f4b6e4b-119d-4e34-8f79-0f39269583f9",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Prefers the old music; a matter of taste.",
+      "reviewId": "8cfa9a83-e2d5-4279-b048-8a82db2a24ac",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "36fd1360-4f76-4c80-b6c9-18df9662c309",
+      "severity": null
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Long-term player praising the game.",
+      "reviewId": "0f4e107d-bf8d-41eb-ac5e-237aef0a1986",
+      "severity": null
+    },
+    {
+      "categories": [
+        "monetization"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Mild complaint about a $3 fee to cash out.",
+      "reviewId": "3f7c423b-972e-4b0e-8b41-6a4f904a78d2",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Neutral praise.",
+      "reviewId": "e5673b29-cdb2-458f-92db-a3ca50cbcf84",
+      "severity": null
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "2b9d0a28-9ddc-44fd-b015-0f64c75a8360",
+      "severity": null
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Praise; sentence cut off at 'but' with no stated problem, so unclear.",
+      "reviewId": "ee140179-ebc8-49e7-9af4-126a84cac3e4",
+      "severity": null
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Levels impossible after 80 with few moves and perceived rigged algorithm.",
+      "reviewId": "427a099e-be60-4ecd-86bc-bdb80de696ce",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Claims the game is rigged so the player cannot win.",
+      "reviewId": "c69aad9f-db7b-4f72-ae1d-169a787a3239",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "ads"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "boosters",
+        "extra moves"
+      ],
+      "rationale": "Many lengthy ads watched and the booster reward is not granted.",
+      "reviewId": "50c061b6-3199-4411-90cf-e3f4629c72f3",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "account_progress_loss"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Progress reset back to level one three times.",
+      "reviewId": "49dafcb6-8c64-4003-87c6-c7e1ba778abc",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "Tiffy",
+        "Yeti",
+        "Jelly Queen",
+        "Nutcracker",
+        "Mr Toffee",
+        "boosters"
+      ],
+      "rationale": "Pure praise naming game characters.",
+      "reviewId": "014a11ea-e446-4f29-966d-27531073ce88",
+      "severity": null
+    },
+    {
+      "categories": [
+        "account_progress_loss"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "color bombs",
+        "hammers"
+      ],
+      "rationale": "Inventory and progress vanished after logging in on a new device.",
+      "reviewId": "627005c1-fcc3-4eca-8180-2c3c58729690",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "5820128d-2b14-4a70-8b48-5d11b06f77e1",
+      "severity": null
+    },
+    {
+      "categories": [
+        "content_ux",
+        "ads",
+        "monetization"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "hand switch",
+        "gold bars",
+        "boosters"
+      ],
+      "rationale": "Removed feature, longer ads and reduced rewards seen as pushing spending.",
+      "reviewId": "b7be639b-bc61-4839-85f4-a18a89760d8e",
+      "severity": "medium"
+    }
+  ],
+  "run_id": "candy_crush_saga-off-r3-b4",
+  "saved_at": "2026-10-15T18:52:53+00:00"
+}

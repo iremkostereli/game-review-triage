@@ -1,0 +1,316 @@
+{
+  "game": "Candy Crush Saga",
+  "issue_groups": [
+    {
+      "category": "content_ux",
+      "evidence": [
+        "why does the game mute my podcast player?",
+        "Latest update keeps taking over the sound... music, YouTube, etc."
+      ],
+      "review_ids": [
+        "bc63101c-2b49-4318-9b7c-e6376ddef7a0",
+        "ebfb876f-d735-4149-b399-15069d2e4a37"
+      ],
+      "severity": "medium",
+      "title": "Game audio mutes or takes over the device's music/podcast apps"
+    },
+    {
+      "category": "monetization",
+      "evidence": [
+        "recent update removed the option to extend play thru watching ads",
+        "game used to have the option to watch videos for extra moves but not anymore"
+      ],
+      "review_ids": [
+        "5f5c7d99-ef99-4829-9671-9e53ca7585ed",
+        "a60c67aa-bd9e-4387-b539-65ebba691866"
+      ],
+      "severity": "medium",
+      "title": "Free ad route to extra moves removed, pushing players to paid gold bars"
+    },
+    {
+      "category": "stability_performance",
+      "evidence": [
+        "game crashes in the middle or beginning of a level making me lose a life and whatever power ups I was using",
+        "It keeps crashing and I have lost 10 gold bars in the process"
+      ],
+      "review_ids": [
+        "a60c67aa-bd9e-4387-b539-65ebba691866",
+        "69b0753c-2c90-4eb9-9f63-66840542efbb"
+      ],
+      "severity": "high",
+      "title": "Crashes cost players gold bars, gold and power ups"
+    },
+    {
+      "category": "monetization",
+      "evidence": [
+        "bought golds and never reflected on my account and this is the second time it has occured",
+        "it is making me go back through 618 with the extra coins already gone"
+      ],
+      "review_ids": [
+        "06a05760-0d51-4326-9825-b1f83d3f4ea0",
+        "f0da58e7-233f-4589-91fa-42e1ebdf021f"
+      ],
+      "severity": "high",
+      "title": "Real-money purchases not delivered or reverted"
+    },
+    {
+      "category": "ads",
+      "evidence": [
+        "why am I not receiving any booster and win moves even after watching videos",
+        "Ads show a fake X button that opens a browser link"
+      ],
+      "review_ids": [
+        "476f05d5-f846-41f3-b89d-298e88ad25af",
+        "12b258b1-e7dd-4538-93c6-93e3fb5b7ad3"
+      ],
+      "severity": "medium",
+      "title": "Ad rewards not granted or ads breaking the game session"
+    },
+    {
+      "category": "monetization",
+      "evidence": [
+        "it also became all about money and ads it sucks",
+        "simply about extorting money from players"
+      ],
+      "review_ids": [
+        "6883f66b-19a7-47e6-adfd-a95602be772e",
+        "c7ece634-642a-455d-ad44-1a786e727b50"
+      ],
+      "severity": "medium",
+      "title": "Perceived money-driven design and over-hard levels"
+    }
+  ],
+  "pack_mode": "off",
+  "result_count": 20,
+  "results": [
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Player asks for the removed helper train to come back.",
+      "reviewId": "b0f469dc-5bf2-4811-9127-b0f91182af81",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "difficulty_balance",
+        "monetization",
+        "ads"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Claims levels are too hard and the game is about money and ads.",
+      "reviewId": "6883f66b-19a7-47e6-adfd-a95602be772e",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Game mutes the player's podcast app, affecting the device outside the game.",
+      "reviewId": "bc63101c-2b49-4318-9b7c-e6376ddef7a0",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "monetization"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "gold bars"
+      ],
+      "rationale": "Update removed the free ad route to extra moves, forcing paid currency.",
+      "reviewId": "5f5c7d99-ef99-4829-9671-9e53ca7585ed",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "stability_performance",
+        "account_progress_loss",
+        "monetization"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "power ups"
+      ],
+      "rationale": "Repeated crashes destroy gold and power ups, and the free extra-moves videos were removed.",
+      "reviewId": "a60c67aa-bd9e-4387-b539-65ebba691866",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Complains about forced pop-ups after every level.",
+      "reviewId": "1aa92d17-a305-4a44-9e6d-21825babd905",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "5af76046-5283-4c19-b263-88f24416dd1c",
+      "severity": null
+    },
+    {
+      "categories": [
+        "monetization"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Accuses the game of extorting money from players.",
+      "reviewId": "c7ece634-642a-455d-ad44-1a786e727b50",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Praise only.",
+      "reviewId": "9da58cb4-629d-430b-bab3-e3fa026e1e64",
+      "severity": null
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Praise only.",
+      "reviewId": "2a567a77-5dee-4b65-8fe9-55a5a8c077b2",
+      "severity": null
+    },
+    {
+      "categories": [
+        "other_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Objects to the company's use of generative AI and layoffs, not covered by other categories.",
+      "reviewId": "ad9b6f47-8c04-4219-b91d-80b8e08b7b6b",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "stability_performance",
+        "account_progress_loss"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "gold bars"
+      ],
+      "rationale": "Repeated crashes cost the player owned gold bars.",
+      "reviewId": "69b0753c-2c90-4eb9-9f63-66840542efbb",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "monetization"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "golds"
+      ],
+      "rationale": "Paid for gold twice and never received it.",
+      "reviewId": "06a05760-0d51-4326-9825-b1f83d3f4ea0",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "ads"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "win moves"
+      ],
+      "rationale": "Rewards not granted after watching ad videos.",
+      "reviewId": "476f05d5-f846-41f3-b89d-298e88ad25af",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Praise only.",
+      "reviewId": "8c04eb64-0583-4db8-af0c-602a633c6980",
+      "severity": null
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "striped candy",
+        "chocolate ball",
+        "freezes"
+      ],
+      "rationale": "Unclear, but complains of inconsistent and unpredictable in-level behaviour.",
+      "reviewId": "2f091cf2-198b-4447-afce-2852ee1cc7eb",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "ads",
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Fake close button on ads sends player to browser and forfeits the game; levels called unfair.",
+      "reviewId": "12b258b1-e7dd-4538-93c6-93e3fb5b7ad3",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Praise only.",
+      "reviewId": "97d1239d-5b64-4ebf-a331-8a3b0ceddcd3",
+      "severity": null
+    },
+    {
+      "categories": [
+        "monetization",
+        "account_progress_loss"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Purchased coins vanished and the level had to be replayed after paying real money.",
+      "reviewId": "f0da58e7-233f-4589-91fa-42e1ebdf021f",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "difficulty_balance",
+        "content_ux",
+        "monetization"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "fishes",
+        "stripe",
+        "wrapper candy"
+      ],
+      "rationale": "Weaker fish booster, useless pop-ups meant to push spending, and the update takes over device audio.",
+      "reviewId": "ebfb876f-d735-4149-b399-15069d2e4a37",
+      "severity": "medium"
+    }
+  ],
+  "run_id": "candy_crush_saga-off-r3-b2",
+  "saved_at": "2026-10-15T18:50:14+00:00"
+}

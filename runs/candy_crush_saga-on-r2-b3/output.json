@@ -1,0 +1,263 @@
+{
+  "game": "Candy Crush Saga",
+  "issue_groups": [
+    {
+      "category": "ads",
+      "evidence": [
+        "not getting adds and extra rewards by watching adds",
+        "get redirected to Amazon and can't get out and don't get reward"
+      ],
+      "review_ids": [
+        "0a5a4571-6e3a-4d0b-ab69-3cfba6f4cad0",
+        "36749b68-20e0-4f71-8ec8-bc86e45d287b"
+      ],
+      "severity": "high",
+      "title": "Ad reward flow fails: redirects, trapped screens and ungranted rewards"
+    },
+    {
+      "category": "monetization",
+      "evidence": [
+        "team wants the player to buy boosters",
+        "free hand booster is removed",
+        "good but is pay to win like golds is bad thing"
+      ],
+      "review_ids": [
+        "76c2650c-a66e-489b-bf71-3cbb5e4a147b",
+        "d48764cc-198a-41f9-b965-e52d3c724600"
+      ],
+      "severity": "medium",
+      "title": "Boosters being removed or scarce, perceived as pushing purchases"
+    },
+    {
+      "category": "difficulty_balance",
+      "evidence": [
+        "you will need to play the same level as much as 45 or more times",
+        "it needs more moves on harder levels"
+      ],
+      "review_ids": [
+        "ee5fc325-3e90-4f75-8169-1fdca3a29410",
+        "5c57a05f-cae4-4672-9cc8-9d08228dc80c"
+      ],
+      "severity": "medium",
+      "title": "Hard levels need too many attempts or too few moves/lives"
+    }
+  ],
+  "pack_mode": "on",
+  "result_count": 20,
+  "results": [
+    {
+      "categories": [
+        "stability_performance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Mentions a few unspecified glitches, minor and non-blocking.",
+      "reviewId": "1bbcd164-300c-4b0f-9a59-7d9d8bc12f1c",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "boosters"
+      ],
+      "rationale": "Higher levels need dozens of attempts and saved boosters to pass, a repeated difficulty grind.",
+      "reviewId": "ee5fc325-3e90-4f75-8169-1fdca3a29410",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "bac156e7-58e7-4e63-b8bf-efd1baecb8ad",
+      "severity": null
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Complains gameplay is too easy and matches lack logic; a tuning opinion, nothing blocked.",
+      "reviewId": "13efcb1c-a1e2-47dc-9084-960976ea5711",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "monetization"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "golds"
+      ],
+      "rationale": "Calls the game pay to win because of gold bars and asks for it to be removed.",
+      "reviewId": "d48764cc-198a-41f9-b965-e52d3c724600",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "other_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Vague negativity about the game being boring, with no identifiable problem; wording is unclear.",
+      "reviewId": "b0e11a8f-3646-4cff-814e-d727bcacef83",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "candy bomb"
+      ],
+      "rationale": "Praise describing match-3 gameplay.",
+      "reviewId": "eea1be1a-f74f-4bb5-9c0e-2027749b364c",
+      "severity": null
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Praise.",
+      "reviewId": "41933925-3cd6-4fe0-8c28-781ccb045973",
+      "severity": null
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Mostly unintelligible chatter around praise; no identifiable problem or request.",
+      "reviewId": "362d6bf0-b547-4239-8a78-30d2e35c163b",
+      "severity": null
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Praise for the game.",
+      "reviewId": "0a7d4c7a-300b-488d-99ac-e7c4cef9643a",
+      "severity": null
+    },
+    {
+      "categories": [
+        "ads"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Must watch several ads before being able to unlock the ad that gives more moves, an ad-gating complaint.",
+      "reviewId": "f2000f93-eeb7-4869-94fb-3214bc07b1e5",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "content_ux",
+        "monetization"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "free hand booster",
+        "boosters"
+      ],
+      "rationale": "Free hand booster was removed and the player says the team wants them to buy boosters.",
+      "reviewId": "76c2650c-a66e-489b-bf71-3cbb5e4a147b",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Requests an option to skip the level-complete animation.",
+      "reviewId": "127b05c6-301a-4d80-92be-bf092e25ec77",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "stability_performance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "extra moves"
+      ],
+      "rationale": "Game kicks the player out again when trying to get extra moves, a recurring fault.",
+      "reviewId": "06aa0b63-1c1f-4aba-a5da-528e28d96606",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "ads"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Ads and ad rewards are not appearing or being granted for this player.",
+      "reviewId": "0a5a4571-6e3a-4d0b-ab69-3cfba6f4cad0",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "ads"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Ad redirects to Amazon, cannot be exited and the reward is lost.",
+      "reviewId": "36749b68-20e0-4f71-8ec8-bc86e45d287b",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Polite request for more moves on harder levels and more free lives and hints.",
+      "reviewId": "5c57a05f-cae4-4672-9cc8-9d08228dc80c",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Constant popups between games clutter the interface.",
+      "reviewId": "f98cf036-f4cc-4ef3-8efa-cc4a604846b4",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Unclear but mildly positive, no complaint.",
+      "reviewId": "df412c7c-ffed-40cc-b327-1a1925e79506",
+      "severity": null
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Dislikes the flashing hint candies and wants them off; a UI preference.",
+      "reviewId": "6198054b-b3ba-420b-92d6-7574c712dad1",
+      "severity": "low"
+    }
+  ],
+  "run_id": "candy_crush_saga-on-r2-b3",
+  "saved_at": "2026-10-15T18:46:49+00:00"
+}

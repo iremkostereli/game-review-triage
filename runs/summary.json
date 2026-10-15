@@ -1,8 +1,8 @@
 {
-  "attempted": 4,
-  "generated_at": "2026-10-14T15:59:17+00:00",
+  "attempted": 54,
+  "generated_at": "2026-10-15T18:53:32+00:00",
   "golden_set_sha256": "b38d5821c3f1307e6749c636826e380817848e4b79a2cabf39e280d35e8b5dea",
-  "planned_batches": 4,
+  "planned_batches": 54,
   "runs": [
     {
       "api_error": null,
@@ -25,6 +25,7 @@
       "repeat": 1,
       "result_count": 20,
       "run_id": "clash_of_clans-off-r1-b1",
+      "skipped": true,
       "started_at": "2026-10-14T15:56:27+00:00",
       "status": "ok",
       "trace": {
@@ -68,10 +69,1202 @@
       "repeat": 1,
       "result_count": 20,
       "run_id": "clash_of_clans-on-r1-b1",
+      "skipped": true,
       "started_at": "2026-10-14T15:57:09+00:00",
       "status": "ok",
       "trace": {
         "events": 25,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          50
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 2,
+      "cost_usd": 0.1664,
+      "elapsed_seconds": 39.0,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 1,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 20,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "08a46bed24648cba",
+      "repeat": 1,
+      "result_count": 20,
+      "run_id": "clash_of_clans-off-r1-b2",
+      "skipped": true,
+      "started_at": "2026-10-14T16:53:42+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 28,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 2,
+      "cost_usd": 0.2002,
+      "elapsed_seconds": 36.3,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 20,
+      "pack": {
+        "file": "clash_of_clans.yaml",
+        "present": true,
+        "sha256": "be63babfee146b67",
+        "terms": 50
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "83c4a047a3f71c48",
+      "repeat": 1,
+      "result_count": 20,
+      "run_id": "clash_of_clans-on-r1-b2",
+      "skipped": true,
+      "started_at": "2026-10-14T16:54:20+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 25,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          50
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 3,
+      "cost_usd": 0.1691,
+      "elapsed_seconds": 37.8,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 40,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "6e93cef7d893f567",
+      "repeat": 1,
+      "result_count": 20,
+      "run_id": "clash_of_clans-off-r1-b3",
+      "skipped": true,
+      "started_at": "2026-10-14T16:54:57+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 26,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 3,
+      "cost_usd": 0.2125,
+      "elapsed_seconds": 42.6,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 40,
+      "pack": {
+        "file": "clash_of_clans.yaml",
+        "present": true,
+        "sha256": "be63babfee146b67",
+        "terms": 50
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "0a13055fd165be96",
+      "repeat": 1,
+      "result_count": 20,
+      "run_id": "clash_of_clans-on-r1-b3",
+      "skipped": true,
+      "started_at": "2026-10-14T16:55:35+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 28,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          50
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 4,
+      "cost_usd": 0.1759,
+      "elapsed_seconds": 41.6,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 60,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "ea41891ff6c5e9e8",
+      "repeat": 1,
+      "result_count": 20,
+      "run_id": "clash_of_clans-off-r1-b4",
+      "skipped": true,
+      "started_at": "2026-10-14T16:56:17+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 27,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 4,
+      "cost_usd": 0.2138,
+      "elapsed_seconds": 43.0,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 60,
+      "pack": {
+        "file": "clash_of_clans.yaml",
+        "present": true,
+        "sha256": "be63babfee146b67",
+        "terms": 50
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "97feb2ef86bc0afc",
+      "repeat": 1,
+      "result_count": 20,
+      "run_id": "clash_of_clans-on-r1-b4",
+      "skipped": true,
+      "started_at": "2026-10-14T16:56:59+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 29,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          50
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 5,
+      "cost_usd": 0.1713,
+      "elapsed_seconds": 40.0,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 4,
+      "limit": 19,
+      "model": "sonnet",
+      "offset": 80,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "b0c81dc5788c80ce",
+      "repeat": 1,
+      "result_count": 19,
+      "run_id": "clash_of_clans-off-r1-b5",
+      "skipped": true,
+      "started_at": "2026-10-14T16:57:42+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 25,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 5,
+      "cost_usd": 0.2158,
+      "elapsed_seconds": 42.7,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 4,
+      "limit": 19,
+      "model": "sonnet",
+      "offset": 80,
+      "pack": {
+        "file": "clash_of_clans.yaml",
+        "present": true,
+        "sha256": "be63babfee146b67",
+        "terms": 50
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "2d64e2ecc5734927",
+      "repeat": 1,
+      "result_count": 19,
+      "run_id": "clash_of_clans-on-r1-b5",
+      "skipped": true,
+      "started_at": "2026-10-14T16:58:22+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 28,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          50
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 1,
+      "cost_usd": 0.1652,
+      "elapsed_seconds": 35.4,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 0,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "9299fbb588782a2e",
+      "repeat": 2,
+      "result_count": 20,
+      "run_id": "clash_of_clans-off-r2-b1",
+      "skipped": true,
+      "started_at": "2026-10-14T16:59:05+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 24,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 1,
+      "cost_usd": 0.2039,
+      "elapsed_seconds": 39.0,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 0,
+      "pack": {
+        "file": "clash_of_clans.yaml",
+        "present": true,
+        "sha256": "be63babfee146b67",
+        "terms": 50
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "d394e9d13e94aabc",
+      "repeat": 2,
+      "result_count": 20,
+      "run_id": "clash_of_clans-on-r2-b1",
+      "skipped": true,
+      "started_at": "2026-10-14T16:59:40+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 25,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          50
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 2,
+      "cost_usd": 0.1622,
+      "elapsed_seconds": 35.4,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 1,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 20,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "83859e0818c6da91",
+      "repeat": 2,
+      "result_count": 20,
+      "run_id": "clash_of_clans-off-r2-b2",
+      "skipped": true,
+      "started_at": "2026-10-14T17:00:19+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 27,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 2,
+      "cost_usd": 0.201,
+      "elapsed_seconds": 37.1,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 2,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 20,
+      "pack": {
+        "file": "clash_of_clans.yaml",
+        "present": true,
+        "sha256": "be63babfee146b67",
+        "terms": 50
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "1f16da36dbc1d0d0",
+      "repeat": 2,
+      "result_count": 20,
+      "run_id": "clash_of_clans-on-r2-b2",
+      "skipped": true,
+      "started_at": "2026-10-14T17:00:54+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 26,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          50
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 3,
+      "cost_usd": 0.1662,
+      "elapsed_seconds": 36.2,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 40,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "22f4260446786171",
+      "repeat": 2,
+      "result_count": 20,
+      "run_id": "clash_of_clans-off-r2-b3",
+      "skipped": true,
+      "started_at": "2026-10-14T17:01:32+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 23,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 3,
+      "cost_usd": 0.212,
+      "elapsed_seconds": 41.1,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 40,
+      "pack": {
+        "file": "clash_of_clans.yaml",
+        "present": true,
+        "sha256": "be63babfee146b67",
+        "terms": 50
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "9f45b749f253069c",
+      "repeat": 2,
+      "result_count": 20,
+      "run_id": "clash_of_clans-on-r2-b3",
+      "skipped": true,
+      "started_at": "2026-10-14T17:02:08+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 25,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          50
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 4,
+      "cost_usd": 0.177,
+      "elapsed_seconds": 41.2,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 60,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "9a01ae1a7866add7",
+      "repeat": 2,
+      "result_count": 20,
+      "run_id": "clash_of_clans-off-r2-b4",
+      "skipped": true,
+      "started_at": "2026-10-14T17:02:49+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 28,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 4,
+      "cost_usd": 0.2176,
+      "elapsed_seconds": 42.8,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 60,
+      "pack": {
+        "file": "clash_of_clans.yaml",
+        "present": true,
+        "sha256": "be63babfee146b67",
+        "terms": 50
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "7082d640662f89cb",
+      "repeat": 2,
+      "result_count": 20,
+      "run_id": "clash_of_clans-on-r2-b4",
+      "started_at": "2026-10-15T18:30:28+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 27,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          50
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 5,
+      "cost_usd": 0.1591,
+      "elapsed_seconds": 33.0,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 19,
+      "model": "sonnet",
+      "offset": 80,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "ac7f65703827a6fb",
+      "repeat": 2,
+      "result_count": 19,
+      "run_id": "clash_of_clans-off-r2-b5",
+      "started_at": "2026-10-15T18:31:11+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 19,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 5,
+      "cost_usd": 0.2135,
+      "elapsed_seconds": 43.4,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 4,
+      "limit": 19,
+      "model": "sonnet",
+      "offset": 80,
+      "pack": {
+        "file": "clash_of_clans.yaml",
+        "present": true,
+        "sha256": "be63babfee146b67",
+        "terms": 50
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "0bfa8ab71dda7262",
+      "repeat": 2,
+      "result_count": 19,
+      "run_id": "clash_of_clans-on-r2-b5",
+      "started_at": "2026-10-15T18:31:44+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 27,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          50
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 1,
+      "cost_usd": 0.1651,
+      "elapsed_seconds": 38.6,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 0,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "816697ca57106d24",
+      "repeat": 3,
+      "result_count": 20,
+      "run_id": "clash_of_clans-off-r3-b1",
+      "started_at": "2026-10-15T18:32:27+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 25,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 1,
+      "cost_usd": 0.191,
+      "elapsed_seconds": 34.2,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 0,
+      "pack": {
+        "file": "clash_of_clans.yaml",
+        "present": true,
+        "sha256": "be63babfee146b67",
+        "terms": 50
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "9ccbcba6abe11540",
+      "repeat": 3,
+      "result_count": 20,
+      "run_id": "clash_of_clans-on-r3-b1",
+      "started_at": "2026-10-15T18:33:06+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 19,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          50
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 2,
+      "cost_usd": 0.1522,
+      "elapsed_seconds": 29.5,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 2,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 20,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "814909d98e598820",
+      "repeat": 3,
+      "result_count": 20,
+      "run_id": "clash_of_clans-off-r3-b2",
+      "started_at": "2026-10-15T18:33:40+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 22,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 2,
+      "cost_usd": 0.2037,
+      "elapsed_seconds": 37.1,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 2,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 20,
+      "pack": {
+        "file": "clash_of_clans.yaml",
+        "present": true,
+        "sha256": "be63babfee146b67",
+        "terms": 50
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "68f4996dfca2dc39",
+      "repeat": 3,
+      "result_count": 20,
+      "run_id": "clash_of_clans-on-r3-b2",
+      "started_at": "2026-10-15T18:34:10+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 26,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          50
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 3,
+      "cost_usd": 0.1739,
+      "elapsed_seconds": 40.0,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 40,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "3c52826686cc11e3",
+      "repeat": 3,
+      "result_count": 20,
+      "run_id": "clash_of_clans-off-r3-b3",
+      "started_at": "2026-10-15T18:34:47+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 25,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 3,
+      "cost_usd": 0.2101,
+      "elapsed_seconds": 39.6,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 40,
+      "pack": {
+        "file": "clash_of_clans.yaml",
+        "present": true,
+        "sha256": "be63babfee146b67",
+        "terms": 50
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "a6bc3ab96737622c",
+      "repeat": 3,
+      "result_count": 20,
+      "run_id": "clash_of_clans-on-r3-b3",
+      "started_at": "2026-10-15T18:35:27+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 27,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          50
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 4,
+      "cost_usd": 0.1774,
+      "elapsed_seconds": 41.2,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 60,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "f14aaf9a779ebd1f",
+      "repeat": 3,
+      "result_count": 20,
+      "run_id": "clash_of_clans-off-r3-b4",
+      "started_at": "2026-10-15T18:36:07+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 27,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 4,
+      "cost_usd": 0.2129,
+      "elapsed_seconds": 41.2,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 60,
+      "pack": {
+        "file": "clash_of_clans.yaml",
+        "present": true,
+        "sha256": "be63babfee146b67",
+        "terms": 50
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "c62abc3173a7d8c3",
+      "repeat": 3,
+      "result_count": 20,
+      "run_id": "clash_of_clans-on-r3-b4",
+      "started_at": "2026-10-15T18:36:48+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 26,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          50
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 5,
+      "cost_usd": 0.1608,
+      "elapsed_seconds": 32.9,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 4,
+      "limit": 19,
+      "model": "sonnet",
+      "offset": 80,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "cad932ddc417f2d3",
+      "repeat": 3,
+      "result_count": 19,
+      "run_id": "clash_of_clans-off-r3-b5",
+      "started_at": "2026-10-15T18:37:29+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 22,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 5,
+      "cost_usd": 0.2164,
+      "elapsed_seconds": 43.9,
+      "exit_code": 0,
+      "game": "Clash of Clans",
+      "issue_groups": 4,
+      "limit": 19,
+      "model": "sonnet",
+      "offset": 80,
+      "pack": {
+        "file": "clash_of_clans.yaml",
+        "present": true,
+        "sha256": "be63babfee146b67",
+        "terms": 50
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "cf0b194a70e81143",
+      "repeat": 3,
+      "result_count": 19,
+      "run_id": "clash_of_clans-on-r3-b5",
+      "started_at": "2026-10-15T18:38:02+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 28,
         "get_jargon_pack_calls": 1,
         "pack_mode": "on",
         "pack_term_counts": [
@@ -109,6 +1302,7 @@
       "repeat": 1,
       "result_count": 20,
       "run_id": "candy_crush_saga-off-r1-b1",
+      "skipped": true,
       "started_at": "2026-10-14T15:57:48+00:00",
       "status": "ok",
       "trace": {
@@ -152,6 +1346,7 @@
       "repeat": 1,
       "result_count": 20,
       "run_id": "candy_crush_saga-on-r1-b1",
+      "skipped": true,
       "started_at": "2026-10-14T15:58:30+00:00",
       "status": "ok",
       "trace": {
@@ -171,11 +1366,935 @@
           "save_triage"
         ]
       }
+    },
+    {
+      "api_error": null,
+      "batch": 2,
+      "cost_usd": 0.1817,
+      "elapsed_seconds": 44.7,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 6,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 20,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "951f7fe02944416e",
+      "repeat": 1,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-off-r1-b2",
+      "started_at": "2026-10-15T18:38:46+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 28,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 2,
+      "cost_usd": 0.2124,
+      "elapsed_seconds": 43.6,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 6,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 20,
+      "pack": {
+        "file": "candy_crush_saga.yaml",
+        "present": true,
+        "sha256": "e25ae7d361de7dc4",
+        "terms": 47
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "83fdf33a95c44aec",
+      "repeat": 1,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-on-r1-b2",
+      "started_at": "2026-10-15T18:39:31+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 28,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          47
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 3,
+      "cost_usd": 0.1686,
+      "elapsed_seconds": 38.3,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 40,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "8f8e7ae4abc7f55a",
+      "repeat": 1,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-off-r1-b3",
+      "started_at": "2026-10-15T18:40:14+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 25,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 3,
+      "cost_usd": 0.2044,
+      "elapsed_seconds": 40.1,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 40,
+      "pack": {
+        "file": "candy_crush_saga.yaml",
+        "present": true,
+        "sha256": "e25ae7d361de7dc4",
+        "terms": 47
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "4e0a91e9f9a781b6",
+      "repeat": 1,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-on-r1-b3",
+      "started_at": "2026-10-15T18:40:53+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 25,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          47
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 4,
+      "cost_usd": 0.167,
+      "elapsed_seconds": 35.1,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 3,
+      "limit": 19,
+      "model": "sonnet",
+      "offset": 60,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "897301c8437f988b",
+      "repeat": 1,
+      "result_count": 19,
+      "run_id": "candy_crush_saga-off-r1-b4",
+      "started_at": "2026-10-15T18:41:33+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 25,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 4,
+      "cost_usd": 0.2009,
+      "elapsed_seconds": 36.2,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 3,
+      "limit": 19,
+      "model": "sonnet",
+      "offset": 60,
+      "pack": {
+        "file": "candy_crush_saga.yaml",
+        "present": true,
+        "sha256": "e25ae7d361de7dc4",
+        "terms": 47
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "9dd96b096043ecdd",
+      "repeat": 1,
+      "result_count": 19,
+      "run_id": "candy_crush_saga-on-r1-b4",
+      "started_at": "2026-10-15T18:42:08+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 24,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          47
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 1,
+      "cost_usd": 0.1815,
+      "elapsed_seconds": 43.3,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 0,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "4274d318fb6f0abd",
+      "repeat": 2,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-off-r2-b1",
+      "started_at": "2026-10-15T18:42:44+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 29,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 1,
+      "cost_usd": 0.2173,
+      "elapsed_seconds": 45.3,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 0,
+      "pack": {
+        "file": "candy_crush_saga.yaml",
+        "present": true,
+        "sha256": "e25ae7d361de7dc4",
+        "terms": 47
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "766c1b79ff2792d4",
+      "repeat": 2,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-on-r2-b1",
+      "started_at": "2026-10-15T18:43:27+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 30,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          47
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 2,
+      "cost_usd": 0.1752,
+      "elapsed_seconds": 40.6,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 5,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 20,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "d3b9680d14ba5878",
+      "repeat": 2,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-off-r2-b2",
+      "started_at": "2026-10-15T18:44:13+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 25,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 2,
+      "cost_usd": 0.2113,
+      "elapsed_seconds": 43.3,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 6,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 20,
+      "pack": {
+        "file": "candy_crush_saga.yaml",
+        "present": true,
+        "sha256": "e25ae7d361de7dc4",
+        "terms": 47
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "b36e4d5968153377",
+      "repeat": 2,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-on-r2-b2",
+      "started_at": "2026-10-15T18:44:53+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 25,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          47
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 3,
+      "cost_usd": 0.159,
+      "elapsed_seconds": 33.1,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 40,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "85508228bc69f561",
+      "repeat": 2,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-off-r2-b3",
+      "started_at": "2026-10-15T18:45:37+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 22,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 3,
+      "cost_usd": 0.206,
+      "elapsed_seconds": 40.9,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 40,
+      "pack": {
+        "file": "candy_crush_saga.yaml",
+        "present": true,
+        "sha256": "e25ae7d361de7dc4",
+        "terms": 47
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "cf953eb7bc24ea92",
+      "repeat": 2,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-on-r2-b3",
+      "started_at": "2026-10-15T18:46:10+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 27,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          47
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 4,
+      "cost_usd": 0.1688,
+      "elapsed_seconds": 35.8,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 3,
+      "limit": 19,
+      "model": "sonnet",
+      "offset": 60,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "1f18d202f3d10ffc",
+      "repeat": 2,
+      "result_count": 19,
+      "run_id": "candy_crush_saga-off-r2-b4",
+      "started_at": "2026-10-15T18:46:51+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 24,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 4,
+      "cost_usd": 0.2019,
+      "elapsed_seconds": 36.8,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 3,
+      "limit": 19,
+      "model": "sonnet",
+      "offset": 60,
+      "pack": {
+        "file": "candy_crush_saga.yaml",
+        "present": true,
+        "sha256": "e25ae7d361de7dc4",
+        "terms": 47
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "430481836ac82ec4",
+      "repeat": 2,
+      "result_count": 19,
+      "run_id": "candy_crush_saga-on-r2-b4",
+      "started_at": "2026-10-15T18:47:27+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 25,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          47
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 1,
+      "cost_usd": 0.1829,
+      "elapsed_seconds": 43.7,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 5,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 0,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "e2ed391f73453654",
+      "repeat": 3,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-off-r3-b1",
+      "started_at": "2026-10-15T18:48:03+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 26,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 1,
+      "cost_usd": 0.2181,
+      "elapsed_seconds": 45.0,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 0,
+      "pack": {
+        "file": "candy_crush_saga.yaml",
+        "present": true,
+        "sha256": "e25ae7d361de7dc4",
+        "terms": 47
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "82ea2055bb1fcd21",
+      "repeat": 3,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-on-r3-b1",
+      "started_at": "2026-10-15T18:48:47+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 30,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          47
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 2,
+      "cost_usd": 0.1822,
+      "elapsed_seconds": 43.4,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 6,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 20,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "39153b2e33d68f2f",
+      "repeat": 3,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-off-r3-b2",
+      "started_at": "2026-10-15T18:49:32+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 28,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 2,
+      "cost_usd": 0.2131,
+      "elapsed_seconds": 44.1,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 6,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 20,
+      "pack": {
+        "file": "candy_crush_saga.yaml",
+        "present": true,
+        "sha256": "e25ae7d361de7dc4",
+        "terms": 47
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "39fae7385957c4bb",
+      "repeat": 3,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-on-r3-b2",
+      "started_at": "2026-10-15T18:50:16+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 27,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          47
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 3,
+      "cost_usd": 0.1696,
+      "elapsed_seconds": 37.0,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 40,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "393a49f602911df2",
+      "repeat": 3,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-off-r3-b3",
+      "started_at": "2026-10-15T18:51:00+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 24,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 3,
+      "cost_usd": 0.1916,
+      "elapsed_seconds": 33.8,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 3,
+      "limit": 20,
+      "model": "sonnet",
+      "offset": 40,
+      "pack": {
+        "file": "candy_crush_saga.yaml",
+        "present": true,
+        "sha256": "e25ae7d361de7dc4",
+        "terms": 47
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "39820f8a16810045",
+      "repeat": 3,
+      "result_count": 20,
+      "run_id": "candy_crush_saga-on-r3-b3",
+      "started_at": "2026-10-15T18:51:37+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 20,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          47
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 4,
+      "cost_usd": 0.1947,
+      "elapsed_seconds": 44.3,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 3,
+      "limit": 19,
+      "model": "sonnet",
+      "offset": 60,
+      "pack": {
+        "present": false,
+        "reason": "pack mode off"
+      },
+      "pack_mode": "off",
+      "permission_denials": [],
+      "prompt_sha256": "32107b61257f0aeb",
+      "repeat": 3,
+      "result_count": 19,
+      "run_id": "candy_crush_saga-off-r3-b4",
+      "started_at": "2026-10-15T18:52:10+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 30,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "off",
+        "pack_term_counts": [
+          0
+        ],
+        "tool_calls": 7,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
+    },
+    {
+      "api_error": null,
+      "batch": 4,
+      "cost_usd": 0.2021,
+      "elapsed_seconds": 36.8,
+      "exit_code": 0,
+      "game": "Candy Crush Saga",
+      "issue_groups": 3,
+      "limit": 19,
+      "model": "sonnet",
+      "offset": 60,
+      "pack": {
+        "file": "candy_crush_saga.yaml",
+        "present": true,
+        "sha256": "e25ae7d361de7dc4",
+        "terms": 47
+      },
+      "pack_mode": "on",
+      "permission_denials": [],
+      "prompt_sha256": "b46ec586d2380c5f",
+      "repeat": 3,
+      "result_count": 19,
+      "run_id": "candy_crush_saga-on-r3-b4",
+      "started_at": "2026-10-15T18:52:55+00:00",
+      "status": "ok",
+      "trace": {
+        "events": 24,
+        "get_jargon_pack_calls": 1,
+        "pack_mode": "on",
+        "pack_term_counts": [
+          47
+        ],
+        "tool_calls": 6,
+        "tools_used": [
+          "Skill",
+          "ToolSearch",
+          "get_jargon_pack",
+          "get_reviews",
+          "get_taxonomy",
+          "save_triage"
+        ]
+      }
     }
   ],
   "status_counts": {
-    "ok": 4
+    "ok": 54
   },
   "stopped_early": null,
-  "total_cost_usd": 0.7646
+  "total_cost_usd": 10.2411
 }

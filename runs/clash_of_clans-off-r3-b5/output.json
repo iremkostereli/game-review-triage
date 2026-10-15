@@ -1,0 +1,313 @@
+{
+  "game": "Clash of Clans",
+  "issue_groups": [
+    {
+      "category": "difficulty_balance",
+      "evidence": [
+        "please fix ranked, how it can be unfair due to people being hit less",
+        "we have 600 trophies and are matched with a clan that has 2600",
+        "constantly matched against much higher Town Halls"
+      ],
+      "review_ids": [
+        "556eed39-e995-4f42-8f12-92601d348279",
+        "b483d5c4-0944-4baa-ab36-973e82ac68f9",
+        "d19903cd-9b95-4f0b-8e2c-55ec6bac7115"
+      ],
+      "severity": "medium",
+      "title": "Unfair matchmaking in ranked and clan capital"
+    },
+    {
+      "category": "monetization",
+      "evidence": [
+        "they lock it behind a paywall",
+        "you're never going to catch up with the other players"
+      ],
+      "review_ids": [
+        "13a277d5-3408-4c3b-8606-b41dd753feb2",
+        "c9826dfc-d3db-4468-9239-b1d436e1ce20"
+      ],
+      "severity": "medium",
+      "title": "Gold pass changes seen as paywalling helpers and bonuses"
+    },
+    {
+      "category": "difficulty_balance",
+      "evidence": [
+        "gold is basically impossible",
+        "pls fix builder base elixer"
+      ],
+      "review_ids": [
+        "4f71693b-c384-4824-beb6-0210166f0817",
+        "14b36363-dd17-47bb-882a-0028d7034209"
+      ],
+      "severity": "medium",
+      "title": "Builder base gold/elixir economy too grindy"
+    },
+    {
+      "category": "account_progress_loss",
+      "evidence": [
+        "i can't even recover my old account",
+        "Removed My legend League title from my profile"
+      ],
+      "review_ids": [
+        "d8c95f3d-21ab-471a-8887-6adfa3b48d44",
+        "8f2249b2-af8c-4a83-94dc-0b278c2e39ca"
+      ],
+      "severity": "high",
+      "title": "Account progress or title lost with failed recovery"
+    }
+  ],
+  "pack_mode": "off",
+  "result_count": 19,
+  "results": [
+    {
+      "categories": [
+        "account_progress_loss"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "town hall level"
+      ],
+      "rationale": "Progress reset from town hall 12 to 1 and recovery failed.",
+      "reviewId": "d8c95f3d-21ab-471a-8887-6adfa3b48d44",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "content_ux",
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "ranked",
+        "trophies"
+      ],
+      "rationale": "Requests a base rotate option and reports unfair ranked trophy system.",
+      "reviewId": "556eed39-e995-4f42-8f12-92601d348279",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "Clan Wars",
+        "3-starring",
+        "Town Halls"
+      ],
+      "rationale": "Praise with a mild remark that upgrade times are brutally long.",
+      "reviewId": "a7835bda-9fab-4790-8a72-fd3157b660d4",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "coc",
+        "th13+"
+      ],
+      "rationale": "Pure praise.",
+      "reviewId": "b6f3b43d-d71c-4e11-aaa6-a8b509809f3a",
+      "severity": null
+    },
+    {
+      "categories": [
+        "stability_performance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "townhall"
+      ],
+      "rationale": "Complains of excessive mobile data usage, a resource complaint.",
+      "reviewId": "7bc1375e-f173-406a-8625-634da23f6050",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "content_ux",
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "builder base"
+      ],
+      "rationale": "Wants an opt-out from being attacked; frustrated by repeated raids and resource loss.",
+      "reviewId": "41cd8a57-43d0-4df0-a9b9-ad2c036fbad9",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "monetization"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "gold pass"
+      ],
+      "rationale": "Claims the gold pass update makes it pay-to-catch-up.",
+      "reviewId": "c9826dfc-d3db-4468-9239-b1d436e1ce20",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "Th-18",
+        "maxed"
+      ],
+      "rationale": "Praise only.",
+      "reviewId": "7bd74273-d73a-4b6d-b0ae-8fed6d731d4a",
+      "severity": null
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "builder base",
+        "loot",
+        "6 star"
+      ],
+      "rationale": "Builder base gold rewards too low, heavy grind.",
+      "reviewId": "4f71693b-c384-4824-beb6-0210166f0817",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "town hall"
+      ],
+      "rationale": "Name change confirm button stays grey; blocked with no workaround.",
+      "reviewId": "f640d626-1484-4417-a7d9-a3ad9ac3f00d",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "town halls"
+      ],
+      "rationale": "Praise and recommendation.",
+      "reviewId": "7623d5be-57da-40a3-9afe-5dd00ce0d4ff",
+      "severity": null
+    },
+    {
+      "categories": [
+        "account_progress_loss",
+        "other_issue"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "legend league",
+        "th14"
+      ],
+      "rationale": "Legend League title removed and support/bot unhelpful.",
+      "reviewId": "8f2249b2-af8c-4a83-94dc-0b278c2e39ca",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "clan capital wars",
+        "trophies"
+      ],
+      "rationale": "Unfair matchmaking against a far stronger clan.",
+      "reviewId": "b483d5c4-0944-4baa-ab36-973e82ac68f9",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "builder base elixer"
+      ],
+      "rationale": "Praise plus request to fix builder base elixir economy.",
+      "reviewId": "14b36363-dd17-47bb-882a-0028d7034209",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "th1-th18"
+      ],
+      "rationale": "Suggests shorter upgrade times.",
+      "reviewId": "b49275d5-2397-44fb-a1f6-bb0a53bf32eb",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "town hall",
+        "base hall",
+        "league"
+      ],
+      "rationale": "Dislikes removed old league and attack system, wants old version back.",
+      "reviewId": "de0a97a1-0305-4b17-b0e0-7cd408aa9e75",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "rank battles",
+        "Town Hall",
+        "3-star",
+        "trophy"
+      ],
+      "rationale": "Unfair matchmaking against higher town halls.",
+      "reviewId": "d19903cd-9b95-4f0b-8e2c-55ec6bac7115",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "monetization"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "gold pass",
+        "ore converter helper",
+        "builder and lab bonuses"
+      ],
+      "rationale": "Helper paywalled behind gold pass and longer wait for bonuses.",
+      "reviewId": "13a277d5-3408-4c3b-8606-b41dd753feb2",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "stability_performance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "cwl",
+        "loot attacks"
+      ],
+      "rationale": "Network switch triggers a try-again popup, interrupting important attacks.",
+      "reviewId": "b628bd09-e795-4a85-9321-d1ed38b767f6",
+      "severity": "medium"
+    }
+  ],
+  "run_id": "clash_of_clans-off-r3-b5",
+  "saved_at": "2026-10-15T18:38:01+00:00"
+}

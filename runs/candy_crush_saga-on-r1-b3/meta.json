@@ -1,0 +1,43 @@
+{
+  "api_error": null,
+  "batch": 3,
+  "cost_usd": 0.2044,
+  "elapsed_seconds": 40.1,
+  "exit_code": 0,
+  "game": "Candy Crush Saga",
+  "issue_groups": 3,
+  "limit": 20,
+  "model": "sonnet",
+  "offset": 40,
+  "pack": {
+    "file": "candy_crush_saga.yaml",
+    "present": true,
+    "sha256": "e25ae7d361de7dc4",
+    "terms": 47
+  },
+  "pack_mode": "on",
+  "permission_denials": [],
+  "prompt_sha256": "4e0a91e9f9a781b6",
+  "repeat": 1,
+  "result_count": 20,
+  "run_id": "candy_crush_saga-on-r1-b3",
+  "started_at": "2026-10-15T18:40:53+00:00",
+  "status": "ok",
+  "trace": {
+    "events": 25,
+    "get_jargon_pack_calls": 1,
+    "pack_mode": "on",
+    "pack_term_counts": [
+      47
+    ],
+    "tool_calls": 6,
+    "tools_used": [
+      "Skill",
+      "ToolSearch",
+      "get_jargon_pack",
+      "get_reviews",
+      "get_taxonomy",
+      "save_triage"
+    ]
+  }
+}

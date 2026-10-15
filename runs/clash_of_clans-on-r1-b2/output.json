@@ -1,0 +1,275 @@
+{
+  "game": "Clash of Clans",
+  "issue_groups": [
+    {
+      "category": "difficulty_balance",
+      "evidence": [
+        "I hate how long you have to wait for structures to build",
+        "construction take 5d 3d 2d that is not awesome",
+        "speed up a players experience without wanting cash for it"
+      ],
+      "review_ids": [
+        "519eba6b-0838-42ad-bf1f-e27032a9edc0",
+        "dd065dcb-6bf8-4b24-aac7-9ba527cd90c7",
+        "c32fe070-563b-433b-a890-8bd566c35788",
+        "dfc9a6ab-8590-4114-aa28-4867a8242b19",
+        "5457380d-fbaf-42a8-9e14-1887f051159f"
+      ],
+      "severity": "medium",
+      "title": "Building and upgrade timers feel too long"
+    },
+    {
+      "category": "stability_performance",
+      "evidence": [
+        "keep disconnected and war losing because of it",
+        "Current now mostly Disconnected by its own"
+      ],
+      "review_ids": [
+        "3c502e8b-41e2-4886-927f-9f31ff23551c"
+      ],
+      "severity": "high",
+      "title": "Disconnects during attacks and wars after the latest update"
+    },
+    {
+      "category": "difficulty_balance",
+      "evidence": [
+        "I'm getting Town Hall 18 opponents",
+        "league promotion requires a lot of effort",
+        "decrease the tournament for ranking time"
+      ],
+      "review_ids": [
+        "15341427-0d13-4844-9753-54f70cbbfef5",
+        "311597f7-df15-40fe-8f87-d6be872fd66c"
+      ],
+      "severity": "medium",
+      "title": "New ranked league system: matchmaking and promotion feel unfair or too demanding"
+    }
+  ],
+  "pack_mode": "on",
+  "result_count": 20,
+  "results": [
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "f69142c9-b242-422a-8d6c-475ee438a580",
+      "severity": null
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Praise and thanks, no complaint.",
+      "reviewId": "950a4c2d-913c-44c1-a9a2-674882ba6daf",
+      "severity": null
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Praise; mentions a second account without any problem.",
+      "reviewId": "aa7cce10-cd2e-4ace-99e5-5bce6c8abad7",
+      "severity": null
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Nostalgic praise.",
+      "reviewId": "07a2339f-90a7-482b-a504-4b25d51b8780",
+      "severity": null
+    },
+    {
+      "categories": [
+        "other_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Vague wish for the game to be more interesting, no concrete problem.",
+      "reviewId": "1c8beb9a-5b85-41db-bfca-7e3fd4e126e1",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "af695f91-a0dc-4305-b2fc-d2e35694ffef",
+      "severity": null
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "tournament for ranking"
+      ],
+      "rationale": "Asks for a shorter ranked tournament period, a mild pacing preference.",
+      "reviewId": "311597f7-df15-40fe-8f87-d6be872fd66c",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "coc"
+      ],
+      "rationale": "Praise only.",
+      "reviewId": "19bd8ef8-85d2-4ca4-b32b-c853f71920d1",
+      "severity": null
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Mild remark that building and upgrades take time, otherwise positive.",
+      "reviewId": "dfc9a6ab-8590-4114-aa28-4867a8242b19",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Dislikes long wait times for structures to build.",
+      "reviewId": "519eba6b-0838-42ad-bf1f-e27032a9edc0",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Requests a change related to clan names.",
+      "reviewId": "8ef721ca-3b38-4ee0-8ca9-5b87430fc015",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "town hall"
+      ],
+      "rationale": "Complains about waiting for upgrades and Town Hall level-up time, mildly.",
+      "reviewId": "dd065dcb-6bf8-4b24-aac7-9ba527cd90c7",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "stability_performance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "war"
+      ],
+      "rationale": "Repeated disconnects while attacking cause lost wars since the update.",
+      "reviewId": "3c502e8b-41e2-4886-927f-9f31ff23551c",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "difficulty_balance",
+        "monetization"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Wants faster build/upgrade progress without paying cash, implying speed-ups are gated by spending.",
+      "reviewId": "5457380d-fbaf-42a8-9e14-1887f051159f",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "915e8e97-a463-4648-b63f-ea22e4bdf0aa",
+      "severity": null
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "builder village",
+        "clan wars"
+      ],
+      "rationale": "Feature request for clan wars in the Builder Base.",
+      "reviewId": "fd82cbde-69b5-4b23-b50d-6d380e0f49f6",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "th",
+        "construction 5d 3d 2d",
+        "max"
+      ],
+      "rationale": "Long construction timers make reaching TH18 take over a year and bore beginners.",
+      "reviewId": "c32fe070-563b-433b-a890-8bd566c35788",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "8cf630e4-a8a3-4aab-9063-cd7536abe734",
+      "severity": null
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Praise; grinding is mentioned approvingly.",
+      "reviewId": "e9633a66-f504-47e7-af09-b1fa22d1f56c",
+      "severity": null
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "Town Hall 17",
+        "Town Hall 18",
+        "league promotion",
+        "league pushing"
+      ],
+      "rationale": "Matched against higher Town Hall opponents and finds the new league system's promotion too demanding.",
+      "reviewId": "15341427-0d13-4844-9753-54f70cbbfef5",
+      "severity": "medium"
+    }
+  ],
+  "run_id": "clash_of_clans-on-r1-b2",
+  "saved_at": "2026-10-14T16:54:55+00:00"
+}

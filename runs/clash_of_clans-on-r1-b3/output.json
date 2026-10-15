@@ -1,0 +1,296 @@
+{
+  "game": "Clash of Clans",
+  "issue_groups": [
+    {
+      "category": "difficulty_balance",
+      "evidence": [
+        "most of the time I found Town Hall of a higher level than mine",
+        "we were all th13-15 and then your opponent was th 16-18",
+        "are we supposed to laugh when we get town hall 15 max in our tournament attack when we are th 13?"
+      ],
+      "review_ids": [
+        "32a36f80-e18d-41b2-bc6f-403124b470e8",
+        "35ec26f7-4b06-47c1-99a4-7d88242cc104",
+        "283b2142-0f3d-44ca-b353-89910dfdfc48"
+      ],
+      "severity": "medium",
+      "title": "Ranked and war matchmaking pairs players against much higher Town Hall levels"
+    },
+    {
+      "category": "difficulty_balance",
+      "evidence": [
+        "tiring to wait for upgraded",
+        "please less the time required In build upgrade"
+      ],
+      "review_ids": [
+        "8d721e0a-a2a0-44b3-a276-4e3061b22b07",
+        "50d4647d-9be8-4522-8852-f04280e06355"
+      ],
+      "severity": "low",
+      "title": "Upgrade and build times are too long"
+    },
+    {
+      "category": "content_ux",
+      "evidence": [
+        "can you update builder hall I Max it and too boring",
+        "There need to be more troop hotkey slots, 10 is simply not enough",
+        "this game needs the mini peka"
+      ],
+      "review_ids": [
+        "a4cd9d8e-d120-4347-88c9-73ae71f96464",
+        "9104c395-896f-4086-a639-f5199b7e1b9b",
+        "456890f9-6c42-468f-a1cb-8fbabbf2e864"
+      ],
+      "severity": "low",
+      "title": "Players ask for new or expanded content and PC options"
+    }
+  ],
+  "pack_mode": "on",
+  "result_count": 20,
+  "results": [
+    {
+      "categories": [
+        "difficulty_balance",
+        "monetization"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "ore",
+        "equipment",
+        "battle pass",
+        "ore exchange helper"
+      ],
+      "rationale": "Ore economy is too stingy for equipment upgrades, and the ore helper was put behind the paid pass with worse rewards.",
+      "reviewId": "07559dec-f267-4a28-bb9b-91c6ff567657",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "Town Hall",
+        "ranked",
+        "builder base"
+      ],
+      "rationale": "Ranked matchmaking keeps pairing the player against higher Town Hall levels.",
+      "reviewId": "32a36f80-e18d-41b2-bc6f-403124b470e8",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "account_progress_loss"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "TH 15"
+      ],
+      "rationale": "Player says their Town Hall 15 account is gone.",
+      "reviewId": "e13ab2f6-f6eb-442d-b3dc-b95356c860cc",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "stability_performance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Describes a bug where copied base layouts do not place buildings, a minor fault that does not block play.",
+      "reviewId": "74c78e6c-6986-4952-b9fc-df2aeb9fe2d9",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "d3d85815-d683-44be-82f6-7ca8877698b6",
+      "severity": null
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "Clan War League",
+        "th13-15",
+        "rank points",
+        "demoted"
+      ],
+      "rationale": "Clan War League matchmaking pairs the clan against much higher Town Halls and the rank system feels forced.",
+      "reviewId": "35ec26f7-4b06-47c1-99a4-7d88242cc104",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "th 16",
+        "merge",
+        "archer tower"
+      ],
+      "rationale": "Praise for the merging feature.",
+      "reviewId": "9647159e-4b4b-4864-9319-be9c5e40e198",
+      "severity": null
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "builder hall",
+        "Max"
+      ],
+      "rationale": "Asks for more Builder Hall content since they have maxed it and are bored.",
+      "reviewId": "a4cd9d8e-d120-4347-88c9-73ae71f96464",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Praise for the strategic gameplay.",
+      "reviewId": "c103ffe5-472d-498f-b613-3d311e3d03ae",
+      "severity": null
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Likes the game but finds the upgrade waiting time tiring.",
+      "reviewId": "8d721e0a-a2a0-44b3-a276-4e3061b22b07",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Long praise with personal history, no complaint.",
+      "reviewId": "52608acf-311f-4bbb-874e-6bb623791d17",
+      "severity": null
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "tournament",
+        "th 15 max",
+        "league",
+        "th13"
+      ],
+      "rationale": "Ranked tournament matchmaking pairs them against maxed higher Town Halls, which feels unfair.",
+      "reviewId": "283b2142-0f3d-44ca-b353-89910dfdfc48",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "troop hotkey slots",
+        "deployment bar"
+      ],
+      "rationale": "PC-version requests for more hotkey slots, a cursor outline and a double deployment bar.",
+      "reviewId": "9104c395-896f-4086-a639-f5199b7e1b9b",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "mini peka"
+      ],
+      "rationale": "Requests a specific troop be added.",
+      "reviewId": "456890f9-6c42-468f-a1cb-8fbabbf2e864",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "The earlier ban problem is resolved and the player is thanking the developers.",
+      "reviewId": "aaa32b75-4b19-4656-9d7d-0524ea1555d5",
+      "severity": null
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "town halls"
+      ],
+      "rationale": "Pure praise.",
+      "reviewId": "18c501e3-a815-4402-a66e-8cb946d5cfb2",
+      "severity": null
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Politely asks for shorter build and upgrade times.",
+      "reviewId": "50d4647d-9be8-4522-8852-f04280e06355",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "account_progress_loss"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Account deletion pending with no Supercell ID to recover it; the player is locked out of the account.",
+      "reviewId": "c4a7b405-4dff-4910-8f70-5d8f369f3745",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Wrongly treated as underage, so they cannot rejoin their clan and have no way to fix it.",
+      "reviewId": "d07dc0c7-8223-4754-a3eb-423cc1f31a2d",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "Super Archer",
+        "Super Wizard",
+        "Thrower",
+        "Clan Wars",
+        "leagues"
+      ],
+      "rationale": "Praise for updates and events.",
+      "reviewId": "86c937d6-0046-4ace-8fcf-535ff734a626",
+      "severity": null
+    }
+  ],
+  "run_id": "clash_of_clans-on-r1-b3",
+  "saved_at": "2026-10-14T16:56:16+00:00"
+}

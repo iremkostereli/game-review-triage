@@ -1,0 +1,272 @@
+{
+  "game": "Clash of Clans",
+  "issue_groups": [
+    {
+      "category": "content_ux",
+      "evidence": [
+        "Stupid rules cannot revenge after 24 hours. At least make it 72 hours.",
+        "Revenge battles now have time limits"
+      ],
+      "review_ids": [
+        "fa74e698-b979-4ab1-8c0a-83b94c3ccbb6",
+        "3f4b4d1d-d5eb-4bcc-b0b8-b728f645fdbd"
+      ],
+      "severity": "low",
+      "title": "Revenge battle time limit is unpopular"
+    },
+    {
+      "category": "account_progress_loss",
+      "evidence": [
+        "they said my account has been deleted",
+        "I've lost all my progress",
+        "I am lost the game all i builded"
+      ],
+      "review_ids": [
+        "70317971-9869-4718-a426-a91c7bd9a88d",
+        "dfe9d79d-27c1-4751-b130-6237eba3162c"
+      ],
+      "severity": "high",
+      "title": "Account or village lost with all progress"
+    },
+    {
+      "category": "difficulty_balance",
+      "evidence": [
+        "it's just the upgrade time it's too consuming",
+        "Everything based on improvements takes days of time for a little improvement"
+      ],
+      "review_ids": [
+        "b5fc7adf-6770-4e35-85b4-dc89afb9b7e6",
+        "a5b13ac9-e9d6-4ed2-baab-b1de6f8fb705"
+      ],
+      "severity": "medium",
+      "title": "Upgrade timers feel too long"
+    }
+  ],
+  "pack_mode": "on",
+  "result_count": 20,
+  "results": [
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Neutral praise with no complaint.",
+      "reviewId": "91134a83-edac-4f46-8d8e-fc72b386031c",
+      "severity": null
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "revenge"
+      ],
+      "rationale": "Complains about the 24-hour revenge limit rule and wants a longer window, a rule/feature change request.",
+      "reviewId": "fa74e698-b979-4ab1-8c0a-83b94c3ccbb6",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "stability_performance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "defensive layout",
+        "ranked battles",
+        "farming base"
+      ],
+      "rationale": "Ranked defensive layout reverts to the old base, which looks like a fault costing points.",
+      "reviewId": "e7844736-a961-4a7b-bf9a-bc25059216ba",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "75c6eea6-385e-4bd8-84dc-f9ad751fac7c",
+      "severity": null
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "war draw",
+        "esport mode",
+        "clan war"
+      ],
+      "rationale": "Players are bored and thinking of quitting due to high war draw rate, a war balance complaint.",
+      "reviewId": "42339053-46e6-4cb1-9b91-85c225b04b89",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Upgrade times are too long, mild grind complaint.",
+      "reviewId": "b5fc7adf-6770-4e35-85b4-dc89afb9b7e6",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Mostly praise; the old-game comparison is neutral and unclear.",
+      "reviewId": "cfa56967-d4a4-4294-880b-ef4ed064b45f",
+      "severity": null
+    },
+    {
+      "categories": [
+        "account_progress_loss"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Account reported deleted and all progress lost.",
+      "reviewId": "70317971-9869-4718-a426-a91c7bd9a88d",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "2da09389-1335-474a-ba20-a3a1b0c2e2db",
+      "severity": null
+    },
+    {
+      "categories": [
+        "difficulty_balance"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Upgrade timers take days and the early game is unbearably slow.",
+      "reviewId": "a5b13ac9-e9d6-4ed2-baab-b1de6f8fb705",
+      "severity": "medium"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "aaa068e3-9f32-423b-8ceb-734837d90258",
+      "severity": null
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "36b74ebe-8831-4ba8-9fdc-5639b8c2b8a6",
+      "severity": null
+    },
+    {
+      "categories": [
+        "stability_performance"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "war"
+      ],
+      "rationale": "Game closes mid-war with a client/server sync error every time, voiding play.",
+      "reviewId": "982df6c5-b5d5-48cf-a43b-d74b2e1f9902",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Pure praise.",
+      "reviewId": "69411144-90b5-499d-ae1f-f3a18f0898e0",
+      "severity": null
+    },
+    {
+      "categories": [
+        "no_issue"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Praise with a wish to share ideas, no concrete request.",
+      "reviewId": "f0e68ecd-c885-4c27-84cf-4fc256d3f742",
+      "severity": null
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "revenge battles"
+      ],
+      "rationale": "Dislikes the new time limit on revenge battles, a changed feature.",
+      "reviewId": "3f4b4d1d-d5eb-4bcc-b0b8-b728f645fdbd",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "account_progress_loss"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "Town hall",
+        "game id"
+      ],
+      "rationale": "Reports game account lost along with everything built.",
+      "reviewId": "dfe9d79d-27c1-4751-b130-6237eba3162c",
+      "severity": "high"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": true,
+      "jargon_terms": [
+        "trophies",
+        "conversion of gold to elixir",
+        "coc"
+      ],
+      "rationale": "Unhappy about removed features such as trophies, army waiting time and resource conversion.",
+      "reviewId": "1e6e58b1-6c16-4871-b198-882d0924f78d",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "An update deleted a sentimental Christmas tree decoration; says it is not game-breaking.",
+      "reviewId": "9bb8b12d-5e41-499d-9edc-049ac5400156",
+      "severity": "low"
+    },
+    {
+      "categories": [
+        "content_ux"
+      ],
+      "has_jargon": false,
+      "jargon_terms": [],
+      "rationale": "Dislikes the update making the game feel childish and asks for no big changes.",
+      "reviewId": "ed748700-9a24-4b71-91aa-12e006c76992",
+      "severity": "low"
+    }
+  ],
+  "run_id": "clash_of_clans-on-r3-b1",
+  "saved_at": "2026-10-15T18:33:38+00:00"
+}

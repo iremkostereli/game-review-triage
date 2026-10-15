@@ -1,0 +1,43 @@
+{
+  "api_error": null,
+  "batch": 4,
+  "cost_usd": 0.2129,
+  "elapsed_seconds": 41.2,
+  "exit_code": 0,
+  "game": "Clash of Clans",
+  "issue_groups": 3,
+  "limit": 20,
+  "model": "sonnet",
+  "offset": 60,
+  "pack": {
+    "file": "clash_of_clans.yaml",
+    "present": true,
+    "sha256": "be63babfee146b67",
+    "terms": 50
+  },
+  "pack_mode": "on",
+  "permission_denials": [],
+  "prompt_sha256": "c62abc3173a7d8c3",
+  "repeat": 3,
+  "result_count": 20,
+  "run_id": "clash_of_clans-on-r3-b4",
+  "started_at": "2026-10-15T18:36:48+00:00",
+  "status": "ok",
+  "trace": {
+    "events": 26,
+    "get_jargon_pack_calls": 1,
+    "pack_mode": "on",
+    "pack_term_counts": [
+      50
+    ],
+    "tool_calls": 6,
+    "tools_used": [
+      "Skill",
+      "ToolSearch",
+      "get_jargon_pack",
+      "get_reviews",
+      "get_taxonomy",
+      "save_triage"
+    ]
+  }
+}

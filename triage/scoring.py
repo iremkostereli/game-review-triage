@@ -86,8 +86,14 @@ def load_gold(
     golden_set: Path | None = None,
     slices_path: Path | None = None,
     excluded_path: Path | None = None,
+    corrections_path: Path | None = None,
 ) -> dict[str, GoldReview]:
-    """The answer key, minus the reviews withheld from eval runs."""
+    """The answer key, minus the reviews withheld from eval runs.
+
+    With `corrections_path`, annotator corrections are applied on the way in. The
+    file on disk is never modified, so the original and corrected answer keys can
+    both be scored from the same committed artifacts.
+    """
     golden_set = golden_set or paths.GOLDEN_SET
     slices_path = slices_path or paths.GOLDEN_SLICES
     excluded_path = excluded_path or paths.EXCLUDED_REVIEWS
@@ -100,8 +106,16 @@ def load_gold(
     if excluded_path.exists():
         withheld = {item["reviewId"] for item in read_json(excluded_path).get("excluded", [])}
 
+    rows = read_jsonl(golden_set)
+    if corrections_path is not None:
+        from triage import corrections as corrections_module
+
+        rows, _ = corrections_module.apply_to_rows(
+            rows, corrections_module.load_corrections(corrections_path)
+        )
+
     gold: dict[str, GoldReview] = {}
-    for row in read_jsonl(golden_set):
+    for row in rows:
         review_id = row["reviewId"]
         if review_id in withheld:
             continue

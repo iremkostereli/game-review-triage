@@ -18,8 +18,9 @@ from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from triage import corrections as corrections_module
 from triage import paths, scoring
-from triage.jsonl_io import write_json
+from triage.jsonl_io import read_jsonl, write_json
 
 
 def fmt(value: Any, width: int = 6) -> str:
@@ -174,6 +175,10 @@ def main() -> int:
     parser.add_argument("--no-bootstrap", action="store_true",
                         help="skip confidence intervals (much faster)")
     parser.add_argument("--resamples", type=int, default=scoring.BOOTSTRAP_RESAMPLES)
+    parser.add_argument("--corrections", type=Path, default=paths.GOLDEN_CORRECTIONS,
+                        help="annotator corrections; scored alongside the original")
+    parser.add_argument("--original-only", action="store_true",
+                        help="skip the corrected answer key even if corrections exist")
     args = parser.parse_args()
 
     gold = scoring.load_gold()
@@ -201,8 +206,50 @@ def main() -> int:
 
     args.out.mkdir(parents=True, exist_ok=True)
     write_json(args.out / "metrics.json", report)
+    pages = [("Original answer key", report)]
+
+    # The corrected answer key is scored as a second, clearly separate result and
+    # never substituted for the original, because the review queue that produced
+    # the corrections was selected by the system's own output.
+    applied: list = []
+    if not args.original_only and args.corrections.exists():
+        applied = corrections_module.validate_against_gold(
+            corrections_module.load_corrections(args.corrections),
+            read_jsonl(paths.GOLDEN_SET),
+        )
+        if applied:
+            corrected_report = scoring.build_report(
+                scoring.load_gold(corrections_path=args.corrections),
+                runs,
+                bootstrap=not args.no_bootstrap,
+                resamples=args.resamples,
+            )
+            corrected_report["corrections"] = {
+                "count": len(applied),
+                "source": args.corrections.name,
+                "changes": [
+                    {
+                        "reviewId": c.review_id,
+                        "from": list(c.old_categories),
+                        "to": list(c.new_categories),
+                        "from_severity": c.old_severity,
+                        "to_severity": c.new_severity,
+                        "reason": c.reason,
+                    }
+                    for c in applied
+                ],
+            }
+            write_json(args.out / "metrics_corrected.json", corrected_report)
+            pages.append(("Corrected answer key", corrected_report))
+
+    body = []
+    for title, page in pages:
+        rendered = render_markdown(page)
+        if len(pages) > 1:
+            rendered = rendered.replace("# Eval results", f"# Eval results - {title}", 1)
+        body.append(rendered)
     (args.out / "summary.md").write_text(
-        render_markdown(report), encoding="utf-8", newline="\n"
+        "\n\n---\n\n".join(body), encoding="utf-8", newline="\n"
     )
 
     print()
@@ -217,6 +264,20 @@ def main() -> int:
             if entry and entry.get("delta") is not None:
                 print(f"delta micro-F1 on {slice_name:<10} n={entry['n']:<4} "
                       f"{fmt_delta(entry)}")
+
+    if applied:
+        print()
+        print(f"{len(applied)} annotator correction(s) applied to a second, separate "
+              "answer key:")
+        for correction in applied[:8]:
+            print(f"   {correction.review_id[:8]} {list(correction.old_categories)} -> "
+                  f"{list(correction.new_categories)}  ({correction.reason[:55]})")
+        if len(applied) > 8:
+            print(f"   ... and {len(applied) - 8} more")
+        for mode, slices in sorted(pages[-1][1]["variance"].items()):
+            print(f"   corrected: pack {mode.upper():<3} micro-F1 all="
+                  f"{fmt(slices['all']['category_micro.f1']['mean'])}")
+        print(f"   Wrote {args.out / 'metrics_corrected.json'}")
 
     print(f"\nWrote {args.out / 'metrics.json'}")
     print(f"Wrote {args.out / 'summary.md'}")

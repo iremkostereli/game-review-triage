@@ -30,6 +30,10 @@ EXCLUDED_REVIEWS = GOLDEN_DIR / "excluded_reviews.json"
 # picked, but committed so scoring can break results down without the raw data.
 GOLDEN_SLICES = GOLDEN_DIR / "slices.json"
 
+# Annotator corrections to the golden set, applied at scoring time rather than
+# edited into golden_set.jsonl, so the original labels stay auditable.
+GOLDEN_CORRECTIONS = GOLDEN_DIR / "corrections.jsonl"
+
 PACKS_DIR = REPO_ROOT / "packs"
 TAXONOMY_FILE = REPO_ROOT / "taxonomy" / "categories.yaml"
 

@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blind re-labeling</title>
+<style>
+  :root {
+    --bg:#f6f7f9; --card:#fff; --ink:#14181f; --muted:#667085; --line:#dfe3ea;
+    --accent:#2d5bd7; --accent-soft:#e8eeff; --warn:#b4341f; --ok:#11734b;
+    --old:#7a5b00; --old-soft:#fdf6e3; --new:#1b5e8a; --new-soft:#e8f3fa;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:15px/1.5 -apple-system,"Segoe UI",Roboto,Arial,sans-serif; }
+  .shell { display:flex; gap:16px; align-items:flex-start;
+           max-width:1500px; margin:0 auto; padding:14px 16px 90px; }
+  .main { flex:1 1 auto; min-width:0; }
+  .guide { flex:0 0 380px; position:sticky; top:14px; max-height:calc(100vh - 110px);
+           overflow:auto; background:var(--card); border:1px solid var(--line);
+           border-radius:10px; padding:14px; font-size:13px; }
+  .guide.collapsed { flex-basis:46px; overflow:hidden; padding:10px 8px; }
+  .guide.collapsed > *:not(.guide-head) { display:none; }
+  .guide-head { display:flex; justify-content:space-between; align-items:center; gap:8px;
+                margin-bottom:8px; }
+  .guide h3 { font-size:13px; margin:14px 0 6px; text-transform:uppercase;
+              letter-spacing:.05em; color:var(--muted); }
+  .guide h3:first-of-type { margin-top:4px; }
+  .gcat { border-top:1px solid var(--line); padding:7px 0; }
+  .gcat b { display:block; }
+  .gcat .typ { color:var(--accent); font-size:12px; }
+  .gcat .def { color:var(--muted); font-size:12.5px; }
+  .gcat .mv { color:var(--muted); font-size:12px; margin-top:3px; }
+  .gcase { border-top:1px solid var(--line); padding:7px 0; }
+  .gcase .q { font-weight:600; }
+  .gcase .r { color:var(--muted); }
+  .gcase .ex { color:var(--muted); font-size:12px; margin-top:4px; font-style:italic; }
+  .gtrap { border-top:1px solid var(--line); padding:6px 0; color:var(--muted); font-size:12.5px; }
+  .gtrap code { color:var(--ink); }
+
+  header { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:8px; }
+  header h1 { font-size:17px; margin:0; }
+  .muted { color:var(--muted); font-size:13px; }
+  .bar { height:5px; background:var(--line); border-radius:3px; overflow:hidden; margin-bottom:12px; }
+  .bar>div { height:100%; background:var(--accent); width:0; transition:width .2s; }
+
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px;
+          padding:15px; margin-bottom:13px; }
+  .meta { display:flex; gap:14px; flex-wrap:wrap; color:var(--muted); font-size:13px; margin-bottom:9px; }
+  .meta .game { color:var(--ink); font-weight:600; }
+  .review { font-size:19px; line-height:1.55; white-space:pre-wrap; word-break:break-word; }
+
+  h2 { font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:0 0 8px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:7px; }
+  .opt { display:flex; gap:9px; align-items:flex-start; text-align:left; font:inherit;
+         padding:9px 11px; border:1px solid var(--line); background:var(--card);
+         border-radius:8px; cursor:pointer; color:var(--ink); width:100%; }
+  .opt:hover { border-color:#b9c2d2; }
+  .opt[aria-pressed="true"] { background:var(--accent-soft); border-color:var(--accent); }
+  .opt .key { flex:none; width:20px; height:20px; border-radius:4px; background:var(--line);
+              font-size:12px; font-weight:700; display:grid; place-items:center; }
+  .opt[aria-pressed="true"] .key { background:var(--accent); color:#fff; }
+  .opt .label { font-weight:600; }
+  .opt .hint { display:block; font-weight:400; color:var(--muted); font-size:12px; margin-top:2px; }
+  .row { display:flex; gap:7px; flex-wrap:wrap; }
+  .sev { min-width:140px; flex:1; }
+  .sev-disabled { opacity:.45; pointer-events:none; }
+  .flags .opt { width:auto; }
+
+  footer { position:fixed; left:0; right:0; bottom:0; background:var(--card);
+           border-top:1px solid var(--line); padding:10px 16px; }
+  .finner { max-width:1500px; margin:0 auto; display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+  .btn { font:inherit; padding:8px 14px; border-radius:7px; border:1px solid var(--line);
+         background:var(--card); cursor:pointer; color:var(--ink); }
+  .btn.primary { background:var(--accent); color:#fff; border-color:var(--accent); font-weight:600; }
+  .btn.small { padding:5px 10px; font-size:13px; }
+  .btn:disabled { opacity:.45; cursor:not-allowed; }
+  .msg { font-size:13px; } .msg.warn { color:var(--warn); } .msg.ok { color:var(--ok); }
+  .spacer { flex:1; }
+  .keys { color:var(--muted); font-size:12px; }
+
+  .sides { display:grid; grid-template-columns:1fr 1fr; gap:11px; }
+  .side { border:1px solid var(--line); border-radius:9px; padding:12px; cursor:pointer; }
+  .side h4 { margin:0 0 7px; font-size:13px; }
+  .side.old { background:var(--old-soft); border-color:#e4d08a; }
+  .side.new { background:var(--new-soft); border-color:#a9cfe4; }
+  .side[aria-pressed="true"] { outline:3px solid var(--accent); }
+  .side .labels { font-size:15px; font-weight:600; }
+  .side .sev { font-size:13px; color:var(--muted); min-width:0; }
+  .rationale { background:var(--bg); border:1px dashed var(--line); border-radius:8px;
+               padding:10px; font-size:13px; color:var(--muted); margin-top:10px; }
+  select, textarea { font:inherit; width:100%; padding:8px 10px; border:1px solid var(--line);
+                     border-radius:8px; background:var(--card); color:var(--ink); }
+  textarea { min-height:52px; resize:vertical; }
+  [hidden] { display:none !important; }
+  .done { text-align:center; padding:40px 16px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="main">
+    <header>
+      <h1 id="phase-title">Blind re-labeling</h1>
+      <span class="muted" id="progress"></span>
+    </header>
+    <div class="bar"><div id="fill"></div></div>
+
+    <div id="blind">
+      <div class="card">
+        <div class="meta">
+          <span class="game" id="m-game"></span>
+          <span id="m-stars"></span>
+          <span id="m-pos"></span>
+          <span class="msg ok" id="m-saved"></span>
+        </div>
+        <div class="review" id="m-text"></div>
+      </div>
+      <div class="card">
+        <h2>Categories — 1–8</h2>
+        <div class="grid" id="cats"></div>
+      </div>
+      <div class="card">
+        <h2>Severity — H / M / L</h2>
+        <div class="row" id="sevs"></div>
+      </div>
+      <div class="card">
+        <h2>Flags</h2>
+        <div class="row flags" id="flags"></div>
+      </div>
+    </div>
+
+    <div id="decide" hidden>
+      <div class="card">
+        <div class="meta">
+          <span class="game" id="d-game"></span>
+          <span id="d-stars"></span>
+          <span id="d-pos"></span>
+        </div>
+        <div class="review" id="d-text"></div>
+      </div>
+      <div class="card">
+        <h2>Which label does the guide support? — press 1 or 2</h2>
+        <div class="sides">
+          <div class="side old" id="side-old" aria-pressed="false">
+            <h4>1 · Your original label</h4>
+            <div class="labels" id="d-old"></div>
+            <div class="sev" id="d-old-sev"></div>
+          </div>
+          <div class="side new" id="side-new" aria-pressed="false">
+            <h4>2 · Your new blind label</h4>
+            <div class="labels" id="d-new"></div>
+            <div class="sev" id="d-new-sev"></div>
+          </div>
+        </div>
+        <div class="rationale" id="d-rationale" hidden></div>
+        <button class="btn small" id="toggle-rationale" style="margin-top:10px">
+          R · show what the system said
+        </button>
+      </div>
+      <div class="card" id="reason-card" hidden>
+        <h2>Why did the label change?</h2>
+        <select id="reason"></select>
+        <div style="margin-top:9px">
+          <textarea id="note" placeholder="Optional note"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div id="finished" class="card done" hidden>
+      <h2 style="font-size:15px;text-transform:none;letter-spacing:0;color:var(--ink)">
+        All done
+      </h2>
+      <p class="muted" id="finished-text"></p>
+    </div>
+  </div>
+
+  <aside class="guide" id="guide">
+    <div class="guide-head">
+      <strong id="guide-title">Reference</strong>
+      <button class="btn small" id="guide-toggle">hide</button>
+    </div>
+    <div id="guide-body"></div>
+  </aside>
+</div>
+
+<footer>
+  <div class="finner">
+    <button class="btn" id="prev">&larr; Back</button>
+    <button class="btn primary" id="next">Save &amp; next &rarr;</button>
+    <span class="msg" id="msg"></span>
+    <span class="spacer"></span>
+    <span class="keys" id="keys">1–8 categories · H/M/L severity · J jargon · U unclear · ←/→ navigate · G guide</span>
+  </div>
+</footer>
+
+<script>
+"use strict";
+
+const S = {
+  phase: "blind", tasks: [], index: 0, cats: [], sevs: [], sevDefs: {},
+  draft: {}, saved: {}, guide: null, reasons: {},
+  diffs: [], dIndex: 0, decisions: {}, choice: null, showRationale: false,
+};
+const el = (id) => document.getElementById(id);
+
+/* ---------------------------------------------------------------- guide */
+
+function renderGuide() {
+  const g = S.guide;
+  const h = [];
+  h.push(`<div class="muted">${g.general_rule || ""}</div>`);
+  h.push("<h3>Categories</h3>");
+  for (const c of g.categories) {
+    h.push(`<div class="gcat"><b>${c.name} <code>${c.id}</code></b>`);
+    if (c.typical) h.push(`<span class="typ">usually ${c.typical}</span>`);
+    h.push(`<span class="def">${c.definition}</span>`);
+    for (const m of c.movers || []) {
+      h.push(`<span class="mv"><b>${m.label}:</b> ${m.reason}</span>`);
+    }
+    if (c.exclusive) h.push(`<span class="mv"><b>Cannot be combined with anything.</b></span>`);
+    h.push("</div>");
+  }
+  h.push("<h3>Severity</h3>");
+  for (const level of g.severity_levels) {
+    h.push(`<div class="gcat"><b>${level}</b><span class="def">${g.severity_definitions[level]}</span></div>`);
+  }
+  h.push("<h3>The four hard cases</h3>");
+  for (const c of g.cases) {
+    h.push(`<div class="gcase"><div class="q">${c.question}</div><div class="r">${c.rule}</div>`);
+    for (const ex of c.examples || []) {
+      h.push(`<div class="ex">“${ex.quote}” → <code>${(ex.labels || []).join(", ")}</code></div>`);
+    }
+    h.push("</div>");
+  }
+  h.push("<h3>Keyword traps</h3>");
+  for (const t of g.keyword_traps) {
+    h.push(`<div class="gtrap">“${t.quote}” → <code>${(t.labels || []).join(", ")}</code><br>${t.why}</div>`);
+  }
+  h.push("<h3>Jargon flag</h3>");
+  h.push(`<div class="gtrap">${g.jargon_help}</div>`);
+  el("guide-body").innerHTML = h.join("");
+}
+
+/* ------------------------------------------------------------ pass 1 */
+
+function answers(id) {
+  if (!S.draft[id]) {
+    const prior = S.saved[id];
+    S.draft[id] = prior
+      ? { categories: [...(prior.categories || [])], severity: prior.severity || null,
+          has_jargon: !!prior.has_jargon, unclear: !!prior.unclear }
+      : { categories: [], severity: null, has_jargon: false, unclear: false };
+  }
+  return S.draft[id];
+}
+
+function buildBlindControls() {
+  const cats = el("cats"); cats.innerHTML = "";
+  S.cats.forEach((c, i) => {
+    const b = document.createElement("button");
+    b.className = "opt"; b.type = "button"; b.dataset.id = c.id;
+    b.setAttribute("aria-pressed", "false");
+    b.innerHTML = `<span class="key">${i + 1}</span><span><span class="label"></span><span class="hint"></span></span>`;
+    b.querySelector(".label").textContent = c.name;
+    b.querySelector(".hint").textContent = c.typical ? "usually " + c.typical : "";
+    b.title = c.definition;
+    b.onclick = () => toggleCat(c.id);
+    cats.appendChild(b);
+  });
+
+  const sevs = el("sevs"); sevs.innerHTML = "";
+  S.sevs.forEach((s) => {
+    const b = document.createElement("button");
+    b.className = "opt sev"; b.type = "button"; b.dataset.level = s;
+    b.setAttribute("aria-pressed", "false");
+    b.innerHTML = `<span class="key">${s[0].toUpperCase()}</span><span><span class="label"></span></span>`;
+    b.querySelector(".label").textContent = s;
+    b.title = S.sevDefs[s] || "";
+    b.onclick = () => setSev(s);
+    sevs.appendChild(b);
+  });
+
+  const flags = el("flags"); flags.innerHTML = "";
+  [["has_jargon", "J", "Contains game jargon"], ["unclear", "U", "Unclear / cannot label"]]
+    .forEach(([k, key, label]) => {
+      const b = document.createElement("button");
+      b.className = "opt"; b.type = "button"; b.dataset.flag = k;
+      b.setAttribute("aria-pressed", "false");
+      b.innerHTML = `<span class="key">${key}</span><span class="label"></span>`;
+      b.querySelector(".label").textContent = label;
+      b.onclick = () => toggleFlag(k);
+      flags.appendChild(b);
+    });
+}
+
+function toggleCat(id) {
+  const t = S.tasks[S.index]; if (!t) return;
+  const a = answers(t.reviewId);
+  const exclusive = S.cats.find((c) => c.id === id)?.exclusive;
+  const fallback = id === "other_issue";
+  if (a.categories.includes(id)) {
+    a.categories = a.categories.filter((c) => c !== id);
+  } else if (exclusive || fallback) {
+    a.categories = [id];
+    if (exclusive) a.severity = null;
+  } else {
+    a.categories = a.categories
+      .filter((c) => !S.cats.find((x) => x.id === c)?.exclusive && c !== "other_issue")
+      .concat(id);
+  }
+  renderBlind();
+}
+
+function setSev(level) {
+  const t = S.tasks[S.index]; if (!t) return;
+  const a = answers(t.reviewId);
+  if (a.categories.some((c) => S.cats.find((x) => x.id === c)?.exclusive)) return;
+  a.severity = a.severity === level ? null : level;
+  renderBlind();
+}
+
+function toggleFlag(k) {
+  const t = S.tasks[S.index]; if (!t) return;
+  const a = answers(t.reviewId);
+  a[k] = !a[k];
+  renderBlind();
+}
+
+function renderBlind() {
+  const t = S.tasks[S.index];
+  if (!t) return;
+  el("m-game").textContent = t.game;
+  el("m-stars").textContent = t.score + "/5 stars";
+  el("m-pos").textContent = (S.index + 1) + " of " + S.tasks.length;
+  el("m-saved").textContent = S.saved[t.reviewId] ? "saved" : "";
+  el("m-text").textContent = t.content;
+
+  const a = answers(t.reviewId);
+  document.querySelectorAll("#cats .opt").forEach((b) => {
+    b.setAttribute("aria-pressed", a.categories.includes(b.dataset.id) ? "true" : "false");
+  });
+  const off = a.categories.some((c) => S.cats.find((x) => x.id === c)?.exclusive);
+  el("sevs").classList.toggle("sev-disabled", off);
+  document.querySelectorAll("#sevs .opt").forEach((b) => {
+    b.setAttribute("aria-pressed", a.severity === b.dataset.level ? "true" : "false");
+  });
+  document.querySelectorAll("#flags .opt").forEach((b) => {
+    b.setAttribute("aria-pressed", a[b.dataset.flag] ? "true" : "false");
+  });
+
+  const done = S.tasks.filter((x) => S.saved[x.reviewId]).length;
+  el("progress").textContent = `${done} / ${S.tasks.length} labeled`;
+  el("fill").style.width = (100 * done / S.tasks.length) + "%";
+  el("prev").disabled = S.index === 0;
+  setMsg("");
+}
+
+function validateBlind(a) {
+  if (a.unclear && a.categories.length === 0) return null;
+  if (a.categories.length === 0) return "Pick at least one category, or mark it unclear (U).";
+  if (a.categories.some((c) => S.cats.find((x) => x.id === c)?.exclusive)) {
+    return a.categories.length > 1 ? "no_issue cannot be combined." : null;
+  }
+  if (!a.severity) return "Set severity: H, M or L.";
+  return null;
+}
+
+async function saveBlind() {
+  const t = S.tasks[S.index]; if (!t) return true;
+  const a = answers(t.reviewId);
+  const problem = validateBlind(a);
+  if (problem) { setMsg(problem, "warn"); return false; }
+  const body = {
+    reviewId: t.reviewId, categories: a.categories,
+    severity: a.categories.some((c) => S.cats.find((x) => x.id === c)?.exclusive) ? null : a.severity,
+    has_jargon: a.has_jargon, unclear: a.unclear,
+  };
+  const r = await fetch("/api/blind_label", {
+    method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body),
+  });
+  const d = await r.json();
+  if (!r.ok) { setMsg(d.error || "Save failed", "warn"); return false; }
+  S.saved[t.reviewId] = d.saved;
+  return true;
+}
+
+/* ------------------------------------------------------------ pass 2 */
+
+async function enterDecidePhase() {
+  const r = await fetch("/api/differences");
+  const d = await r.json();
+  if (d.remaining.length) { setMsg(`${d.remaining.length} reviews still unlabeled.`, "warn"); return; }
+  S.diffs = d.differences;
+  S.decisions = d.decisions || {};
+  S.phase = "decide";
+  S.dIndex = S.diffs.findIndex((x) => !S.decisions[x.reviewId]);
+  if (S.dIndex < 0) S.dIndex = S.diffs.length;
+  el("blind").hidden = true;
+  el("phase-title").textContent = "Settle the differences";
+  el("keys").textContent = "1 original · 2 new · R show the system's reasoning · →/Enter save · G guide";
+  renderDecide();
+}
+
+function renderDecide() {
+  const total = S.diffs.length;
+  const done = Object.keys(S.decisions).length;
+  el("progress").textContent = `${done} / ${total} decided`;
+  el("fill").style.width = total ? (100 * done / total) + "%" : "100%";
+
+  if (S.dIndex >= total) {
+    el("decide").hidden = true;
+    el("finished").hidden = false;
+    const changes = Object.values(S.decisions).filter((x) => x.action === "change").length;
+    el("finished-text").textContent =
+      `${total} differences settled. ${changes} label(s) changed, written to data/golden/corrections.jsonl. ` +
+      `You can close this tab and stop the server with Ctrl+C.`;
+    el("next").disabled = true;
+    el("prev").disabled = total === 0;
+    return;
+  }
+
+  const d = S.diffs[S.dIndex];
+  const prior = S.decisions[d.reviewId];
+  S.choice = prior ? (prior.action === "change" ? "new" : "old") : null;
+  S.showRationale = false;
+
+  el("decide").hidden = false;
+  el("finished").hidden = true;
+  el("next").disabled = false;
+  el("d-game").textContent = d.game;
+  el("d-stars").textContent = d.score + "/5 stars";
+  el("d-pos").textContent = (S.dIndex + 1) + " of " + total;
+  el("d-text").textContent = d.content;
+  el("d-old").textContent = d.old_categories.join(", ") || "(none)";
+  el("d-old-sev").textContent = "severity: " + (d.old_severity || "none")
+    + " · jargon: " + (d.old_has_jargon ? "yes" : "no");
+  el("d-new").textContent = d.new_categories.join(", ") || "(none)";
+  el("d-new-sev").textContent = "severity: " + (d.new_severity || "none")
+    + " · jargon: " + (d.new_has_jargon ? "yes" : "no");
+
+  const rat = el("d-rationale");
+  rat.hidden = !S.showRationale;
+  rat.innerHTML = "<b>The system said:</b> <code>"
+    + (d.model_categories.join(", ") || "(none)") + "</code> · severity "
+    + (d.model_severity || "none") + "<br>"
+    + (d.model_rationales || []).map((x) => "• " + x).join("<br>");
+
+  if (prior && prior.reason_code) {
+    el("reason").value = prior.reason_code;
+    const note = (prior.reason || "").split(": ").slice(1).join(": ");
+    el("note").value = note;
+  } else {
+    el("reason").value = "";
+    el("note").value = "";
+  }
+  syncChoice();
+  setMsg("");
+}
+
+function syncChoice() {
+  el("side-old").setAttribute("aria-pressed", S.choice === "old" ? "true" : "false");
+  el("side-new").setAttribute("aria-pressed", S.choice === "new" ? "true" : "false");
+  el("reason-card").hidden = S.choice !== "new";
+}
+
+function pick(which) { S.choice = which; syncChoice(); }
+
+async function saveDecision() {
+  const d = S.diffs[S.dIndex];
+  if (!d) return true;
+  if (!S.choice) { setMsg("Pick which label the guide supports: 1 or 2.", "warn"); return false; }
+
+  const body = { reviewId: d.reviewId, choice: S.choice === "new" ? "change" : "keep" };
+  if (S.choice === "new") {
+    body.new_categories = d.new_categories;
+    body.new_severity = d.new_severity;
+    body.reason_code = el("reason").value;
+    body.note = el("note").value;
+    if (!body.reason_code) { setMsg("Pick a reason for the change.", "warn"); return false; }
+  }
+  const r = await fetch("/api/decision", {
+    method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body),
+  });
+  const res = await r.json();
+  if (!r.ok) { setMsg(res.error || "Save failed", "warn"); return false; }
+  S.decisions[d.reviewId] = {
+    action: body.choice, reason_code: body.reason_code || null,
+    reason: body.reason_code ? S.reasons[body.reason_code] + (body.note ? ": " + body.note : "") : "",
+  };
+  return true;
+}
+
+/* -------------------------------------------------------------- shared */
+
+function setMsg(text, kind) {
+  const n = el("msg"); n.textContent = text; n.className = "msg" + (kind ? " " + kind : "");
+}
+
+async function goNext() {
+  if (S.phase === "blind") {
+    if (!(await saveBlind())) return;
+    if (S.index < S.tasks.length - 1) { S.index += 1; renderBlind(); }
+    else if (S.tasks.every((t) => S.saved[t.reviewId])) await enterDecidePhase();
+    else { S.index = S.tasks.findIndex((t) => !S.saved[t.reviewId]); renderBlind(); }
+  } else {
+    if (!(await saveDecision())) return;
+    S.dIndex += 1;
+    renderDecide();
+  }
+}
+
+function goPrev() {
+  if (S.phase === "blind") { if (S.index > 0) { S.index -= 1; renderBlind(); } }
+  else if (S.dIndex > 0) { S.dIndex -= 1; renderDecide(); }
+}
+
+document.addEventListener("keydown", (e) => {
+  const note = el("note");
+  if (document.activeElement === note || document.activeElement === el("reason")) {
+    if (e.key === "Escape") document.activeElement.blur();
+    return;
+  }
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
+  const k = e.key.toLowerCase();
+
+  if (k === "g") { e.preventDefault(); el("guide").classList.toggle("collapsed");
+                   el("guide-toggle").textContent =
+                     el("guide").classList.contains("collapsed") ? "show" : "hide"; return; }
+  if (k === "arrowright" || k === "enter") { e.preventDefault(); goNext(); return; }
+  if (k === "arrowleft") { e.preventDefault(); goPrev(); return; }
+
+  if (S.phase === "blind") {
+    if (k >= "1" && k <= "8") {
+      const i = parseInt(k, 10) - 1;
+      if (i < S.cats.length) { e.preventDefault(); toggleCat(S.cats[i].id); }
+      return;
+    }
+    if (k === "h") { e.preventDefault(); setSev("high"); return; }
+    if (k === "m") { e.preventDefault(); setSev("medium"); return; }
+    if (k === "l") { e.preventDefault(); setSev("low"); return; }
+    if (k === "j") { e.preventDefault(); toggleFlag("has_jargon"); return; }
+    if (k === "u") { e.preventDefault(); toggleFlag("unclear"); return; }
+  } else {
+    if (k === "1") { e.preventDefault(); pick("old"); return; }
+    if (k === "2") { e.preventDefault(); pick("new"); return; }
+    if (k === "r") {
+      e.preventDefault(); S.showRationale = !S.showRationale;
+      el("d-rationale").hidden = !S.showRationale; return;
+    }
+  }
+});
+
+el("next").onclick = goNext;
+el("prev").onclick = goPrev;
+el("side-old").onclick = () => pick("old");
+el("side-new").onclick = () => pick("new");
+el("toggle-rationale").onclick = () => {
+  S.showRationale = !S.showRationale;
+  el("d-rationale").hidden = !S.showRationale;
+};
+el("guide-toggle").onclick = () => {
+  el("guide").classList.toggle("collapsed");
+  el("guide-toggle").textContent =
+    el("guide").classList.contains("collapsed") ? "show" : "hide";
+};
+
+(async function init() {
+  const d = await (await fetch("/api/bootstrap")).json();
+  S.tasks = d.tasks;
+  S.saved = d.blind_labels || {};
+  S.guide = d.guide;
+  S.cats = d.guide.categories;
+  S.sevs = d.guide.severity_levels;
+  S.sevDefs = d.guide.severity_definitions;
+  S.reasons = d.change_reasons;
+  S.decisions = d.decisions || {};
+
+  const sel = el("reason");
+  sel.innerHTML = '<option value="">— pick a reason —</option>'
+    + Object.entries(S.reasons).map(([k, v]) => `<option value="${k}">${v}</option>`).join("");
+
+  renderGuide();
+  buildBlindControls();
+
+  const firstUnlabeled = S.tasks.findIndex((t) => !S.saved[t.reviewId]);
+  if (firstUnlabeled === -1 && S.tasks.length) { await enterDecidePhase(); }
+  else { S.index = Math.max(0, firstUnlabeled); renderBlind(); }
+})();
+</script>
+</body>
+</html>

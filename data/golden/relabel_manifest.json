@@ -1,0 +1,392 @@
+{
+  "counts": {
+    "control": 30,
+    "queue": 46,
+    "total": 76
+  },
+  "description": "Blind re-labeling task list. The `source` field is for analysis only and is never shown during labeling.",
+  "fingerprint": "083d8644d5fa195b",
+  "seed": 20261017,
+  "tasks": [
+    {
+      "order": 0,
+      "reviewId": "0f4e107d-bf8d-41eb-ac5e-237aef0a1986",
+      "source": "control"
+    },
+    {
+      "order": 1,
+      "reviewId": "d48764cc-198a-41f9-b965-e52d3c724600",
+      "source": "queue"
+    },
+    {
+      "order": 2,
+      "reviewId": "6f583892-aa38-4ed4-ad5c-2b3d7c680963",
+      "source": "queue"
+    },
+    {
+      "order": 3,
+      "reviewId": "a8aa727f-0b08-444e-8979-429243705659",
+      "source": "queue"
+    },
+    {
+      "order": 4,
+      "reviewId": "5b0bb8d8-ed1b-478c-927a-e8f181bc342e",
+      "source": "queue"
+    },
+    {
+      "order": 5,
+      "reviewId": "c103ffe5-472d-498f-b613-3d311e3d03ae",
+      "source": "control"
+    },
+    {
+      "order": 6,
+      "reviewId": "69411144-90b5-499d-ae1f-f3a18f0898e0",
+      "source": "control"
+    },
+    {
+      "order": 7,
+      "reviewId": "7bc1375e-f173-406a-8625-634da23f6050",
+      "source": "queue"
+    },
+    {
+      "order": 8,
+      "reviewId": "b628bd09-e795-4a85-9321-d1ed38b767f6",
+      "source": "queue"
+    },
+    {
+      "order": 9,
+      "reviewId": "bc63101c-2b49-4318-9b7c-e6376ddef7a0",
+      "source": "queue"
+    },
+    {
+      "order": 10,
+      "reviewId": "eb14a980-00ea-4aee-a599-e88f17029550",
+      "source": "control"
+    },
+    {
+      "order": 11,
+      "reviewId": "4f71693b-c384-4824-beb6-0210166f0817",
+      "source": "queue"
+    },
+    {
+      "order": 12,
+      "reviewId": "a7835bda-9fab-4790-8a72-fd3157b660d4",
+      "source": "queue"
+    },
+    {
+      "order": 13,
+      "reviewId": "c8956c76-e461-45fb-ab8a-dbb921440b2b",
+      "source": "control"
+    },
+    {
+      "order": 14,
+      "reviewId": "5457380d-fbaf-42a8-9e14-1887f051159f",
+      "source": "queue"
+    },
+    {
+      "order": 15,
+      "reviewId": "f2000f93-eeb7-4869-94fb-3214bc07b1e5",
+      "source": "queue"
+    },
+    {
+      "order": 16,
+      "reviewId": "2a567a77-5dee-4b65-8fe9-55a5a8c077b2",
+      "source": "control"
+    },
+    {
+      "order": 17,
+      "reviewId": "7578a5fe-723e-43d8-abd9-11fd15267d2f",
+      "source": "queue"
+    },
+    {
+      "order": 18,
+      "reviewId": "ee140179-ebc8-49e7-9af4-126a84cac3e4",
+      "source": "control"
+    },
+    {
+      "order": 19,
+      "reviewId": "15341427-0d13-4844-9753-54f70cbbfef5",
+      "source": "control"
+    },
+    {
+      "order": 20,
+      "reviewId": "c7ece634-642a-455d-ad44-1a786e727b50",
+      "source": "queue"
+    },
+    {
+      "order": 21,
+      "reviewId": "50d4647d-9be8-4522-8852-f04280e06355",
+      "source": "control"
+    },
+    {
+      "order": 22,
+      "reviewId": "e5673b29-cdb2-458f-92db-a3ca50cbcf84",
+      "source": "control"
+    },
+    {
+      "order": 23,
+      "reviewId": "6b44b8d9-af45-4fd1-b41c-7751d19f5216",
+      "source": "queue"
+    },
+    {
+      "order": 24,
+      "reviewId": "41933925-3cd6-4fe0-8c28-781ccb045973",
+      "source": "control"
+    },
+    {
+      "order": 25,
+      "reviewId": "a2bf4c59-744b-4aba-a1d8-ff8e4bd9c110",
+      "source": "queue"
+    },
+    {
+      "order": 26,
+      "reviewId": "8ac09b04-67cc-42b1-a8e7-6302d208afe8",
+      "source": "queue"
+    },
+    {
+      "order": 27,
+      "reviewId": "46111864-08d4-46ad-ae7e-2db9edd52eb8",
+      "source": "control"
+    },
+    {
+      "order": 28,
+      "reviewId": "0a5a4571-6e3a-4d0b-ab69-3cfba6f4cad0",
+      "source": "queue"
+    },
+    {
+      "order": 29,
+      "reviewId": "9647159e-4b4b-4864-9319-be9c5e40e198",
+      "source": "control"
+    },
+    {
+      "order": 30,
+      "reviewId": "1bbcd164-300c-4b0f-9a59-7d9d8bc12f1c",
+      "source": "queue"
+    },
+    {
+      "order": 31,
+      "reviewId": "74c78e6c-6986-4952-b9fc-df2aeb9fe2d9",
+      "source": "queue"
+    },
+    {
+      "order": 32,
+      "reviewId": "4de0c278-f530-4a4e-b1f1-24dd366bd6ea",
+      "source": "control"
+    },
+    {
+      "order": 33,
+      "reviewId": "8a91f24a-85b9-49d5-83e4-08975408d21e",
+      "source": "queue"
+    },
+    {
+      "order": 34,
+      "reviewId": "e13ab2f6-f6eb-442d-b3dc-b95356c860cc",
+      "source": "queue"
+    },
+    {
+      "order": 35,
+      "reviewId": "13a277d5-3408-4c3b-8606-b41dd753feb2",
+      "source": "queue"
+    },
+    {
+      "order": 36,
+      "reviewId": "26b506b6-0d7b-4588-a547-ba0465fae46f",
+      "source": "queue"
+    },
+    {
+      "order": 37,
+      "reviewId": "50c061b6-3199-4411-90cf-e3f4629c72f3",
+      "source": "queue"
+    },
+    {
+      "order": 38,
+      "reviewId": "fe607934-362e-4526-be6b-015adf4c676c",
+      "source": "queue"
+    },
+    {
+      "order": 39,
+      "reviewId": "d8c95f3d-21ab-471a-8887-6adfa3b48d44",
+      "source": "control"
+    },
+    {
+      "order": 40,
+      "reviewId": "70317971-9869-4718-a426-a91c7bd9a88d",
+      "source": "control"
+    },
+    {
+      "order": 41,
+      "reviewId": "07559dec-f267-4a28-bb9b-91c6ff567657",
+      "source": "queue"
+    },
+    {
+      "order": 42,
+      "reviewId": "c08a6c62-71ef-4445-a52a-9eaa0dbe8c7e",
+      "source": "queue"
+    },
+    {
+      "order": 43,
+      "reviewId": "fd82cbde-69b5-4b23-b50d-6d380e0f49f6",
+      "source": "queue"
+    },
+    {
+      "order": 44,
+      "reviewId": "fcfc0c4a-0ddd-4c3e-8bd6-0f70eb1e736a",
+      "source": "queue"
+    },
+    {
+      "order": 45,
+      "reviewId": "0992e09f-de5c-4c48-bd91-171eaea2d3d2",
+      "source": "control"
+    },
+    {
+      "order": 46,
+      "reviewId": "c69aad9f-db7b-4f72-ae1d-169a787a3239",
+      "source": "control"
+    },
+    {
+      "order": 47,
+      "reviewId": "f69142c9-b242-422a-8d6c-475ee438a580",
+      "source": "control"
+    },
+    {
+      "order": 48,
+      "reviewId": "d07dc0c7-8223-4754-a3eb-423cc1f31a2d",
+      "source": "queue"
+    },
+    {
+      "order": 49,
+      "reviewId": "5c57a05f-cae4-4672-9cc8-9d08228dc80c",
+      "source": "queue"
+    },
+    {
+      "order": 50,
+      "reviewId": "df412c7c-ffed-40cc-b327-1a1925e79506",
+      "source": "control"
+    },
+    {
+      "order": 51,
+      "reviewId": "dfc9a6ab-8590-4114-aa28-4867a8242b19",
+      "source": "queue"
+    },
+    {
+      "order": 52,
+      "reviewId": "8c04eb64-0583-4db8-af0c-602a633c6980",
+      "source": "control"
+    },
+    {
+      "order": 53,
+      "reviewId": "0a7d4c7a-300b-488d-99ac-e7c4cef9643a",
+      "source": "control"
+    },
+    {
+      "order": 54,
+      "reviewId": "de0a97a1-0305-4b17-b0e0-7cd408aa9e75",
+      "source": "queue"
+    },
+    {
+      "order": 55,
+      "reviewId": "1e6e58b1-6c16-4871-b198-882d0924f78d",
+      "source": "queue"
+    },
+    {
+      "order": 56,
+      "reviewId": "91134a83-edac-4f46-8d8e-fc72b386031c",
+      "source": "control"
+    },
+    {
+      "order": 57,
+      "reviewId": "f16d89bc-7f39-4a17-8fad-1bb9e0423a4f",
+      "source": "queue"
+    },
+    {
+      "order": 58,
+      "reviewId": "aaf283ba-09d5-4b2a-ae76-c1e06f646440",
+      "source": "control"
+    },
+    {
+      "order": 59,
+      "reviewId": "1aa92d17-a305-4a44-9e6d-21825babd905",
+      "source": "control"
+    },
+    {
+      "order": 60,
+      "reviewId": "26b18092-64eb-4051-9f37-2e9e0f281a4f",
+      "source": "control"
+    },
+    {
+      "order": 61,
+      "reviewId": "7bd74273-d73a-4b6d-b0ae-8fed6d731d4a",
+      "source": "control"
+    },
+    {
+      "order": 62,
+      "reviewId": "69b0753c-2c90-4eb9-9f63-66840542efbb",
+      "source": "queue"
+    },
+    {
+      "order": 63,
+      "reviewId": "2f4b6e4b-119d-4e34-8f79-0f39269583f9",
+      "source": "queue"
+    },
+    {
+      "order": 64,
+      "reviewId": "9104c395-896f-4086-a639-f5199b7e1b9b",
+      "source": "queue"
+    },
+    {
+      "order": 65,
+      "reviewId": "c4a7b405-4dff-4910-8f70-5d8f369f3745",
+      "source": "queue"
+    },
+    {
+      "order": 66,
+      "reviewId": "ce8bb37b-8362-48f7-82f0-26a3d2f41dda",
+      "source": "queue"
+    },
+    {
+      "order": 67,
+      "reviewId": "36749b68-20e0-4f71-8ec8-bc86e45d287b",
+      "source": "queue"
+    },
+    {
+      "order": 68,
+      "reviewId": "b5fc7adf-6770-4e35-85b4-dc89afb9b7e6",
+      "source": "queue"
+    },
+    {
+      "order": 69,
+      "reviewId": "6198054b-b3ba-420b-92d6-7574c712dad1",
+      "source": "queue"
+    },
+    {
+      "order": 70,
+      "reviewId": "5af76046-5283-4c19-b263-88f24416dd1c",
+      "source": "control"
+    },
+    {
+      "order": 71,
+      "reviewId": "19bd8ef8-85d2-4ca4-b32b-c853f71920d1",
+      "source": "control"
+    },
+    {
+      "order": 72,
+      "reviewId": "722a6207-6ba7-4459-ba50-7e931e27d41a",
+      "source": "control"
+    },
+    {
+      "order": 73,
+      "reviewId": "456890f9-6c42-468f-a1cb-8fbabbf2e864",
+      "source": "queue"
+    },
+    {
+      "order": 74,
+      "reviewId": "fa74e698-b979-4ab1-8c0a-83b94c3ccbb6",
+      "source": "queue"
+    },
+    {
+      "order": 75,
+      "reviewId": "a5b13ac9-e9d6-4ed2-baab-b1de6f8fb705",
+      "source": "queue"
+    }
+  ]
+}

@@ -1,0 +1,5187 @@
+{
+  "comparison": {
+    "all": {
+      "category_macro_f1": {
+        "ci_high": 0.0321,
+        "ci_low": -0.0265,
+        "delta": -0.0,
+        "metric": "category_macro_f1",
+        "n": 178,
+        "off": 0.8108,
+        "on": 0.8108,
+        "resamples": 2000,
+        "significant": false
+      },
+      "category_micro.f1": {
+        "ci_high": 0.0145,
+        "ci_low": -0.0143,
+        "delta": 0.0,
+        "metric": "category_micro.f1",
+        "n": 178,
+        "off": 0.8729,
+        "on": 0.8729,
+        "resamples": 2000,
+        "significant": false
+      },
+      "exact_set_match": {
+        "ci_high": 0.0262,
+        "ci_low": -0.0169,
+        "delta": 0.0037,
+        "metric": "exact_set_match",
+        "n": 178,
+        "off": 0.8071,
+        "on": 0.8109,
+        "resamples": 2000,
+        "significant": false
+      },
+      "high_star_issue_recall.recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "delta": 0.0,
+        "metric": "high_star_issue_recall.recall",
+        "n": 178,
+        "off": 1.0,
+        "on": 1.0,
+        "resamples": 2000,
+        "significant": false
+      },
+      "issue_detection.f1": {
+        "ci_high": 0.007,
+        "ci_low": 0.0,
+        "delta": 0.0027,
+        "metric": "issue_detection.f1",
+        "n": 178,
+        "off": 0.9907,
+        "on": 0.9933,
+        "resamples": 2000,
+        "significant": false
+      },
+      "jargon_flag_agreement": {
+        "ci_high": -0.015,
+        "ci_low": -0.0899,
+        "delta": -0.0506,
+        "metric": "jargon_flag_agreement",
+        "n": 178,
+        "off": 0.8745,
+        "on": 0.824,
+        "resamples": 2000,
+        "significant": true
+      },
+      "severity.accuracy": {
+        "ci_high": 0.0165,
+        "ci_low": -0.0246,
+        "delta": -0.0027,
+        "metric": "severity.accuracy",
+        "n": 178,
+        "off": 0.793,
+        "on": 0.7903,
+        "resamples": 2000,
+        "significant": false
+      }
+    },
+    "game_Candy Crush Saga": {
+      "category_macro_f1": {
+        "ci_high": 0.0191,
+        "ci_low": -0.0451,
+        "delta": -0.0165,
+        "metric": "category_macro_f1",
+        "n": 79,
+        "off": 0.826,
+        "on": 0.8094,
+        "resamples": 2000,
+        "significant": false
+      },
+      "category_micro.f1": {
+        "ci_high": 0.0144,
+        "ci_low": -0.0282,
+        "delta": -0.0073,
+        "metric": "category_micro.f1",
+        "n": 79,
+        "off": 0.8699,
+        "on": 0.8626,
+        "resamples": 2000,
+        "significant": false
+      },
+      "exact_set_match": {
+        "ci_high": 0.0127,
+        "ci_low": -0.0507,
+        "delta": -0.0169,
+        "metric": "exact_set_match",
+        "n": 79,
+        "off": 0.7806,
+        "on": 0.7637,
+        "resamples": 2000,
+        "significant": false
+      },
+      "high_star_issue_recall.recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "delta": 0.0,
+        "metric": "high_star_issue_recall.recall",
+        "n": 79,
+        "off": 1.0,
+        "on": 1.0,
+        "resamples": 2000,
+        "significant": false
+      },
+      "issue_detection.f1": {
+        "ci_high": 0.0095,
+        "ci_low": 0.0,
+        "delta": 0.0028,
+        "metric": "issue_detection.f1",
+        "n": 79,
+        "off": 0.9972,
+        "on": 1.0,
+        "resamples": 2000,
+        "significant": false
+      },
+      "jargon_flag_agreement": {
+        "ci_high": -0.0632,
+        "ci_low": -0.1983,
+        "delta": -0.1266,
+        "metric": "jargon_flag_agreement",
+        "n": 79,
+        "off": 0.8861,
+        "on": 0.7595,
+        "resamples": 2000,
+        "significant": true
+      },
+      "severity.accuracy": {
+        "ci_high": 0.0172,
+        "ci_low": -0.0547,
+        "delta": -0.017,
+        "metric": "severity.accuracy",
+        "n": 79,
+        "off": 0.7797,
+        "on": 0.7627,
+        "resamples": 2000,
+        "significant": false
+      }
+    },
+    "game_Clash of Clans": {
+      "category_macro_f1": {
+        "ci_high": 0.0235,
+        "ci_low": -0.0219,
+        "delta": 0.0008,
+        "metric": "category_macro_f1",
+        "n": 99,
+        "off": 0.8597,
+        "on": 0.8605,
+        "resamples": 2000,
+        "significant": false
+      },
+      "category_micro.f1": {
+        "ci_high": 0.0257,
+        "ci_low": -0.011,
+        "delta": 0.0069,
+        "metric": "category_micro.f1",
+        "n": 99,
+        "off": 0.8756,
+        "on": 0.8825,
+        "resamples": 2000,
+        "significant": false
+      },
+      "exact_set_match": {
+        "ci_high": 0.0471,
+        "ci_low": -0.0034,
+        "delta": 0.0202,
+        "metric": "exact_set_match",
+        "n": 99,
+        "off": 0.8283,
+        "on": 0.8485,
+        "resamples": 2000,
+        "significant": false
+      },
+      "high_star_issue_recall.recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "delta": 0.0,
+        "metric": "high_star_issue_recall.recall",
+        "n": 99,
+        "off": 1.0,
+        "on": 1.0,
+        "resamples": 2000,
+        "significant": false
+      },
+      "issue_detection.f1": {
+        "ci_high": 0.0081,
+        "ci_low": 0.0,
+        "delta": 0.0025,
+        "metric": "issue_detection.f1",
+        "n": 99,
+        "off": 0.9849,
+        "on": 0.9873,
+        "resamples": 2000,
+        "significant": false
+      },
+      "jargon_flag_agreement": {
+        "ci_high": 0.0438,
+        "ci_low": -0.0269,
+        "delta": 0.0101,
+        "metric": "jargon_flag_agreement",
+        "n": 99,
+        "off": 0.8653,
+        "on": 0.8754,
+        "resamples": 2000,
+        "significant": false
+      },
+      "severity.accuracy": {
+        "ci_high": 0.0322,
+        "ci_low": -0.0091,
+        "delta": 0.0103,
+        "metric": "severity.accuracy",
+        "n": 99,
+        "off": 0.8051,
+        "on": 0.8154,
+        "resamples": 2000,
+        "significant": false
+      }
+    },
+    "jargon": {
+      "category_macro_f1": {
+        "ci_high": 0.0191,
+        "ci_low": -0.0496,
+        "delta": -0.0134,
+        "metric": "category_macro_f1",
+        "n": 71,
+        "off": 0.9079,
+        "on": 0.8945,
+        "resamples": 2000,
+        "significant": false
+      },
+      "category_micro.f1": {
+        "ci_high": 0.0194,
+        "ci_low": -0.0326,
+        "delta": -0.0061,
+        "metric": "category_micro.f1",
+        "n": 71,
+        "off": 0.8747,
+        "on": 0.8686,
+        "resamples": 2000,
+        "significant": false
+      },
+      "exact_set_match": {
+        "ci_high": 0.0469,
+        "ci_low": -0.047,
+        "delta": 0.0,
+        "metric": "exact_set_match",
+        "n": 71,
+        "off": 0.8075,
+        "on": 0.8075,
+        "resamples": 2000,
+        "significant": false
+      },
+      "high_star_issue_recall.recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "delta": 0.0,
+        "metric": "high_star_issue_recall.recall",
+        "n": 71,
+        "off": 1.0,
+        "on": 1.0,
+        "resamples": 2000,
+        "significant": false
+      },
+      "issue_detection.f1": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "delta": 0.0,
+        "metric": "issue_detection.f1",
+        "n": 71,
+        "off": 0.9917,
+        "on": 0.9917,
+        "resamples": 2000,
+        "significant": false
+      },
+      "jargon_flag_agreement": {
+        "ci_high": 0.0423,
+        "ci_low": -0.0141,
+        "delta": 0.0141,
+        "metric": "jargon_flag_agreement",
+        "n": 71,
+        "off": 0.8826,
+        "on": 0.8967,
+        "resamples": 2000,
+        "significant": false
+      },
+      "severity.accuracy": {
+        "ci_high": 0.0173,
+        "ci_low": -0.043,
+        "delta": -0.0111,
+        "metric": "severity.accuracy",
+        "n": 71,
+        "off": 0.8222,
+        "on": 0.8111,
+        "resamples": 2000,
+        "significant": false
+      }
+    },
+    "no_jargon": {
+      "category_macro_f1": {
+        "ci_high": 0.0233,
+        "ci_low": -0.0293,
+        "delta": -0.0079,
+        "metric": "category_macro_f1",
+        "n": 107,
+        "off": 0.8013,
+        "on": 0.7934,
+        "resamples": 2000,
+        "significant": false
+      },
+      "category_micro.f1": {
+        "ci_high": 0.0214,
+        "ci_low": -0.0107,
+        "delta": 0.0044,
+        "metric": "category_micro.f1",
+        "n": 107,
+        "off": 0.8716,
+        "on": 0.8759,
+        "resamples": 2000,
+        "significant": false
+      },
+      "exact_set_match": {
+        "ci_high": 0.0218,
+        "ci_low": -0.0124,
+        "delta": 0.0063,
+        "metric": "exact_set_match",
+        "n": 107,
+        "off": 0.8068,
+        "on": 0.8131,
+        "resamples": 2000,
+        "significant": false
+      },
+      "high_star_issue_recall.recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "delta": 0.0,
+        "metric": "high_star_issue_recall.recall",
+        "n": 107,
+        "off": 1.0,
+        "on": 1.0,
+        "resamples": 2000,
+        "significant": false
+      },
+      "issue_detection.f1": {
+        "ci_high": 0.0137,
+        "ci_low": 0.0,
+        "delta": 0.0052,
+        "metric": "issue_detection.f1",
+        "n": 107,
+        "off": 0.9896,
+        "on": 0.9948,
+        "resamples": 2000,
+        "significant": false
+      },
+      "jargon_flag_agreement": {
+        "ci_high": -0.0374,
+        "ci_low": -0.1527,
+        "delta": -0.0934,
+        "metric": "jargon_flag_agreement",
+        "n": 107,
+        "off": 0.8691,
+        "on": 0.7757,
+        "resamples": 2000,
+        "significant": true
+      },
+      "severity.accuracy": {
+        "ci_high": 0.0334,
+        "ci_low": -0.0212,
+        "delta": 0.0052,
+        "metric": "severity.accuracy",
+        "n": 107,
+        "off": 0.7656,
+        "on": 0.7708,
+        "resamples": 2000,
+        "significant": false
+      }
+    },
+    "slice_enriched": {
+      "category_macro_f1": {
+        "ci_high": 0.0144,
+        "ci_low": -0.0276,
+        "delta": -0.0062,
+        "metric": "category_macro_f1",
+        "n": 120,
+        "off": 0.88,
+        "on": 0.8738,
+        "resamples": 2000,
+        "significant": false
+      },
+      "category_micro.f1": {
+        "ci_high": 0.0225,
+        "ci_low": -0.0148,
+        "delta": 0.0026,
+        "metric": "category_micro.f1",
+        "n": 120,
+        "off": 0.8677,
+        "on": 0.8702,
+        "resamples": 2000,
+        "significant": false
+      },
+      "exact_set_match": {
+        "ci_high": 0.0334,
+        "ci_low": -0.0278,
+        "delta": 0.0028,
+        "metric": "exact_set_match",
+        "n": 120,
+        "off": 0.7944,
+        "on": 0.7972,
+        "resamples": 2000,
+        "significant": false
+      },
+      "high_star_issue_recall.recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "delta": 0.0,
+        "metric": "high_star_issue_recall.recall",
+        "n": 120,
+        "off": 1.0,
+        "on": 1.0,
+        "resamples": 2000,
+        "significant": false
+      },
+      "issue_detection.f1": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "delta": 0.0,
+        "metric": "issue_detection.f1",
+        "n": 120,
+        "off": 0.9912,
+        "on": 0.9912,
+        "resamples": 2000,
+        "significant": false
+      },
+      "jargon_flag_agreement": {
+        "ci_high": 0.0,
+        "ci_low": -0.1,
+        "delta": -0.0472,
+        "metric": "jargon_flag_agreement",
+        "n": 120,
+        "off": 0.85,
+        "on": 0.8028,
+        "resamples": 2000,
+        "significant": false
+      },
+      "severity.accuracy": {
+        "ci_high": 0.0238,
+        "ci_low": -0.0251,
+        "delta": 0.0,
+        "metric": "severity.accuracy",
+        "n": 120,
+        "off": 0.7993,
+        "on": 0.7993,
+        "resamples": 2000,
+        "significant": false
+      }
+    },
+    "slice_random": {
+      "category_macro_f1": {
+        "ci_high": 0.0025,
+        "ci_low": -0.0684,
+        "delta": -0.0392,
+        "metric": "category_macro_f1",
+        "n": 58,
+        "off": 0.8302,
+        "on": 0.791,
+        "resamples": 2000,
+        "significant": false
+      },
+      "category_micro.f1": {
+        "ci_high": 0.0136,
+        "ci_low": -0.0266,
+        "delta": -0.0059,
+        "metric": "category_micro.f1",
+        "n": 58,
+        "off": 0.8848,
+        "on": 0.8789,
+        "resamples": 2000,
+        "significant": false
+      },
+      "exact_set_match": {
+        "ci_high": 0.023,
+        "ci_low": -0.0115,
+        "delta": 0.0058,
+        "metric": "exact_set_match",
+        "n": 58,
+        "off": 0.8333,
+        "on": 0.8391,
+        "resamples": 2000,
+        "significant": false
+      },
+      "high_star_issue_recall.recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "delta": 0.0,
+        "metric": "high_star_issue_recall.recall",
+        "n": 58,
+        "off": 1.0,
+        "on": 1.0,
+        "resamples": 1733,
+        "significant": false
+      },
+      "issue_detection.f1": {
+        "ci_high": 0.0282,
+        "ci_low": 0.0,
+        "delta": 0.0108,
+        "metric": "issue_detection.f1",
+        "n": 58,
+        "off": 0.9892,
+        "on": 1.0,
+        "resamples": 2000,
+        "significant": false
+      },
+      "jargon_flag_agreement": {
+        "ci_high": -0.0115,
+        "ci_low": -0.1207,
+        "delta": -0.0575,
+        "metric": "jargon_flag_agreement",
+        "n": 58,
+        "off": 0.9253,
+        "on": 0.8678,
+        "resamples": 2000,
+        "significant": true
+      },
+      "severity.accuracy": {
+        "ci_high": 0.0247,
+        "ci_low": -0.0494,
+        "delta": -0.0108,
+        "metric": "severity.accuracy",
+        "n": 58,
+        "off": 0.7742,
+        "on": 0.7634,
+        "resamples": 2000,
+        "significant": false
+      }
+    },
+    "stars_1_3": {
+      "category_macro_f1": {
+        "ci_high": 0.0277,
+        "ci_low": -0.0481,
+        "delta": -0.0018,
+        "metric": "category_macro_f1",
+        "n": 83,
+        "off": 0.8207,
+        "on": 0.8189,
+        "resamples": 2000,
+        "significant": false
+      },
+      "category_micro.f1": {
+        "ci_high": 0.0146,
+        "ci_low": -0.0304,
+        "delta": -0.0081,
+        "metric": "category_micro.f1",
+        "n": 83,
+        "off": 0.8472,
+        "on": 0.839,
+        "resamples": 2000,
+        "significant": false
+      },
+      "exact_set_match": {
+        "ci_high": 0.0361,
+        "ci_low": -0.0481,
+        "delta": -0.004,
+        "metric": "exact_set_match",
+        "n": 83,
+        "off": 0.7349,
+        "on": 0.7309,
+        "resamples": 2000,
+        "significant": false
+      },
+      "high_star_issue_recall.recall": {
+        "ci_high": null,
+        "ci_low": null,
+        "delta": null,
+        "metric": "high_star_issue_recall.recall",
+        "n": 83
+      },
+      "issue_detection.f1": {
+        "ci_high": 0.0063,
+        "ci_low": 0.0,
+        "delta": 0.002,
+        "metric": "issue_detection.f1",
+        "n": 83,
+        "off": 0.998,
+        "on": 1.0,
+        "resamples": 2000,
+        "significant": false
+      },
+      "jargon_flag_agreement": {
+        "ci_high": -0.0321,
+        "ci_low": -0.1526,
+        "delta": -0.0884,
+        "metric": "jargon_flag_agreement",
+        "n": 83,
+        "off": 0.8394,
+        "on": 0.751,
+        "resamples": 2000,
+        "significant": true
+      },
+      "severity.accuracy": {
+        "ci_high": 0.0282,
+        "ci_low": -0.0169,
+        "delta": 0.0041,
+        "metric": "severity.accuracy",
+        "n": 83,
+        "off": 0.7602,
+        "on": 0.7642,
+        "resamples": 2000,
+        "significant": false
+      }
+    },
+    "stars_4_5": {
+      "category_macro_f1": {
+        "ci_high": 0.0345,
+        "ci_low": -0.0308,
+        "delta": 0.0013,
+        "metric": "category_macro_f1",
+        "n": 95,
+        "off": 0.8338,
+        "on": 0.8351,
+        "resamples": 2000,
+        "significant": false
+      },
+      "category_micro.f1": {
+        "ci_high": 0.0273,
+        "ci_low": -0.0063,
+        "delta": 0.0086,
+        "metric": "category_micro.f1",
+        "n": 95,
+        "off": 0.9002,
+        "on": 0.9088,
+        "resamples": 2000,
+        "significant": false
+      },
+      "exact_set_match": {
+        "ci_high": 0.0316,
+        "ci_low": -0.0035,
+        "delta": 0.0105,
+        "metric": "exact_set_match",
+        "n": 95,
+        "off": 0.8702,
+        "on": 0.8807,
+        "resamples": 2000,
+        "significant": false
+      },
+      "high_star_issue_recall.recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "delta": 0.0,
+        "metric": "high_star_issue_recall.recall",
+        "n": 95,
+        "off": 1.0,
+        "on": 1.0,
+        "resamples": 2000,
+        "significant": false
+      },
+      "issue_detection.f1": {
+        "ci_high": 0.0123,
+        "ci_low": 0.0,
+        "delta": 0.0037,
+        "metric": "issue_detection.f1",
+        "n": 95,
+        "off": 0.9768,
+        "on": 0.9805,
+        "resamples": 2000,
+        "significant": false
+      },
+      "jargon_flag_agreement": {
+        "ci_high": 0.0281,
+        "ci_low": -0.0667,
+        "delta": -0.0175,
+        "metric": "jargon_flag_agreement",
+        "n": 95,
+        "off": 0.9053,
+        "on": 0.8877,
+        "resamples": 2000,
+        "significant": false
+      },
+      "severity.accuracy": {
+        "ci_high": 0.0167,
+        "ci_low": -0.0583,
+        "delta": -0.0159,
+        "metric": "severity.accuracy",
+        "n": 95,
+        "off": 0.8571,
+        "on": 0.8412,
+        "resamples": 2000,
+        "significant": false
+      }
+    }
+  },
+  "corrections": {
+    "changes": [
+      {
+        "from": [
+          "other_issue"
+        ],
+        "from_severity": "low",
+        "reason": "I applied the rule wrongly",
+        "reviewId": "a8aa727f-0b08-444e-8979-429243705659",
+        "to": [
+          "difficulty_balance"
+        ],
+        "to_severity": "medium"
+      },
+      {
+        "from": [
+          "difficulty_balance"
+        ],
+        "from_severity": "low",
+        "reason": "I judged the severity wrongly",
+        "reviewId": "5b0bb8d8-ed1b-478c-927a-e8f181bc342e",
+        "to": [
+          "difficulty_balance"
+        ],
+        "to_severity": "medium"
+      },
+      {
+        "from": [
+          "content_ux"
+        ],
+        "from_severity": "low",
+        "reason": "I read a bug as a feature request",
+        "reviewId": "7bc1375e-f173-406a-8625-634da23f6050",
+        "to": [
+          "stability_performance"
+        ],
+        "to_severity": "medium"
+      },
+      {
+        "from": [
+          "content_ux"
+        ],
+        "from_severity": "low",
+        "reason": "I read a bug as a feature request",
+        "reviewId": "bc63101c-2b49-4318-9b7c-e6376ddef7a0",
+        "to": [
+          "stability_performance"
+        ],
+        "to_severity": "medium"
+      },
+      {
+        "from": [
+          "content_ux",
+          "difficulty_balance"
+        ],
+        "from_severity": "medium",
+        "reason": "I applied the rule wrongly",
+        "reviewId": "4f71693b-c384-4824-beb6-0210166f0817",
+        "to": [
+          "difficulty_balance"
+        ],
+        "to_severity": "medium"
+      },
+      {
+        "from": [
+          "difficulty_balance"
+        ],
+        "from_severity": "medium",
+        "reason": "I judged the severity wrongly",
+        "reviewId": "c8956c76-e461-45fb-ab8a-dbb921440b2b",
+        "to": [
+          "difficulty_balance"
+        ],
+        "to_severity": "high"
+      },
+      {
+        "from": [
+          "monetization"
+        ],
+        "from_severity": "medium",
+        "reason": "I applied the rule wrongly",
+        "reviewId": "f2000f93-eeb7-4869-94fb-3214bc07b1e5",
+        "to": [
+          "ads"
+        ],
+        "to_severity": "medium"
+      },
+      {
+        "from": [
+          "account_progress_loss"
+        ],
+        "from_severity": "high",
+        "reason": "I applied the rule wrongly",
+        "reviewId": "7578a5fe-723e-43d8-abd9-11fd15267d2f",
+        "to": [
+          "difficulty_balance"
+        ],
+        "to_severity": "medium"
+      },
+      {
+        "from": [
+          "stability_performance"
+        ],
+        "from_severity": "high",
+        "reason": "I applied the rule wrongly",
+        "reviewId": "a2bf4c59-744b-4aba-a1d8-ff8e4bd9c110",
+        "to": [
+          "account_progress_loss"
+        ],
+        "to_severity": "high"
+      },
+      {
+        "from": [
+          "monetization"
+        ],
+        "from_severity": "high",
+        "reason": "I applied the rule wrongly",
+        "reviewId": "0a5a4571-6e3a-4d0b-ab69-3cfba6f4cad0",
+        "to": [
+          "ads"
+        ],
+        "to_severity": "medium"
+      },
+      {
+        "from": [
+          "other_issue"
+        ],
+        "from_severity": "low",
+        "reason": "I applied the rule wrongly",
+        "reviewId": "1bbcd164-300c-4b0f-9a59-7d9d8bc12f1c",
+        "to": [
+          "content_ux"
+        ],
+        "to_severity": "low"
+      },
+      {
+        "from": [
+          "content_ux"
+        ],
+        "from_severity": "low",
+        "reason": "I judged the severity wrongly",
+        "reviewId": "74c78e6c-6986-4952-b9fc-df2aeb9fe2d9",
+        "to": [
+          "content_ux"
+        ],
+        "to_severity": "medium"
+      },
+      {
+        "from": [
+          "difficulty_balance"
+        ],
+        "from_severity": "medium",
+        "reason": "I judged the severity wrongly",
+        "reviewId": "8a91f24a-85b9-49d5-83e4-08975408d21e",
+        "to": [
+          "difficulty_balance"
+        ],
+        "to_severity": "low"
+      },
+      {
+        "from": [
+          "other_issue"
+        ],
+        "from_severity": "low",
+        "reason": "I applied the rule wrongly",
+        "reviewId": "e13ab2f6-f6eb-442d-b3dc-b95356c860cc",
+        "to": [
+          "account_progress_loss"
+        ],
+        "to_severity": "high"
+      },
+      {
+        "from": [
+          "difficulty_balance",
+          "monetization"
+        ],
+        "from_severity": "medium",
+        "reason": "Other: I missed a third issue",
+        "reviewId": "13a277d5-3408-4c3b-8606-b41dd753feb2",
+        "to": [
+          "content_ux",
+          "difficulty_balance",
+          "monetization"
+        ],
+        "to_severity": "medium"
+      },
+      {
+        "from": [
+          "content_ux"
+        ],
+        "from_severity": "low",
+        "reason": "I missed a second issue",
+        "reviewId": "26b506b6-0d7b-4588-a547-ba0465fae46f",
+        "to": [
+          "content_ux",
+          "difficulty_balance",
+          "monetization"
+        ],
+        "to_severity": "medium"
+      },
+      {
+        "from": [
+          "stability_performance"
+        ],
+        "from_severity": "medium",
+        "reason": "I judged the severity wrongly",
+        "reviewId": "fe607934-362e-4526-be6b-015adf4c676c",
+        "to": [
+          "stability_performance"
+        ],
+        "to_severity": "high"
+      },
+      {
+        "from": [
+          "content_ux",
+          "monetization"
+        ],
+        "from_severity": "medium",
+        "reason": "I read a bug as a feature request",
+        "reviewId": "07559dec-f267-4a28-bb9b-91c6ff567657",
+        "to": [
+          "difficulty_balance",
+          "monetization"
+        ],
+        "to_severity": "medium"
+      },
+      {
+        "from": [
+          "content_ux"
+        ],
+        "from_severity": "low",
+        "reason": "I missed a second issue",
+        "reviewId": "c08a6c62-71ef-4445-a52a-9eaa0dbe8c7e",
+        "to": [
+          "content_ux",
+          "difficulty_balance"
+        ],
+        "to_severity": "low"
+      },
+      {
+        "from": [
+          "no_issue"
+        ],
+        "from_severity": null,
+        "reason": "I applied the rule wrongly",
+        "reviewId": "fd82cbde-69b5-4b23-b50d-6d380e0f49f6",
+        "to": [
+          "content_ux"
+        ],
+        "to_severity": "low"
+      },
+      {
+        "from": [
+          "content_ux"
+        ],
+        "from_severity": "low",
+        "reason": "I read a bug as a feature request",
+        "reviewId": "dfc9a6ab-8590-4114-aa28-4867a8242b19",
+        "to": [
+          "difficulty_balance"
+        ],
+        "to_severity": "low"
+      },
+      {
+        "from": [
+          "content_ux"
+        ],
+        "from_severity": "medium",
+        "reason": "I judged the severity wrongly",
+        "reviewId": "de0a97a1-0305-4b17-b0e0-7cd408aa9e75",
+        "to": [
+          "content_ux"
+        ],
+        "to_severity": "low"
+      },
+      {
+        "from": [
+          "content_ux"
+        ],
+        "from_severity": "medium",
+        "reason": "I judged the severity wrongly",
+        "reviewId": "1e6e58b1-6c16-4871-b198-882d0924f78d",
+        "to": [
+          "content_ux"
+        ],
+        "to_severity": "low"
+      },
+      {
+        "from": [
+          "stability_performance"
+        ],
+        "from_severity": "high",
+        "reason": "I missed a second issue",
+        "reviewId": "69b0753c-2c90-4eb9-9f63-66840542efbb",
+        "to": [
+          "account_progress_loss",
+          "stability_performance"
+        ],
+        "to_severity": "high"
+      },
+      {
+        "from": [
+          "difficulty_balance"
+        ],
+        "from_severity": "medium",
+        "reason": "I missed a second issue",
+        "reviewId": "2f4b6e4b-119d-4e34-8f79-0f39269583f9",
+        "to": [
+          "difficulty_balance",
+          "monetization"
+        ],
+        "to_severity": "medium"
+      },
+      {
+        "from": [
+          "content_ux",
+          "stability_performance"
+        ],
+        "from_severity": "high",
+        "reason": "I judged the severity wrongly",
+        "reviewId": "9104c395-896f-4086-a639-f5199b7e1b9b",
+        "to": [
+          "content_ux",
+          "stability_performance"
+        ],
+        "to_severity": "low"
+      },
+      {
+        "from": [
+          "other_issue"
+        ],
+        "from_severity": "low",
+        "reason": "I applied the rule wrongly",
+        "reviewId": "c4a7b405-4dff-4910-8f70-5d8f369f3745",
+        "to": [
+          "account_progress_loss"
+        ],
+        "to_severity": "medium"
+      },
+      {
+        "from": [
+          "content_ux",
+          "difficulty_balance"
+        ],
+        "from_severity": "low",
+        "reason": "I applied the rule wrongly",
+        "reviewId": "ce8bb37b-8362-48f7-82f0-26a3d2f41dda",
+        "to": [
+          "difficulty_balance"
+        ],
+        "to_severity": "medium"
+      },
+      {
+        "from": [
+          "content_ux"
+        ],
+        "from_severity": "low",
+        "reason": "I read a bug as a feature request",
+        "reviewId": "b5fc7adf-6770-4e35-85b4-dc89afb9b7e6",
+        "to": [
+          "difficulty_balance"
+        ],
+        "to_severity": "low"
+      },
+      {
+        "from": [
+          "content_ux"
+        ],
+        "from_severity": "medium",
+        "reason": "I judged the severity wrongly",
+        "reviewId": "6198054b-b3ba-420b-92d6-7574c712dad1",
+        "to": [
+          "content_ux"
+        ],
+        "to_severity": "low"
+      },
+      {
+        "from": [
+          "other_issue"
+        ],
+        "from_severity": "low",
+        "reason": "I applied the rule wrongly",
+        "reviewId": "456890f9-6c42-468f-a1cb-8fbabbf2e864",
+        "to": [
+          "content_ux"
+        ],
+        "to_severity": "low"
+      },
+      {
+        "from": [
+          "difficulty_balance"
+        ],
+        "from_severity": "medium",
+        "reason": "I applied the rule wrongly",
+        "reviewId": "fa74e698-b979-4ab1-8c0a-83b94c3ccbb6",
+        "to": [
+          "content_ux"
+        ],
+        "to_severity": "low"
+      }
+    ],
+    "count": 32,
+    "source": "corrections.jsonl"
+  },
+  "gold": {
+    "games": {
+      "Candy Crush Saga": 79,
+      "Clash of Clans": 99
+    },
+    "jargon_flagged": 71,
+    "reviews": 178,
+    "slices": {
+      "all": 178,
+      "game_Candy Crush Saga": 79,
+      "game_Clash of Clans": 99,
+      "jargon": 71,
+      "no_jargon": 107,
+      "slice_enriched": 120,
+      "slice_random": 58,
+      "stars_1_3": 83,
+      "stars_4_5": 95
+    }
+  },
+  "runs": {
+    "by_condition": {
+      "off": 3,
+      "on": 3
+    },
+    "detail": [
+      {
+        "batches": [
+          "candy_crush_saga-off-r1-b1",
+          "candy_crush_saga-off-r1-b2",
+          "candy_crush_saga-off-r1-b3",
+          "candy_crush_saga-off-r1-b4",
+          "clash_of_clans-off-r1-b1",
+          "clash_of_clans-off-r1-b2",
+          "clash_of_clans-off-r1-b3",
+          "clash_of_clans-off-r1-b4",
+          "clash_of_clans-off-r1-b5"
+        ],
+        "games": [
+          "Candy Crush Saga",
+          "Clash of Clans"
+        ],
+        "pack_mode": "off",
+        "repeat": 1,
+        "reviews_scored": 178,
+        "scores": {
+          "all": {
+            "category_macro_f1": 0.8046,
+            "category_micro": {
+              "f1": 0.8713,
+              "precision": 0.8756,
+              "recall": 0.867
+            },
+            "exact_set_match": 0.8034,
+            "high_star_issue_recall": {
+              "n": 42,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.992,
+              "precision": 0.9841,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8764,
+            "n": 178,
+            "per_category_f1": {
+              "account_progress_loss": 0.8,
+              "ads": 0.963,
+              "content_ux": 0.7778,
+              "difficulty_balance": 0.8602,
+              "monetization": 0.8824,
+              "no_issue": 0.9811,
+              "other_issue": 0.3333,
+              "stability_performance": 0.8387
+            },
+            "per_category_support": {
+              "account_progress_loss": 17,
+              "ads": 14,
+              "content_ux": 41,
+              "difficulty_balance": 43,
+              "monetization": 17,
+              "no_issue": 54,
+              "other_issue": 1,
+              "stability_performance": 16
+            },
+            "severity": {
+              "accuracy": 0.7823,
+              "n": 124,
+              "within_one": 1.0
+            }
+          },
+          "game_Candy Crush Saga": {
+            "category_macro_f1": 0.807,
+            "category_micro": {
+              "f1": 0.8705,
+              "precision": 0.875,
+              "recall": 0.866
+            },
+            "exact_set_match": 0.7722,
+            "high_star_issue_recall": {
+              "n": 13,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8861,
+            "n": 79,
+            "per_category_f1": {
+              "account_progress_loss": 0.7059,
+              "ads": 0.963,
+              "content_ux": 0.7097,
+              "difficulty_balance": 0.9375,
+              "monetization": 0.9167,
+              "no_issue": 1.0,
+              "other_issue": 0.4,
+              "stability_performance": 0.8235
+            },
+            "per_category_support": {
+              "account_progress_loss": 7,
+              "ads": 14,
+              "content_ux": 18,
+              "difficulty_balance": 15,
+              "monetization": 13,
+              "no_issue": 20,
+              "other_issue": 1,
+              "stability_performance": 9
+            },
+            "severity": {
+              "accuracy": 0.7797,
+              "n": 59,
+              "within_one": 1.0
+            }
+          },
+          "game_Clash of Clans": {
+            "category_macro_f1": 0.8608,
+            "category_micro": {
+              "f1": 0.872,
+              "precision": 0.8762,
+              "recall": 0.8679
+            },
+            "exact_set_match": 0.8283,
+            "high_star_issue_recall": {
+              "n": 29,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9848,
+              "precision": 0.9701,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8687,
+            "n": 99,
+            "per_category_f1": {
+              "account_progress_loss": 0.8889,
+              "content_ux": 0.8293,
+              "difficulty_balance": 0.8197,
+              "monetization": 0.8,
+              "no_issue": 0.9697,
+              "stability_performance": 0.8571
+            },
+            "per_category_support": {
+              "account_progress_loss": 10,
+              "content_ux": 23,
+              "difficulty_balance": 28,
+              "monetization": 4,
+              "no_issue": 34,
+              "stability_performance": 7
+            },
+            "severity": {
+              "accuracy": 0.7846,
+              "n": 65,
+              "within_one": 1.0
+            }
+          },
+          "jargon": {
+            "category_macro_f1": 0.8954,
+            "category_micro": {
+              "f1": 0.8606,
+              "precision": 0.8765,
+              "recall": 0.8452
+            },
+            "exact_set_match": 0.8028,
+            "high_star_issue_recall": {
+              "n": 16,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9917,
+              "precision": 0.9836,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.9014,
+            "n": 71,
+            "per_category_f1": {
+              "account_progress_loss": 0.9091,
+              "ads": 1.0,
+              "content_ux": 0.8421,
+              "difficulty_balance": 0.8519,
+              "monetization": 0.8235,
+              "no_issue": 0.9524,
+              "stability_performance": 0.8889
+            },
+            "per_category_support": {
+              "account_progress_loss": 12,
+              "ads": 1,
+              "content_ux": 22,
+              "difficulty_balance": 25,
+              "monetization": 8,
+              "no_issue": 11,
+              "stability_performance": 5
+            },
+            "severity": {
+              "accuracy": 0.8167,
+              "n": 60,
+              "within_one": 1.0
+            }
+          },
+          "no_jargon": {
+            "category_macro_f1": 0.8001,
+            "category_micro": {
+              "f1": 0.8787,
+              "precision": 0.875,
+              "recall": 0.8824
+            },
+            "exact_set_match": 0.8037,
+            "high_star_issue_recall": {
+              "n": 26,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9922,
+              "precision": 0.9846,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8598,
+            "n": 107,
+            "per_category_f1": {
+              "account_progress_loss": 0.6154,
+              "ads": 0.96,
+              "content_ux": 0.7059,
+              "difficulty_balance": 0.8718,
+              "monetization": 0.9412,
+              "no_issue": 0.9882,
+              "other_issue": 0.5,
+              "stability_performance": 0.8182
+            },
+            "per_category_support": {
+              "account_progress_loss": 5,
+              "ads": 13,
+              "content_ux": 19,
+              "difficulty_balance": 18,
+              "monetization": 9,
+              "no_issue": 43,
+              "other_issue": 1,
+              "stability_performance": 11
+            },
+            "severity": {
+              "accuracy": 0.75,
+              "n": 64,
+              "within_one": 1.0
+            }
+          },
+          "slice_enriched": {
+            "category_macro_f1": 0.8734,
+            "category_micro": {
+              "f1": 0.8612,
+              "precision": 0.8643,
+              "recall": 0.8582
+            },
+            "exact_set_match": 0.7833,
+            "high_star_issue_recall": {
+              "n": 40,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9894,
+              "precision": 0.9789,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8583,
+            "n": 120,
+            "per_category_f1": {
+              "account_progress_loss": 0.8571,
+              "ads": 1.0,
+              "content_ux": 0.8214,
+              "difficulty_balance": 0.85,
+              "monetization": 0.8462,
+              "no_issue": 0.9615,
+              "stability_performance": 0.7778
+            },
+            "per_category_support": {
+              "account_progress_loss": 14,
+              "ads": 9,
+              "content_ux": 32,
+              "difficulty_balance": 37,
+              "monetization": 13,
+              "no_issue": 27,
+              "stability_performance": 9
+            },
+            "severity": {
+              "accuracy": 0.7849,
+              "n": 93,
+              "within_one": 1.0
+            }
+          },
+          "slice_random": {
+            "category_macro_f1": 0.8248,
+            "category_micro": {
+              "f1": 0.8943,
+              "precision": 0.9016,
+              "recall": 0.8871
+            },
+            "exact_set_match": 0.8448,
+            "high_star_issue_recall": {
+              "n": 2,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.9138,
+            "n": 58,
+            "per_category_f1": {
+              "account_progress_loss": 0.5714,
+              "ads": 0.8889,
+              "content_ux": 0.625,
+              "difficulty_balance": 0.9231,
+              "monetization": 1.0,
+              "no_issue": 1.0,
+              "other_issue": 0.6667,
+              "stability_performance": 0.9231
+            },
+            "per_category_support": {
+              "account_progress_loss": 3,
+              "ads": 5,
+              "content_ux": 9,
+              "difficulty_balance": 6,
+              "monetization": 4,
+              "no_issue": 27,
+              "other_issue": 1,
+              "stability_performance": 7
+            },
+            "severity": {
+              "accuracy": 0.7742,
+              "n": 31,
+              "within_one": 1.0
+            }
+          },
+          "stars_1_3": {
+            "category_macro_f1": 0.8295,
+            "category_micro": {
+              "f1": 0.8502,
+              "precision": 0.8462,
+              "recall": 0.8544
+            },
+            "exact_set_match": 0.7349,
+            "high_star_issue_recall": {
+              "n": 0,
+              "recall": null
+            },
+            "issue_detection": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8434,
+            "n": 83,
+            "per_category_f1": {
+              "account_progress_loss": 0.6957,
+              "ads": 0.96,
+              "content_ux": 0.7907,
+              "difficulty_balance": 0.8772,
+              "monetization": 0.8889,
+              "no_issue": 1.0,
+              "other_issue": 0.5,
+              "stability_performance": 0.9231
+            },
+            "per_category_support": {
+              "account_progress_loss": 11,
+              "ads": 13,
+              "content_ux": 23,
+              "difficulty_balance": 27,
+              "monetization": 13,
+              "no_issue": 1,
+              "other_issue": 1,
+              "stability_performance": 14
+            },
+            "severity": {
+              "accuracy": 0.7439,
+              "n": 82,
+              "within_one": 1.0
+            }
+          },
+          "stars_4_5": {
+            "category_macro_f1": 0.8328,
+            "category_micro": {
+              "f1": 0.8934,
+              "precision": 0.9072,
+              "recall": 0.88
+            },
+            "exact_set_match": 0.8632,
+            "high_star_issue_recall": {
+              "n": 42,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9767,
+              "precision": 0.9545,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.9053,
+            "n": 95,
+            "per_category_f1": {
+              "account_progress_loss": 1.0,
+              "ads": 1.0,
+              "content_ux": 0.7586,
+              "difficulty_balance": 0.8333,
+              "monetization": 0.8571,
+              "no_issue": 0.9808,
+              "stability_performance": 0.4
+            },
+            "per_category_support": {
+              "account_progress_loss": 6,
+              "ads": 1,
+              "content_ux": 18,
+              "difficulty_balance": 16,
+              "monetization": 4,
+              "no_issue": 53,
+              "stability_performance": 2
+            },
+            "severity": {
+              "accuracy": 0.8571,
+              "n": 42,
+              "within_one": 1.0
+            }
+          }
+        }
+      },
+      {
+        "batches": [
+          "candy_crush_saga-off-r2-b1",
+          "candy_crush_saga-off-r2-b2",
+          "candy_crush_saga-off-r2-b3",
+          "candy_crush_saga-off-r2-b4",
+          "clash_of_clans-off-r2-b1",
+          "clash_of_clans-off-r2-b2",
+          "clash_of_clans-off-r2-b3",
+          "clash_of_clans-off-r2-b4",
+          "clash_of_clans-off-r2-b5"
+        ],
+        "games": [
+          "Candy Crush Saga",
+          "Clash of Clans"
+        ],
+        "pack_mode": "off",
+        "repeat": 2,
+        "reviews_scored": 178,
+        "scores": {
+          "all": {
+            "category_macro_f1": 0.793,
+            "category_micro": {
+              "f1": 0.8606,
+              "precision": 0.8544,
+              "recall": 0.867
+            },
+            "exact_set_match": 0.7865,
+            "high_star_issue_recall": {
+              "n": 42,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.984,
+              "precision": 0.9762,
+              "recall": 0.9919
+            },
+            "jargon_flag_agreement": 0.8933,
+            "n": 178,
+            "per_category_f1": {
+              "account_progress_loss": 0.8,
+              "ads": 0.9286,
+              "content_ux": 0.75,
+              "difficulty_balance": 0.8791,
+              "monetization": 0.8421,
+              "no_issue": 0.9623,
+              "other_issue": 0.3333,
+              "stability_performance": 0.8485
+            },
+            "per_category_support": {
+              "account_progress_loss": 17,
+              "ads": 14,
+              "content_ux": 41,
+              "difficulty_balance": 43,
+              "monetization": 17,
+              "no_issue": 54,
+              "other_issue": 1,
+              "stability_performance": 16
+            },
+            "severity": {
+              "accuracy": 0.7903,
+              "n": 124,
+              "within_one": 0.9919
+            }
+          },
+          "game_Candy Crush Saga": {
+            "category_macro_f1": 0.8222,
+            "category_micro": {
+              "f1": 0.8571,
+              "precision": 0.8485,
+              "recall": 0.866
+            },
+            "exact_set_match": 0.7595,
+            "high_star_issue_recall": {
+              "n": 13,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9915,
+              "precision": 1.0,
+              "recall": 0.9831
+            },
+            "jargon_flag_agreement": 0.9114,
+            "n": 79,
+            "per_category_f1": {
+              "account_progress_loss": 0.7059,
+              "ads": 0.9286,
+              "content_ux": 0.6667,
+              "difficulty_balance": 0.9032,
+              "monetization": 0.8889,
+              "no_issue": 0.9756,
+              "other_issue": 0.6667,
+              "stability_performance": 0.8421
+            },
+            "per_category_support": {
+              "account_progress_loss": 7,
+              "ads": 14,
+              "content_ux": 18,
+              "difficulty_balance": 15,
+              "monetization": 13,
+              "no_issue": 20,
+              "other_issue": 1,
+              "stability_performance": 9
+            },
+            "severity": {
+              "accuracy": 0.7797,
+              "n": 59,
+              "within_one": 0.9831
+            }
+          },
+          "game_Clash of Clans": {
+            "category_macro_f1": 0.8506,
+            "category_micro": {
+              "f1": 0.8638,
+              "precision": 0.8598,
+              "recall": 0.8679
+            },
+            "exact_set_match": 0.8081,
+            "high_star_issue_recall": {
+              "n": 29,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9774,
+              "precision": 0.9559,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8788,
+            "n": 99,
+            "per_category_f1": {
+              "account_progress_loss": 0.8889,
+              "content_ux": 0.8095,
+              "difficulty_balance": 0.8667,
+              "monetization": 0.7273,
+              "no_issue": 0.9538,
+              "stability_performance": 0.8571
+            },
+            "per_category_support": {
+              "account_progress_loss": 10,
+              "content_ux": 23,
+              "difficulty_balance": 28,
+              "monetization": 4,
+              "no_issue": 34,
+              "stability_performance": 7
+            },
+            "severity": {
+              "accuracy": 0.8,
+              "n": 65,
+              "within_one": 1.0
+            }
+          },
+          "jargon": {
+            "category_macro_f1": 0.9062,
+            "category_micro": {
+              "f1": 0.8706,
+              "precision": 0.8605,
+              "recall": 0.881
+            },
+            "exact_set_match": 0.7887,
+            "high_star_issue_recall": {
+              "n": 16,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9917,
+              "precision": 0.9836,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8732,
+            "n": 71,
+            "per_category_f1": {
+              "account_progress_loss": 0.9091,
+              "ads": 1.0,
+              "content_ux": 0.8421,
+              "difficulty_balance": 0.8889,
+              "monetization": 0.8421,
+              "no_issue": 0.9524,
+              "stability_performance": 0.9091
+            },
+            "per_category_support": {
+              "account_progress_loss": 12,
+              "ads": 1,
+              "content_ux": 22,
+              "difficulty_balance": 25,
+              "monetization": 8,
+              "no_issue": 11,
+              "stability_performance": 5
+            },
+            "severity": {
+              "accuracy": 0.8,
+              "n": 60,
+              "within_one": 1.0
+            }
+          },
+          "no_jargon": {
+            "category_macro_f1": 0.7928,
+            "category_micro": {
+              "f1": 0.8536,
+              "precision": 0.85,
+              "recall": 0.8571
+            },
+            "exact_set_match": 0.785,
+            "high_star_issue_recall": {
+              "n": 26,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9767,
+              "precision": 0.9692,
+              "recall": 0.9844
+            },
+            "jargon_flag_agreement": 0.9065,
+            "n": 107,
+            "per_category_f1": {
+              "account_progress_loss": 0.6154,
+              "ads": 0.9231,
+              "content_ux": 0.6471,
+              "difficulty_balance": 0.8649,
+              "monetization": 0.8421,
+              "no_issue": 0.9647,
+              "other_issue": 0.6667,
+              "stability_performance": 0.8182
+            },
+            "per_category_support": {
+              "account_progress_loss": 5,
+              "ads": 13,
+              "content_ux": 19,
+              "difficulty_balance": 18,
+              "monetization": 9,
+              "no_issue": 43,
+              "other_issue": 1,
+              "stability_performance": 11
+            },
+            "severity": {
+              "accuracy": 0.7812,
+              "n": 64,
+              "within_one": 0.9844
+            }
+          },
+          "slice_enriched": {
+            "category_macro_f1": 0.871,
+            "category_micro": {
+              "f1": 0.8592,
+              "precision": 0.8531,
+              "recall": 0.8652
+            },
+            "exact_set_match": 0.775,
+            "high_star_issue_recall": {
+              "n": 40,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9894,
+              "precision": 0.9789,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8667,
+            "n": 120,
+            "per_category_f1": {
+              "account_progress_loss": 0.8889,
+              "ads": 0.9474,
+              "content_ux": 0.8,
+              "difficulty_balance": 0.8718,
+              "monetization": 0.8276,
+              "no_issue": 0.9615,
+              "stability_performance": 0.8
+            },
+            "per_category_support": {
+              "account_progress_loss": 14,
+              "ads": 9,
+              "content_ux": 32,
+              "difficulty_balance": 37,
+              "monetization": 13,
+              "no_issue": 27,
+              "stability_performance": 9
+            },
+            "severity": {
+              "accuracy": 0.7957,
+              "n": 93,
+              "within_one": 1.0
+            }
+          },
+          "slice_random": {
+            "category_macro_f1": 0.8344,
+            "category_micro": {
+              "f1": 0.864,
+              "precision": 0.8571,
+              "recall": 0.871
+            },
+            "exact_set_match": 0.8103,
+            "high_star_issue_recall": {
+              "n": 2,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9677,
+              "precision": 0.9677,
+              "recall": 0.9677
+            },
+            "jargon_flag_agreement": 0.9483,
+            "n": 58,
+            "per_category_f1": {
+              "account_progress_loss": 0.5,
+              "ads": 0.8889,
+              "content_ux": 0.5882,
+              "difficulty_balance": 0.9231,
+              "monetization": 0.8889,
+              "no_issue": 0.963,
+              "other_issue": 1.0,
+              "stability_performance": 0.9231
+            },
+            "per_category_support": {
+              "account_progress_loss": 3,
+              "ads": 5,
+              "content_ux": 9,
+              "difficulty_balance": 6,
+              "monetization": 4,
+              "no_issue": 27,
+              "other_issue": 1,
+              "stability_performance": 7
+            },
+            "severity": {
+              "accuracy": 0.7742,
+              "n": 31,
+              "within_one": 0.9677
+            }
+          },
+          "stars_1_3": {
+            "category_macro_f1": 0.7983,
+            "category_micro": {
+              "f1": 0.8396,
+              "precision": 0.8165,
+              "recall": 0.8641
+            },
+            "exact_set_match": 0.7108,
+            "high_star_issue_recall": {
+              "n": 0,
+              "recall": null
+            },
+            "issue_detection": {
+              "f1": 0.9939,
+              "precision": 1.0,
+              "recall": 0.9878
+            },
+            "jargon_flag_agreement": 0.8675,
+            "n": 83,
+            "per_category_f1": {
+              "account_progress_loss": 0.6957,
+              "ads": 0.9231,
+              "content_ux": 0.7619,
+              "difficulty_balance": 0.8772,
+              "monetization": 0.8667,
+              "no_issue": 0.6667,
+              "other_issue": 0.6667,
+              "stability_performance": 0.9286
+            },
+            "per_category_support": {
+              "account_progress_loss": 11,
+              "ads": 13,
+              "content_ux": 23,
+              "difficulty_balance": 27,
+              "monetization": 13,
+              "no_issue": 1,
+              "other_issue": 1,
+              "stability_performance": 14
+            },
+            "severity": {
+              "accuracy": 0.7683,
+              "n": 82,
+              "within_one": 0.9878
+            }
+          },
+          "stars_4_5": {
+            "category_macro_f1": 0.8195,
+            "category_micro": {
+              "f1": 0.8832,
+              "precision": 0.8969,
+              "recall": 0.87
+            },
+            "exact_set_match": 0.8526,
+            "high_star_issue_recall": {
+              "n": 42,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9655,
+              "precision": 0.9333,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.9158,
+            "n": 95,
+            "per_category_f1": {
+              "account_progress_loss": 1.0,
+              "ads": 1.0,
+              "content_ux": 0.7333,
+              "difficulty_balance": 0.8824,
+              "monetization": 0.75,
+              "no_issue": 0.9709,
+              "stability_performance": 0.4
+            },
+            "per_category_support": {
+              "account_progress_loss": 6,
+              "ads": 1,
+              "content_ux": 18,
+              "difficulty_balance": 16,
+              "monetization": 4,
+              "no_issue": 53,
+              "stability_performance": 2
+            },
+            "severity": {
+              "accuracy": 0.8333,
+              "n": 42,
+              "within_one": 1.0
+            }
+          }
+        }
+      },
+      {
+        "batches": [
+          "candy_crush_saga-off-r3-b1",
+          "candy_crush_saga-off-r3-b2",
+          "candy_crush_saga-off-r3-b3",
+          "candy_crush_saga-off-r3-b4",
+          "clash_of_clans-off-r3-b1",
+          "clash_of_clans-off-r3-b2",
+          "clash_of_clans-off-r3-b3",
+          "clash_of_clans-off-r3-b4",
+          "clash_of_clans-off-r3-b5"
+        ],
+        "games": [
+          "Candy Crush Saga",
+          "Clash of Clans"
+        ],
+        "pack_mode": "off",
+        "repeat": 3,
+        "reviews_scored": 178,
+        "scores": {
+          "all": {
+            "category_macro_f1": 0.8349,
+            "category_micro": {
+              "f1": 0.8867,
+              "precision": 0.8867,
+              "recall": 0.8867
+            },
+            "exact_set_match": 0.8315,
+            "high_star_issue_recall": {
+              "n": 42,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.996,
+              "precision": 0.992,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8539,
+            "n": 178,
+            "per_category_f1": {
+              "account_progress_loss": 0.8649,
+              "ads": 0.963,
+              "content_ux": 0.7778,
+              "difficulty_balance": 0.8791,
+              "monetization": 0.8649,
+              "no_issue": 0.9907,
+              "other_issue": 0.5,
+              "stability_performance": 0.8387
+            },
+            "per_category_support": {
+              "account_progress_loss": 17,
+              "ads": 14,
+              "content_ux": 41,
+              "difficulty_balance": 43,
+              "monetization": 17,
+              "no_issue": 54,
+              "other_issue": 1,
+              "stability_performance": 16
+            },
+            "severity": {
+              "accuracy": 0.8065,
+              "n": 124,
+              "within_one": 0.9919
+            }
+          },
+          "game_Candy Crush Saga": {
+            "category_macro_f1": 0.8487,
+            "category_micro": {
+              "f1": 0.8821,
+              "precision": 0.8776,
+              "recall": 0.8866
+            },
+            "exact_set_match": 0.8101,
+            "high_star_issue_recall": {
+              "n": 13,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8608,
+            "n": 79,
+            "per_category_f1": {
+              "account_progress_loss": 0.7778,
+              "ads": 0.963,
+              "content_ux": 0.6667,
+              "difficulty_balance": 0.9375,
+              "monetization": 0.8889,
+              "no_issue": 1.0,
+              "other_issue": 0.6667,
+              "stability_performance": 0.8889
+            },
+            "per_category_support": {
+              "account_progress_loss": 7,
+              "ads": 14,
+              "content_ux": 18,
+              "difficulty_balance": 15,
+              "monetization": 13,
+              "no_issue": 20,
+              "other_issue": 1,
+              "stability_performance": 9
+            },
+            "severity": {
+              "accuracy": 0.7797,
+              "n": 59,
+              "within_one": 1.0
+            }
+          },
+          "game_Clash of Clans": {
+            "category_macro_f1": 0.8677,
+            "category_micro": {
+              "f1": 0.891,
+              "precision": 0.8952,
+              "recall": 0.8868
+            },
+            "exact_set_match": 0.8485,
+            "high_star_issue_recall": {
+              "n": 29,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9924,
+              "precision": 0.9848,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8485,
+            "n": 99,
+            "per_category_f1": {
+              "account_progress_loss": 0.9474,
+              "content_ux": 0.8571,
+              "difficulty_balance": 0.8475,
+              "monetization": 0.8,
+              "no_issue": 0.9851,
+              "stability_performance": 0.7692
+            },
+            "per_category_support": {
+              "account_progress_loss": 10,
+              "content_ux": 23,
+              "difficulty_balance": 28,
+              "monetization": 4,
+              "no_issue": 34,
+              "stability_performance": 7
+            },
+            "severity": {
+              "accuracy": 0.8308,
+              "n": 65,
+              "within_one": 0.9846
+            }
+          },
+          "jargon": {
+            "category_macro_f1": 0.922,
+            "category_micro": {
+              "f1": 0.8929,
+              "precision": 0.8929,
+              "recall": 0.8929
+            },
+            "exact_set_match": 0.831,
+            "high_star_issue_recall": {
+              "n": 16,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9917,
+              "precision": 0.9836,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8732,
+            "n": 71,
+            "per_category_f1": {
+              "account_progress_loss": 1.0,
+              "ads": 1.0,
+              "content_ux": 0.8718,
+              "difficulty_balance": 0.8519,
+              "monetization": 0.8889,
+              "no_issue": 0.9524,
+              "stability_performance": 0.8889
+            },
+            "per_category_support": {
+              "account_progress_loss": 12,
+              "ads": 1,
+              "content_ux": 22,
+              "difficulty_balance": 25,
+              "monetization": 8,
+              "no_issue": 11,
+              "stability_performance": 5
+            },
+            "severity": {
+              "accuracy": 0.85,
+              "n": 60,
+              "within_one": 0.9833
+            }
+          },
+          "no_jargon": {
+            "category_macro_f1": 0.811,
+            "category_micro": {
+              "f1": 0.8824,
+              "precision": 0.8824,
+              "recall": 0.8824
+            },
+            "exact_set_match": 0.8318,
+            "high_star_issue_recall": {
+              "n": 26,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8411,
+            "n": 107,
+            "per_category_f1": {
+              "account_progress_loss": 0.6154,
+              "ads": 0.96,
+              "content_ux": 0.6667,
+              "difficulty_balance": 0.9189,
+              "monetization": 0.8421,
+              "no_issue": 1.0,
+              "other_issue": 0.6667,
+              "stability_performance": 0.8182
+            },
+            "per_category_support": {
+              "account_progress_loss": 5,
+              "ads": 13,
+              "content_ux": 19,
+              "difficulty_balance": 18,
+              "monetization": 9,
+              "no_issue": 43,
+              "other_issue": 1,
+              "stability_performance": 11
+            },
+            "severity": {
+              "accuracy": 0.7656,
+              "n": 64,
+              "within_one": 1.0
+            }
+          },
+          "slice_enriched": {
+            "category_macro_f1": 0.8957,
+            "category_micro": {
+              "f1": 0.8826,
+              "precision": 0.8857,
+              "recall": 0.8794
+            },
+            "exact_set_match": 0.825,
+            "high_star_issue_recall": {
+              "n": 40,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9947,
+              "precision": 0.9894,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.825,
+            "n": 120,
+            "per_category_f1": {
+              "account_progress_loss": 0.9286,
+              "ads": 1.0,
+              "content_ux": 0.8,
+              "difficulty_balance": 0.8608,
+              "monetization": 0.8571,
+              "no_issue": 0.9811,
+              "stability_performance": 0.8421
+            },
+            "per_category_support": {
+              "account_progress_loss": 14,
+              "ads": 9,
+              "content_ux": 32,
+              "difficulty_balance": 37,
+              "monetization": 13,
+              "no_issue": 27,
+              "stability_performance": 9
+            },
+            "severity": {
+              "accuracy": 0.8172,
+              "n": 93,
+              "within_one": 1.0
+            }
+          },
+          "slice_random": {
+            "category_macro_f1": 0.8313,
+            "category_micro": {
+              "f1": 0.896,
+              "precision": 0.8889,
+              "recall": 0.9032
+            },
+            "exact_set_match": 0.8448,
+            "high_star_issue_recall": {
+              "n": 2,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.9138,
+            "n": 58,
+            "per_category_f1": {
+              "account_progress_loss": 0.6667,
+              "ads": 0.8889,
+              "content_ux": 0.7059,
+              "difficulty_balance": 1.0,
+              "monetization": 0.8889,
+              "no_issue": 1.0,
+              "other_issue": 0.6667,
+              "stability_performance": 0.8333
+            },
+            "per_category_support": {
+              "account_progress_loss": 3,
+              "ads": 5,
+              "content_ux": 9,
+              "difficulty_balance": 6,
+              "monetization": 4,
+              "no_issue": 27,
+              "other_issue": 1,
+              "stability_performance": 7
+            },
+            "severity": {
+              "accuracy": 0.7742,
+              "n": 31,
+              "within_one": 0.9677
+            }
+          },
+          "stars_1_3": {
+            "category_macro_f1": 0.8343,
+            "category_micro": {
+              "f1": 0.8517,
+              "precision": 0.8396,
+              "recall": 0.8641
+            },
+            "exact_set_match": 0.759,
+            "high_star_issue_recall": {
+              "n": 0,
+              "recall": null
+            },
+            "issue_detection": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8072,
+            "n": 83,
+            "per_category_f1": {
+              "account_progress_loss": 0.8,
+              "ads": 0.96,
+              "content_ux": 0.7317,
+              "difficulty_balance": 0.8929,
+              "monetization": 0.8667,
+              "no_issue": 1.0,
+              "other_issue": 0.5,
+              "stability_performance": 0.9231
+            },
+            "per_category_support": {
+              "account_progress_loss": 11,
+              "ads": 13,
+              "content_ux": 23,
+              "difficulty_balance": 27,
+              "monetization": 13,
+              "no_issue": 1,
+              "other_issue": 1,
+              "stability_performance": 14
+            },
+            "severity": {
+              "accuracy": 0.7683,
+              "n": 82,
+              "within_one": 0.9878
+            }
+          },
+          "stars_4_5": {
+            "category_macro_f1": 0.8491,
+            "category_micro": {
+              "f1": 0.9239,
+              "precision": 0.9381,
+              "recall": 0.91
+            },
+            "exact_set_match": 0.8947,
+            "high_star_issue_recall": {
+              "n": 42,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9882,
+              "precision": 0.9767,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8947,
+            "n": 95,
+            "per_category_f1": {
+              "account_progress_loss": 1.0,
+              "ads": 1.0,
+              "content_ux": 0.8387,
+              "difficulty_balance": 0.8571,
+              "monetization": 0.8571,
+              "no_issue": 0.9905,
+              "stability_performance": 0.4
+            },
+            "per_category_support": {
+              "account_progress_loss": 6,
+              "ads": 1,
+              "content_ux": 18,
+              "difficulty_balance": 16,
+              "monetization": 4,
+              "no_issue": 53,
+              "stability_performance": 2
+            },
+            "severity": {
+              "accuracy": 0.881,
+              "n": 42,
+              "within_one": 1.0
+            }
+          }
+        }
+      },
+      {
+        "batches": [
+          "candy_crush_saga-on-r1-b1",
+          "candy_crush_saga-on-r1-b2",
+          "candy_crush_saga-on-r1-b3",
+          "candy_crush_saga-on-r1-b4",
+          "clash_of_clans-on-r1-b1",
+          "clash_of_clans-on-r1-b2",
+          "clash_of_clans-on-r1-b3",
+          "clash_of_clans-on-r1-b4",
+          "clash_of_clans-on-r1-b5"
+        ],
+        "games": [
+          "Candy Crush Saga",
+          "Clash of Clans"
+        ],
+        "pack_mode": "on",
+        "repeat": 1,
+        "reviews_scored": 178,
+        "scores": {
+          "all": {
+            "category_macro_f1": 0.8042,
+            "category_micro": {
+              "f1": 0.8649,
+              "precision": 0.8627,
+              "recall": 0.867
+            },
+            "exact_set_match": 0.8034,
+            "high_star_issue_recall": {
+              "n": 42,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.992,
+              "precision": 0.9841,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8202,
+            "n": 178,
+            "per_category_f1": {
+              "account_progress_loss": 0.7778,
+              "ads": 0.963,
+              "content_ux": 0.7778,
+              "difficulty_balance": 0.8478,
+              "monetization": 0.8108,
+              "no_issue": 0.9811,
+              "other_issue": 0.4,
+              "stability_performance": 0.875
+            },
+            "per_category_support": {
+              "account_progress_loss": 17,
+              "ads": 14,
+              "content_ux": 41,
+              "difficulty_balance": 43,
+              "monetization": 17,
+              "no_issue": 54,
+              "other_issue": 1,
+              "stability_performance": 16
+            },
+            "severity": {
+              "accuracy": 0.7984,
+              "n": 124,
+              "within_one": 1.0
+            }
+          },
+          "game_Candy Crush Saga": {
+            "category_macro_f1": 0.799,
+            "category_micro": {
+              "f1": 0.8485,
+              "precision": 0.8317,
+              "recall": 0.866
+            },
+            "exact_set_match": 0.7468,
+            "high_star_issue_recall": {
+              "n": 13,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.7468,
+            "n": 79,
+            "per_category_f1": {
+              "account_progress_loss": 0.6667,
+              "ads": 0.963,
+              "content_ux": 0.7097,
+              "difficulty_balance": 0.8485,
+              "monetization": 0.8148,
+              "no_issue": 1.0,
+              "other_issue": 0.5,
+              "stability_performance": 0.8889
+            },
+            "per_category_support": {
+              "account_progress_loss": 7,
+              "ads": 14,
+              "content_ux": 18,
+              "difficulty_balance": 15,
+              "monetization": 13,
+              "no_issue": 20,
+              "other_issue": 1,
+              "stability_performance": 9
+            },
+            "severity": {
+              "accuracy": 0.7797,
+              "n": 59,
+              "within_one": 1.0
+            }
+          },
+          "game_Clash of Clans": {
+            "category_macro_f1": 0.8654,
+            "category_micro": {
+              "f1": 0.8804,
+              "precision": 0.8932,
+              "recall": 0.8679
+            },
+            "exact_set_match": 0.8485,
+            "high_star_issue_recall": {
+              "n": 29,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9848,
+              "precision": 0.9701,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8788,
+            "n": 99,
+            "per_category_f1": {
+              "account_progress_loss": 0.8889,
+              "content_ux": 0.8293,
+              "difficulty_balance": 0.8475,
+              "monetization": 0.8,
+              "no_issue": 0.9697,
+              "stability_performance": 0.8571
+            },
+            "per_category_support": {
+              "account_progress_loss": 10,
+              "content_ux": 23,
+              "difficulty_balance": 28,
+              "monetization": 4,
+              "no_issue": 34,
+              "stability_performance": 7
+            },
+            "severity": {
+              "accuracy": 0.8154,
+              "n": 65,
+              "within_one": 1.0
+            }
+          },
+          "jargon": {
+            "category_macro_f1": 0.9031,
+            "category_micro": {
+              "f1": 0.8743,
+              "precision": 0.8795,
+              "recall": 0.869
+            },
+            "exact_set_match": 0.8169,
+            "high_star_issue_recall": {
+              "n": 16,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9917,
+              "precision": 0.9836,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.9014,
+            "n": 71,
+            "per_category_f1": {
+              "account_progress_loss": 0.9091,
+              "ads": 1.0,
+              "content_ux": 0.8718,
+              "difficulty_balance": 0.8519,
+              "monetization": 0.7368,
+              "no_issue": 0.9524,
+              "stability_performance": 1.0
+            },
+            "per_category_support": {
+              "account_progress_loss": 12,
+              "ads": 1,
+              "content_ux": 22,
+              "difficulty_balance": 25,
+              "monetization": 8,
+              "no_issue": 11,
+              "stability_performance": 5
+            },
+            "severity": {
+              "accuracy": 0.8333,
+              "n": 60,
+              "within_one": 1.0
+            }
+          },
+          "no_jargon": {
+            "category_macro_f1": 0.7669,
+            "category_micro": {
+              "f1": 0.8583,
+              "precision": 0.8512,
+              "recall": 0.8655
+            },
+            "exact_set_match": 0.7944,
+            "high_star_issue_recall": {
+              "n": 26,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9922,
+              "precision": 0.9846,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.7664,
+            "n": 107,
+            "per_category_f1": {
+              "account_progress_loss": 0.5714,
+              "ads": 0.96,
+              "content_ux": 0.6667,
+              "difficulty_balance": 0.8421,
+              "monetization": 0.8889,
+              "no_issue": 0.9882,
+              "other_issue": 0.4,
+              "stability_performance": 0.8182
+            },
+            "per_category_support": {
+              "account_progress_loss": 5,
+              "ads": 13,
+              "content_ux": 19,
+              "difficulty_balance": 18,
+              "monetization": 9,
+              "no_issue": 43,
+              "other_issue": 1,
+              "stability_performance": 11
+            },
+            "severity": {
+              "accuracy": 0.7656,
+              "n": 64,
+              "within_one": 1.0
+            }
+          },
+          "slice_enriched": {
+            "category_macro_f1": 0.874,
+            "category_micro": {
+              "f1": 0.8652,
+              "precision": 0.8652,
+              "recall": 0.8652
+            },
+            "exact_set_match": 0.7917,
+            "high_star_issue_recall": {
+              "n": 40,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9894,
+              "precision": 0.9789,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8,
+            "n": 120,
+            "per_category_f1": {
+              "account_progress_loss": 0.8571,
+              "ads": 1.0,
+              "content_ux": 0.8214,
+              "difficulty_balance": 0.85,
+              "monetization": 0.7857,
+              "no_issue": 0.9615,
+              "stability_performance": 0.8421
+            },
+            "per_category_support": {
+              "account_progress_loss": 14,
+              "ads": 9,
+              "content_ux": 32,
+              "difficulty_balance": 37,
+              "monetization": 13,
+              "no_issue": 27,
+              "stability_performance": 9
+            },
+            "severity": {
+              "accuracy": 0.8065,
+              "n": 93,
+              "within_one": 1.0
+            }
+          },
+          "slice_random": {
+            "category_macro_f1": 0.7699,
+            "category_micro": {
+              "f1": 0.864,
+              "precision": 0.8571,
+              "recall": 0.871
+            },
+            "exact_set_match": 0.8276,
+            "high_star_issue_recall": {
+              "n": 2,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8621,
+            "n": 58,
+            "per_category_f1": {
+              "account_progress_loss": 0.5,
+              "ads": 0.8889,
+              "content_ux": 0.625,
+              "difficulty_balance": 0.8333,
+              "monetization": 0.8889,
+              "no_issue": 1.0,
+              "other_issue": 0.5,
+              "stability_performance": 0.9231
+            },
+            "per_category_support": {
+              "account_progress_loss": 3,
+              "ads": 5,
+              "content_ux": 9,
+              "difficulty_balance": 6,
+              "monetization": 4,
+              "no_issue": 27,
+              "other_issue": 1,
+              "stability_performance": 7
+            },
+            "severity": {
+              "accuracy": 0.7742,
+              "n": 31,
+              "within_one": 1.0
+            }
+          },
+          "stars_1_3": {
+            "category_macro_f1": 0.8136,
+            "category_micro": {
+              "f1": 0.8286,
+              "precision": 0.8131,
+              "recall": 0.8447
+            },
+            "exact_set_match": 0.7229,
+            "high_star_issue_recall": {
+              "n": 0,
+              "recall": null
+            },
+            "issue_detection": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.747,
+            "n": 83,
+            "per_category_f1": {
+              "account_progress_loss": 0.6667,
+              "ads": 0.96,
+              "content_ux": 0.7619,
+              "difficulty_balance": 0.8571,
+              "monetization": 0.8,
+              "no_issue": 1.0,
+              "other_issue": 0.5,
+              "stability_performance": 0.963
+            },
+            "per_category_support": {
+              "account_progress_loss": 11,
+              "ads": 13,
+              "content_ux": 23,
+              "difficulty_balance": 27,
+              "monetization": 13,
+              "no_issue": 1,
+              "other_issue": 1,
+              "stability_performance": 14
+            },
+            "severity": {
+              "accuracy": 0.7683,
+              "n": 82,
+              "within_one": 1.0
+            }
+          },
+          "stars_4_5": {
+            "category_macro_f1": 0.8387,
+            "category_micro": {
+              "f1": 0.9036,
+              "precision": 0.9175,
+              "recall": 0.89
+            },
+            "exact_set_match": 0.8737,
+            "high_star_issue_recall": {
+              "n": 42,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9767,
+              "precision": 0.9545,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8842,
+            "n": 95,
+            "per_category_f1": {
+              "account_progress_loss": 1.0,
+              "ads": 1.0,
+              "content_ux": 0.8,
+              "difficulty_balance": 0.8333,
+              "monetization": 0.8571,
+              "no_issue": 0.9808,
+              "stability_performance": 0.4
+            },
+            "per_category_support": {
+              "account_progress_loss": 6,
+              "ads": 1,
+              "content_ux": 18,
+              "difficulty_balance": 16,
+              "monetization": 4,
+              "no_issue": 53,
+              "stability_performance": 2
+            },
+            "severity": {
+              "accuracy": 0.8571,
+              "n": 42,
+              "within_one": 1.0
+            }
+          }
+        }
+      },
+      {
+        "batches": [
+          "candy_crush_saga-on-r2-b1",
+          "candy_crush_saga-on-r2-b2",
+          "candy_crush_saga-on-r2-b3",
+          "candy_crush_saga-on-r2-b4",
+          "clash_of_clans-on-r2-b1",
+          "clash_of_clans-on-r2-b2",
+          "clash_of_clans-on-r2-b3",
+          "clash_of_clans-on-r2-b4",
+          "clash_of_clans-on-r2-b5"
+        ],
+        "games": [
+          "Candy Crush Saga",
+          "Clash of Clans"
+        ],
+        "pack_mode": "on",
+        "repeat": 2,
+        "reviews_scored": 178,
+        "scores": {
+          "all": {
+            "category_macro_f1": 0.8121,
+            "category_micro": {
+              "f1": 0.8812,
+              "precision": 0.8856,
+              "recall": 0.8768
+            },
+            "exact_set_match": 0.8258,
+            "high_star_issue_recall": {
+              "n": 42,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.992,
+              "precision": 0.9841,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8427,
+            "n": 178,
+            "per_category_f1": {
+              "account_progress_loss": 0.8,
+              "ads": 0.963,
+              "content_ux": 0.7945,
+              "difficulty_balance": 0.9111,
+              "monetization": 0.8235,
+              "no_issue": 0.9811,
+              "other_issue": 0.4,
+              "stability_performance": 0.8235
+            },
+            "per_category_support": {
+              "account_progress_loss": 17,
+              "ads": 14,
+              "content_ux": 41,
+              "difficulty_balance": 43,
+              "monetization": 17,
+              "no_issue": 54,
+              "other_issue": 1,
+              "stability_performance": 16
+            },
+            "severity": {
+              "accuracy": 0.7903,
+              "n": 124,
+              "within_one": 1.0
+            }
+          },
+          "game_Candy Crush Saga": {
+            "category_macro_f1": 0.8152,
+            "category_micro": {
+              "f1": 0.8705,
+              "precision": 0.875,
+              "recall": 0.866
+            },
+            "exact_set_match": 0.7848,
+            "high_star_issue_recall": {
+              "n": 13,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.7975,
+            "n": 79,
+            "per_category_f1": {
+              "account_progress_loss": 0.7059,
+              "ads": 0.963,
+              "content_ux": 0.7097,
+              "difficulty_balance": 0.9677,
+              "monetization": 0.8333,
+              "no_issue": 1.0,
+              "other_issue": 0.5,
+              "stability_performance": 0.8421
+            },
+            "per_category_support": {
+              "account_progress_loss": 7,
+              "ads": 14,
+              "content_ux": 18,
+              "difficulty_balance": 15,
+              "monetization": 13,
+              "no_issue": 20,
+              "other_issue": 1,
+              "stability_performance": 9
+            },
+            "severity": {
+              "accuracy": 0.7458,
+              "n": 59,
+              "within_one": 1.0
+            }
+          },
+          "game_Clash of Clans": {
+            "category_macro_f1": 0.8662,
+            "category_micro": {
+              "f1": 0.891,
+              "precision": 0.8952,
+              "recall": 0.8868
+            },
+            "exact_set_match": 0.8586,
+            "high_star_issue_recall": {
+              "n": 29,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9848,
+              "precision": 0.9701,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8788,
+            "n": 99,
+            "per_category_f1": {
+              "account_progress_loss": 0.8889,
+              "content_ux": 0.8571,
+              "difficulty_balance": 0.8814,
+              "monetization": 0.8,
+              "no_issue": 0.9697,
+              "stability_performance": 0.8
+            },
+            "per_category_support": {
+              "account_progress_loss": 10,
+              "content_ux": 23,
+              "difficulty_balance": 28,
+              "monetization": 4,
+              "no_issue": 34,
+              "stability_performance": 7
+            },
+            "severity": {
+              "accuracy": 0.8308,
+              "n": 65,
+              "within_one": 1.0
+            }
+          },
+          "jargon": {
+            "category_macro_f1": 0.8856,
+            "category_micro": {
+              "f1": 0.8675,
+              "precision": 0.878,
+              "recall": 0.8571
+            },
+            "exact_set_match": 0.8169,
+            "high_star_issue_recall": {
+              "n": 16,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9917,
+              "precision": 0.9836,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.9155,
+            "n": 71,
+            "per_category_f1": {
+              "account_progress_loss": 0.9091,
+              "ads": 1.0,
+              "content_ux": 0.8421,
+              "difficulty_balance": 0.8846,
+              "monetization": 0.7778,
+              "no_issue": 0.9524,
+              "stability_performance": 0.8333
+            },
+            "per_category_support": {
+              "account_progress_loss": 12,
+              "ads": 1,
+              "content_ux": 22,
+              "difficulty_balance": 25,
+              "monetization": 8,
+              "no_issue": 11,
+              "stability_performance": 5
+            },
+            "severity": {
+              "accuracy": 0.8167,
+              "n": 60,
+              "within_one": 1.0
+            }
+          },
+          "no_jargon": {
+            "category_macro_f1": 0.8059,
+            "category_micro": {
+              "f1": 0.8908,
+              "precision": 0.8908,
+              "recall": 0.8908
+            },
+            "exact_set_match": 0.8318,
+            "high_star_issue_recall": {
+              "n": 26,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9922,
+              "precision": 0.9846,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.7944,
+            "n": 107,
+            "per_category_f1": {
+              "account_progress_loss": 0.6154,
+              "ads": 0.96,
+              "content_ux": 0.7429,
+              "difficulty_balance": 0.9474,
+              "monetization": 0.875,
+              "no_issue": 0.9882,
+              "other_issue": 0.5,
+              "stability_performance": 0.8182
+            },
+            "per_category_support": {
+              "account_progress_loss": 5,
+              "ads": 13,
+              "content_ux": 19,
+              "difficulty_balance": 18,
+              "monetization": 9,
+              "no_issue": 43,
+              "other_issue": 1,
+              "stability_performance": 11
+            },
+            "severity": {
+              "accuracy": 0.7656,
+              "n": 64,
+              "within_one": 1.0
+            }
+          },
+          "slice_enriched": {
+            "category_macro_f1": 0.8734,
+            "category_micro": {
+              "f1": 0.8723,
+              "precision": 0.8723,
+              "recall": 0.8723
+            },
+            "exact_set_match": 0.8083,
+            "high_star_issue_recall": {
+              "n": 40,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9894,
+              "precision": 0.9789,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.825,
+            "n": 120,
+            "per_category_f1": {
+              "account_progress_loss": 0.8571,
+              "ads": 1.0,
+              "content_ux": 0.8214,
+              "difficulty_balance": 0.8974,
+              "monetization": 0.8148,
+              "no_issue": 0.9615,
+              "stability_performance": 0.7619
+            },
+            "per_category_support": {
+              "account_progress_loss": 14,
+              "ads": 9,
+              "content_ux": 32,
+              "difficulty_balance": 37,
+              "monetization": 13,
+              "no_issue": 27,
+              "stability_performance": 9
+            },
+            "severity": {
+              "accuracy": 0.8065,
+              "n": 93,
+              "within_one": 1.0
+            }
+          },
+          "slice_random": {
+            "category_macro_f1": 0.8266,
+            "category_micro": {
+              "f1": 0.9016,
+              "precision": 0.9167,
+              "recall": 0.8871
+            },
+            "exact_set_match": 0.8621,
+            "high_star_issue_recall": {
+              "n": 2,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8793,
+            "n": 58,
+            "per_category_f1": {
+              "account_progress_loss": 0.5714,
+              "ads": 0.8889,
+              "content_ux": 0.7059,
+              "difficulty_balance": 1.0,
+              "monetization": 0.8571,
+              "no_issue": 1.0,
+              "other_issue": 0.6667,
+              "stability_performance": 0.9231
+            },
+            "per_category_support": {
+              "account_progress_loss": 3,
+              "ads": 5,
+              "content_ux": 9,
+              "difficulty_balance": 6,
+              "monetization": 4,
+              "no_issue": 27,
+              "other_issue": 1,
+              "stability_performance": 7
+            },
+            "severity": {
+              "accuracy": 0.7419,
+              "n": 31,
+              "within_one": 1.0
+            }
+          },
+          "stars_1_3": {
+            "category_macro_f1": 0.8292,
+            "category_micro": {
+              "f1": 0.8544,
+              "precision": 0.8544,
+              "recall": 0.8544
+            },
+            "exact_set_match": 0.759,
+            "high_star_issue_recall": {
+              "n": 0,
+              "recall": null
+            },
+            "issue_detection": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.7711,
+            "n": 83,
+            "per_category_f1": {
+              "account_progress_loss": 0.6957,
+              "ads": 0.96,
+              "content_ux": 0.7907,
+              "difficulty_balance": 0.9091,
+              "monetization": 0.8148,
+              "no_issue": 1.0,
+              "other_issue": 0.5,
+              "stability_performance": 0.963
+            },
+            "per_category_support": {
+              "account_progress_loss": 11,
+              "ads": 13,
+              "content_ux": 23,
+              "difficulty_balance": 27,
+              "monetization": 13,
+              "no_issue": 1,
+              "other_issue": 1,
+              "stability_performance": 14
+            },
+            "severity": {
+              "accuracy": 0.7683,
+              "n": 82,
+              "within_one": 1.0
+            }
+          },
+          "stars_4_5": {
+            "category_macro_f1": 0.834,
+            "category_micro": {
+              "f1": 0.9091,
+              "precision": 0.9184,
+              "recall": 0.9
+            },
+            "exact_set_match": 0.8842,
+            "high_star_issue_recall": {
+              "n": 42,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9767,
+              "precision": 0.9545,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.9053,
+            "n": 95,
+            "per_category_f1": {
+              "account_progress_loss": 1.0,
+              "ads": 1.0,
+              "content_ux": 0.8,
+              "difficulty_balance": 0.9143,
+              "monetization": 0.8571,
+              "no_issue": 0.9808,
+              "stability_performance": 0.2857
+            },
+            "per_category_support": {
+              "account_progress_loss": 6,
+              "ads": 1,
+              "content_ux": 18,
+              "difficulty_balance": 16,
+              "monetization": 4,
+              "no_issue": 53,
+              "stability_performance": 2
+            },
+            "severity": {
+              "accuracy": 0.8333,
+              "n": 42,
+              "within_one": 1.0
+            }
+          }
+        }
+      },
+      {
+        "batches": [
+          "candy_crush_saga-on-r3-b1",
+          "candy_crush_saga-on-r3-b2",
+          "candy_crush_saga-on-r3-b3",
+          "candy_crush_saga-on-r3-b4",
+          "clash_of_clans-on-r3-b1",
+          "clash_of_clans-on-r3-b2",
+          "clash_of_clans-on-r3-b3",
+          "clash_of_clans-on-r3-b4",
+          "clash_of_clans-on-r3-b5"
+        ],
+        "games": [
+          "Candy Crush Saga",
+          "Clash of Clans"
+        ],
+        "pack_mode": "on",
+        "repeat": 3,
+        "reviews_scored": 178,
+        "scores": {
+          "all": {
+            "category_macro_f1": 0.8161,
+            "category_micro": {
+              "f1": 0.8725,
+              "precision": 0.8683,
+              "recall": 0.8768
+            },
+            "exact_set_match": 0.8034,
+            "high_star_issue_recall": {
+              "n": 42,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.996,
+              "precision": 0.992,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.809,
+            "n": 178,
+            "per_category_f1": {
+              "account_progress_loss": 0.7647,
+              "ads": 0.9286,
+              "content_ux": 0.75,
+              "difficulty_balance": 0.8817,
+              "monetization": 0.8649,
+              "no_issue": 0.9907,
+              "other_issue": 0.5,
+              "stability_performance": 0.8485
+            },
+            "per_category_support": {
+              "account_progress_loss": 17,
+              "ads": 14,
+              "content_ux": 41,
+              "difficulty_balance": 43,
+              "monetization": 17,
+              "no_issue": 54,
+              "other_issue": 1,
+              "stability_performance": 16
+            },
+            "severity": {
+              "accuracy": 0.7823,
+              "n": 124,
+              "within_one": 0.9919
+            }
+          },
+          "game_Candy Crush Saga": {
+            "category_macro_f1": 0.8141,
+            "category_micro": {
+              "f1": 0.8687,
+              "precision": 0.8515,
+              "recall": 0.8866
+            },
+            "exact_set_match": 0.7595,
+            "high_star_issue_recall": {
+              "n": 13,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.7342,
+            "n": 79,
+            "per_category_f1": {
+              "account_progress_loss": 0.7059,
+              "ads": 0.9286,
+              "content_ux": 0.7097,
+              "difficulty_balance": 0.9375,
+              "monetization": 0.8889,
+              "no_issue": 1.0,
+              "other_issue": 0.5,
+              "stability_performance": 0.8421
+            },
+            "per_category_support": {
+              "account_progress_loss": 7,
+              "ads": 14,
+              "content_ux": 18,
+              "difficulty_balance": 15,
+              "monetization": 13,
+              "no_issue": 20,
+              "other_issue": 1,
+              "stability_performance": 9
+            },
+            "severity": {
+              "accuracy": 0.7627,
+              "n": 59,
+              "within_one": 1.0
+            }
+          },
+          "game_Clash of Clans": {
+            "category_macro_f1": 0.8498,
+            "category_micro": {
+              "f1": 0.8762,
+              "precision": 0.8846,
+              "recall": 0.8679
+            },
+            "exact_set_match": 0.8384,
+            "high_star_issue_recall": {
+              "n": 29,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9924,
+              "precision": 0.9848,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8687,
+            "n": 99,
+            "per_category_f1": {
+              "account_progress_loss": 0.8235,
+              "content_ux": 0.7805,
+              "difficulty_balance": 0.8525,
+              "monetization": 0.8,
+              "no_issue": 0.9851,
+              "stability_performance": 0.8571
+            },
+            "per_category_support": {
+              "account_progress_loss": 10,
+              "content_ux": 23,
+              "difficulty_balance": 28,
+              "monetization": 4,
+              "no_issue": 34,
+              "stability_performance": 7
+            },
+            "severity": {
+              "accuracy": 0.8,
+              "n": 65,
+              "within_one": 0.9846
+            }
+          },
+          "jargon": {
+            "category_macro_f1": 0.8947,
+            "category_micro": {
+              "f1": 0.8639,
+              "precision": 0.8588,
+              "recall": 0.869
+            },
+            "exact_set_match": 0.7887,
+            "high_star_issue_recall": {
+              "n": 16,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9917,
+              "precision": 0.9836,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8732,
+            "n": 71,
+            "per_category_f1": {
+              "account_progress_loss": 0.8571,
+              "ads": 1.0,
+              "content_ux": 0.85,
+              "difficulty_balance": 0.8519,
+              "monetization": 0.8421,
+              "no_issue": 0.9524,
+              "stability_performance": 0.9091
+            },
+            "per_category_support": {
+              "account_progress_loss": 12,
+              "ads": 1,
+              "content_ux": 22,
+              "difficulty_balance": 25,
+              "monetization": 8,
+              "no_issue": 11,
+              "stability_performance": 5
+            },
+            "severity": {
+              "accuracy": 0.7833,
+              "n": 60,
+              "within_one": 0.9833
+            }
+          },
+          "no_jargon": {
+            "category_macro_f1": 0.8075,
+            "category_micro": {
+              "f1": 0.8787,
+              "precision": 0.875,
+              "recall": 0.8824
+            },
+            "exact_set_match": 0.8131,
+            "high_star_issue_recall": {
+              "n": 26,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.7664,
+            "n": 107,
+            "per_category_f1": {
+              "account_progress_loss": 0.6154,
+              "ads": 0.9231,
+              "content_ux": 0.625,
+              "difficulty_balance": 0.9231,
+              "monetization": 0.8889,
+              "no_issue": 1.0,
+              "other_issue": 0.6667,
+              "stability_performance": 0.8182
+            },
+            "per_category_support": {
+              "account_progress_loss": 5,
+              "ads": 13,
+              "content_ux": 19,
+              "difficulty_balance": 18,
+              "monetization": 9,
+              "no_issue": 43,
+              "other_issue": 1,
+              "stability_performance": 11
+            },
+            "severity": {
+              "accuracy": 0.7812,
+              "n": 64,
+              "within_one": 1.0
+            }
+          },
+          "slice_enriched": {
+            "category_macro_f1": 0.874,
+            "category_micro": {
+              "f1": 0.8732,
+              "precision": 0.8671,
+              "recall": 0.8794
+            },
+            "exact_set_match": 0.7917,
+            "high_star_issue_recall": {
+              "n": 40,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9947,
+              "precision": 0.9894,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.7833,
+            "n": 120,
+            "per_category_f1": {
+              "account_progress_loss": 0.8571,
+              "ads": 0.9474,
+              "content_ux": 0.8,
+              "difficulty_balance": 0.875,
+              "monetization": 0.8571,
+              "no_issue": 0.9811,
+              "stability_performance": 0.8
+            },
+            "per_category_support": {
+              "account_progress_loss": 14,
+              "ads": 9,
+              "content_ux": 32,
+              "difficulty_balance": 37,
+              "monetization": 13,
+              "no_issue": 27,
+              "stability_performance": 9
+            },
+            "severity": {
+              "accuracy": 0.7849,
+              "n": 93,
+              "within_one": 1.0
+            }
+          },
+          "slice_random": {
+            "category_macro_f1": 0.7765,
+            "category_micro": {
+              "f1": 0.871,
+              "precision": 0.871,
+              "recall": 0.871
+            },
+            "exact_set_match": 0.8276,
+            "high_star_issue_recall": {
+              "n": 2,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8621,
+            "n": 58,
+            "per_category_f1": {
+              "account_progress_loss": 0.3333,
+              "ads": 0.8889,
+              "content_ux": 0.5882,
+              "difficulty_balance": 0.9231,
+              "monetization": 0.8889,
+              "no_issue": 1.0,
+              "other_issue": 0.6667,
+              "stability_performance": 0.9231
+            },
+            "per_category_support": {
+              "account_progress_loss": 3,
+              "ads": 5,
+              "content_ux": 9,
+              "difficulty_balance": 6,
+              "monetization": 4,
+              "no_issue": 27,
+              "other_issue": 1,
+              "stability_performance": 7
+            },
+            "severity": {
+              "accuracy": 0.7742,
+              "n": 31,
+              "within_one": 0.9677
+            }
+          },
+          "stars_1_3": {
+            "category_macro_f1": 0.8138,
+            "category_micro": {
+              "f1": 0.8341,
+              "precision": 0.8148,
+              "recall": 0.8544
+            },
+            "exact_set_match": 0.7108,
+            "high_star_issue_recall": {
+              "n": 0,
+              "recall": null
+            },
+            "issue_detection": {
+              "f1": 1.0,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.7349,
+            "n": 83,
+            "per_category_f1": {
+              "account_progress_loss": 0.6364,
+              "ads": 0.9231,
+              "content_ux": 0.7442,
+              "difficulty_balance": 0.8772,
+              "monetization": 0.8667,
+              "no_issue": 1.0,
+              "other_issue": 0.5,
+              "stability_performance": 0.963
+            },
+            "per_category_support": {
+              "account_progress_loss": 11,
+              "ads": 13,
+              "content_ux": 23,
+              "difficulty_balance": 27,
+              "monetization": 13,
+              "no_issue": 1,
+              "other_issue": 1,
+              "stability_performance": 14
+            },
+            "severity": {
+              "accuracy": 0.7561,
+              "n": 82,
+              "within_one": 0.9878
+            }
+          },
+          "stars_4_5": {
+            "category_macro_f1": 0.8326,
+            "category_micro": {
+              "f1": 0.9137,
+              "precision": 0.9278,
+              "recall": 0.9
+            },
+            "exact_set_match": 0.8842,
+            "high_star_issue_recall": {
+              "n": 42,
+              "recall": 1.0
+            },
+            "issue_detection": {
+              "f1": 0.9882,
+              "precision": 0.9767,
+              "recall": 1.0
+            },
+            "jargon_flag_agreement": 0.8737,
+            "n": 95,
+            "per_category_f1": {
+              "account_progress_loss": 1.0,
+              "ads": 1.0,
+              "content_ux": 0.7586,
+              "difficulty_balance": 0.8889,
+              "monetization": 0.8571,
+              "no_issue": 0.9905,
+              "stability_performance": 0.3333
+            },
+            "per_category_support": {
+              "account_progress_loss": 6,
+              "ads": 1,
+              "content_ux": 18,
+              "difficulty_balance": 16,
+              "monetization": 4,
+              "no_issue": 53,
+              "stability_performance": 2
+            },
+            "severity": {
+              "accuracy": 0.8333,
+              "n": 42,
+              "within_one": 1.0
+            }
+          }
+        }
+      }
+    ],
+    "total": 6
+  },
+  "variance": {
+    "off": {
+      "all": {
+        "category_macro_f1": {
+          "max": 0.8349,
+          "mean": 0.8108,
+          "min": 0.793,
+          "runs": 3,
+          "stdev": 0.0216,
+          "values": [
+            0.8046,
+            0.793,
+            0.8349
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.8867,
+          "mean": 0.8729,
+          "min": 0.8606,
+          "runs": 3,
+          "stdev": 0.0131,
+          "values": [
+            0.8713,
+            0.8606,
+            0.8867
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.8315,
+          "mean": 0.8071,
+          "min": 0.7865,
+          "runs": 3,
+          "stdev": 0.0227,
+          "values": [
+            0.8034,
+            0.7865,
+            0.8315
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "issue_detection.f1": {
+          "max": 0.996,
+          "mean": 0.9907,
+          "min": 0.984,
+          "runs": 3,
+          "stdev": 0.0061,
+          "values": [
+            0.992,
+            0.984,
+            0.996
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.8933,
+          "mean": 0.8745,
+          "min": 0.8539,
+          "runs": 3,
+          "stdev": 0.0198,
+          "values": [
+            0.8764,
+            0.8933,
+            0.8539
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.8065,
+          "mean": 0.793,
+          "min": 0.7823,
+          "runs": 3,
+          "stdev": 0.0123,
+          "values": [
+            0.7823,
+            0.7903,
+            0.8065
+          ]
+        }
+      },
+      "game_Candy Crush Saga": {
+        "category_macro_f1": {
+          "max": 0.8487,
+          "mean": 0.826,
+          "min": 0.807,
+          "runs": 3,
+          "stdev": 0.0211,
+          "values": [
+            0.807,
+            0.8222,
+            0.8487
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.8821,
+          "mean": 0.8699,
+          "min": 0.8571,
+          "runs": 3,
+          "stdev": 0.0125,
+          "values": [
+            0.8705,
+            0.8571,
+            0.8821
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.8101,
+          "mean": 0.7806,
+          "min": 0.7595,
+          "runs": 3,
+          "stdev": 0.0263,
+          "values": [
+            0.7722,
+            0.7595,
+            0.8101
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "issue_detection.f1": {
+          "max": 1.0,
+          "mean": 0.9972,
+          "min": 0.9915,
+          "runs": 3,
+          "stdev": 0.0049,
+          "values": [
+            1.0,
+            0.9915,
+            1.0
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.9114,
+          "mean": 0.8861,
+          "min": 0.8608,
+          "runs": 3,
+          "stdev": 0.0253,
+          "values": [
+            0.8861,
+            0.9114,
+            0.8608
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.7797,
+          "mean": 0.7797,
+          "min": 0.7797,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            0.7797,
+            0.7797,
+            0.7797
+          ]
+        }
+      },
+      "game_Clash of Clans": {
+        "category_macro_f1": {
+          "max": 0.8677,
+          "mean": 0.8597,
+          "min": 0.8506,
+          "runs": 3,
+          "stdev": 0.0086,
+          "values": [
+            0.8608,
+            0.8506,
+            0.8677
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.891,
+          "mean": 0.8756,
+          "min": 0.8638,
+          "runs": 3,
+          "stdev": 0.014,
+          "values": [
+            0.872,
+            0.8638,
+            0.891
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.8485,
+          "mean": 0.8283,
+          "min": 0.8081,
+          "runs": 3,
+          "stdev": 0.0202,
+          "values": [
+            0.8283,
+            0.8081,
+            0.8485
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "issue_detection.f1": {
+          "max": 0.9924,
+          "mean": 0.9849,
+          "min": 0.9774,
+          "runs": 3,
+          "stdev": 0.0075,
+          "values": [
+            0.9848,
+            0.9774,
+            0.9924
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.8788,
+          "mean": 0.8653,
+          "min": 0.8485,
+          "runs": 3,
+          "stdev": 0.0154,
+          "values": [
+            0.8687,
+            0.8788,
+            0.8485
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.8308,
+          "mean": 0.8051,
+          "min": 0.7846,
+          "runs": 3,
+          "stdev": 0.0235,
+          "values": [
+            0.7846,
+            0.8,
+            0.8308
+          ]
+        }
+      },
+      "jargon": {
+        "category_macro_f1": {
+          "max": 0.922,
+          "mean": 0.9079,
+          "min": 0.8954,
+          "runs": 3,
+          "stdev": 0.0134,
+          "values": [
+            0.8954,
+            0.9062,
+            0.922
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.8929,
+          "mean": 0.8747,
+          "min": 0.8606,
+          "runs": 3,
+          "stdev": 0.0165,
+          "values": [
+            0.8606,
+            0.8706,
+            0.8929
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.831,
+          "mean": 0.8075,
+          "min": 0.7887,
+          "runs": 3,
+          "stdev": 0.0215,
+          "values": [
+            0.8028,
+            0.7887,
+            0.831
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "issue_detection.f1": {
+          "max": 0.9917,
+          "mean": 0.9917,
+          "min": 0.9917,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            0.9917,
+            0.9917,
+            0.9917
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.9014,
+          "mean": 0.8826,
+          "min": 0.8732,
+          "runs": 3,
+          "stdev": 0.0163,
+          "values": [
+            0.9014,
+            0.8732,
+            0.8732
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.85,
+          "mean": 0.8222,
+          "min": 0.8,
+          "runs": 3,
+          "stdev": 0.0255,
+          "values": [
+            0.8167,
+            0.8,
+            0.85
+          ]
+        }
+      },
+      "no_jargon": {
+        "category_macro_f1": {
+          "max": 0.811,
+          "mean": 0.8013,
+          "min": 0.7928,
+          "runs": 3,
+          "stdev": 0.0092,
+          "values": [
+            0.8001,
+            0.7928,
+            0.811
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.8824,
+          "mean": 0.8716,
+          "min": 0.8536,
+          "runs": 3,
+          "stdev": 0.0157,
+          "values": [
+            0.8787,
+            0.8536,
+            0.8824
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.8318,
+          "mean": 0.8068,
+          "min": 0.785,
+          "runs": 3,
+          "stdev": 0.0236,
+          "values": [
+            0.8037,
+            0.785,
+            0.8318
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "issue_detection.f1": {
+          "max": 1.0,
+          "mean": 0.9896,
+          "min": 0.9767,
+          "runs": 3,
+          "stdev": 0.0119,
+          "values": [
+            0.9922,
+            0.9767,
+            1.0
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.9065,
+          "mean": 0.8691,
+          "min": 0.8411,
+          "runs": 3,
+          "stdev": 0.0337,
+          "values": [
+            0.8598,
+            0.9065,
+            0.8411
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.7812,
+          "mean": 0.7656,
+          "min": 0.75,
+          "runs": 3,
+          "stdev": 0.0156,
+          "values": [
+            0.75,
+            0.7812,
+            0.7656
+          ]
+        }
+      },
+      "slice_enriched": {
+        "category_macro_f1": {
+          "max": 0.8957,
+          "mean": 0.88,
+          "min": 0.871,
+          "runs": 3,
+          "stdev": 0.0136,
+          "values": [
+            0.8734,
+            0.871,
+            0.8957
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.8826,
+          "mean": 0.8677,
+          "min": 0.8592,
+          "runs": 3,
+          "stdev": 0.013,
+          "values": [
+            0.8612,
+            0.8592,
+            0.8826
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.825,
+          "mean": 0.7944,
+          "min": 0.775,
+          "runs": 3,
+          "stdev": 0.0268,
+          "values": [
+            0.7833,
+            0.775,
+            0.825
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "issue_detection.f1": {
+          "max": 0.9947,
+          "mean": 0.9912,
+          "min": 0.9894,
+          "runs": 3,
+          "stdev": 0.0031,
+          "values": [
+            0.9894,
+            0.9894,
+            0.9947
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.8667,
+          "mean": 0.85,
+          "min": 0.825,
+          "runs": 3,
+          "stdev": 0.0221,
+          "values": [
+            0.8583,
+            0.8667,
+            0.825
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.8172,
+          "mean": 0.7993,
+          "min": 0.7849,
+          "runs": 3,
+          "stdev": 0.0164,
+          "values": [
+            0.7849,
+            0.7957,
+            0.8172
+          ]
+        }
+      },
+      "slice_random": {
+        "category_macro_f1": {
+          "max": 0.8344,
+          "mean": 0.8302,
+          "min": 0.8248,
+          "runs": 3,
+          "stdev": 0.0049,
+          "values": [
+            0.8248,
+            0.8344,
+            0.8313
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.896,
+          "mean": 0.8848,
+          "min": 0.864,
+          "runs": 3,
+          "stdev": 0.018,
+          "values": [
+            0.8943,
+            0.864,
+            0.896
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.8448,
+          "mean": 0.8333,
+          "min": 0.8103,
+          "runs": 3,
+          "stdev": 0.0199,
+          "values": [
+            0.8448,
+            0.8103,
+            0.8448
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "issue_detection.f1": {
+          "max": 1.0,
+          "mean": 0.9892,
+          "min": 0.9677,
+          "runs": 3,
+          "stdev": 0.0186,
+          "values": [
+            1.0,
+            0.9677,
+            1.0
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.9483,
+          "mean": 0.9253,
+          "min": 0.9138,
+          "runs": 3,
+          "stdev": 0.0199,
+          "values": [
+            0.9138,
+            0.9483,
+            0.9138
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.7742,
+          "mean": 0.7742,
+          "min": 0.7742,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            0.7742,
+            0.7742,
+            0.7742
+          ]
+        }
+      },
+      "stars_1_3": {
+        "category_macro_f1": {
+          "max": 0.8343,
+          "mean": 0.8207,
+          "min": 0.7983,
+          "runs": 3,
+          "stdev": 0.0195,
+          "values": [
+            0.8295,
+            0.7983,
+            0.8343
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.8517,
+          "mean": 0.8472,
+          "min": 0.8396,
+          "runs": 3,
+          "stdev": 0.0066,
+          "values": [
+            0.8502,
+            0.8396,
+            0.8517
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.759,
+          "mean": 0.7349,
+          "min": 0.7108,
+          "runs": 3,
+          "stdev": 0.0241,
+          "values": [
+            0.7349,
+            0.7108,
+            0.759
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "mean": null,
+          "runs": 0,
+          "stdev": null,
+          "values": []
+        },
+        "issue_detection.f1": {
+          "max": 1.0,
+          "mean": 0.998,
+          "min": 0.9939,
+          "runs": 3,
+          "stdev": 0.0035,
+          "values": [
+            1.0,
+            0.9939,
+            1.0
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.8675,
+          "mean": 0.8394,
+          "min": 0.8072,
+          "runs": 3,
+          "stdev": 0.0304,
+          "values": [
+            0.8434,
+            0.8675,
+            0.8072
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.7683,
+          "mean": 0.7602,
+          "min": 0.7439,
+          "runs": 3,
+          "stdev": 0.0141,
+          "values": [
+            0.7439,
+            0.7683,
+            0.7683
+          ]
+        }
+      },
+      "stars_4_5": {
+        "category_macro_f1": {
+          "max": 0.8491,
+          "mean": 0.8338,
+          "min": 0.8195,
+          "runs": 3,
+          "stdev": 0.0148,
+          "values": [
+            0.8328,
+            0.8195,
+            0.8491
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.9239,
+          "mean": 0.9002,
+          "min": 0.8832,
+          "runs": 3,
+          "stdev": 0.0212,
+          "values": [
+            0.8934,
+            0.8832,
+            0.9239
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.8947,
+          "mean": 0.8702,
+          "min": 0.8526,
+          "runs": 3,
+          "stdev": 0.0219,
+          "values": [
+            0.8632,
+            0.8526,
+            0.8947
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "issue_detection.f1": {
+          "max": 0.9882,
+          "mean": 0.9768,
+          "min": 0.9655,
+          "runs": 3,
+          "stdev": 0.0114,
+          "values": [
+            0.9767,
+            0.9655,
+            0.9882
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.9158,
+          "mean": 0.9053,
+          "min": 0.8947,
+          "runs": 3,
+          "stdev": 0.0106,
+          "values": [
+            0.9053,
+            0.9158,
+            0.8947
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.881,
+          "mean": 0.8571,
+          "min": 0.8333,
+          "runs": 3,
+          "stdev": 0.0239,
+          "values": [
+            0.8571,
+            0.8333,
+            0.881
+          ]
+        }
+      }
+    },
+    "on": {
+      "all": {
+        "category_macro_f1": {
+          "max": 0.8161,
+          "mean": 0.8108,
+          "min": 0.8042,
+          "runs": 3,
+          "stdev": 0.0061,
+          "values": [
+            0.8042,
+            0.8121,
+            0.8161
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.8812,
+          "mean": 0.8729,
+          "min": 0.8649,
+          "runs": 3,
+          "stdev": 0.0082,
+          "values": [
+            0.8649,
+            0.8812,
+            0.8725
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.8258,
+          "mean": 0.8109,
+          "min": 0.8034,
+          "runs": 3,
+          "stdev": 0.0129,
+          "values": [
+            0.8034,
+            0.8258,
+            0.8034
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "issue_detection.f1": {
+          "max": 0.996,
+          "mean": 0.9933,
+          "min": 0.992,
+          "runs": 3,
+          "stdev": 0.0023,
+          "values": [
+            0.992,
+            0.992,
+            0.996
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.8427,
+          "mean": 0.824,
+          "min": 0.809,
+          "runs": 3,
+          "stdev": 0.0172,
+          "values": [
+            0.8202,
+            0.8427,
+            0.809
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.7984,
+          "mean": 0.7903,
+          "min": 0.7823,
+          "runs": 3,
+          "stdev": 0.0081,
+          "values": [
+            0.7984,
+            0.7903,
+            0.7823
+          ]
+        }
+      },
+      "game_Candy Crush Saga": {
+        "category_macro_f1": {
+          "max": 0.8152,
+          "mean": 0.8094,
+          "min": 0.799,
+          "runs": 3,
+          "stdev": 0.0091,
+          "values": [
+            0.799,
+            0.8152,
+            0.8141
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.8705,
+          "mean": 0.8626,
+          "min": 0.8485,
+          "runs": 3,
+          "stdev": 0.0122,
+          "values": [
+            0.8485,
+            0.8705,
+            0.8687
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.7848,
+          "mean": 0.7637,
+          "min": 0.7468,
+          "runs": 3,
+          "stdev": 0.0193,
+          "values": [
+            0.7468,
+            0.7848,
+            0.7595
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "issue_detection.f1": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.7975,
+          "mean": 0.7595,
+          "min": 0.7342,
+          "runs": 3,
+          "stdev": 0.0335,
+          "values": [
+            0.7468,
+            0.7975,
+            0.7342
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.7797,
+          "mean": 0.7627,
+          "min": 0.7458,
+          "runs": 3,
+          "stdev": 0.017,
+          "values": [
+            0.7797,
+            0.7458,
+            0.7627
+          ]
+        }
+      },
+      "game_Clash of Clans": {
+        "category_macro_f1": {
+          "max": 0.8662,
+          "mean": 0.8605,
+          "min": 0.8498,
+          "runs": 3,
+          "stdev": 0.0092,
+          "values": [
+            0.8654,
+            0.8662,
+            0.8498
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.891,
+          "mean": 0.8825,
+          "min": 0.8762,
+          "runs": 3,
+          "stdev": 0.0076,
+          "values": [
+            0.8804,
+            0.891,
+            0.8762
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.8586,
+          "mean": 0.8485,
+          "min": 0.8384,
+          "runs": 3,
+          "stdev": 0.0101,
+          "values": [
+            0.8485,
+            0.8586,
+            0.8384
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "issue_detection.f1": {
+          "max": 0.9924,
+          "mean": 0.9873,
+          "min": 0.9848,
+          "runs": 3,
+          "stdev": 0.0044,
+          "values": [
+            0.9848,
+            0.9848,
+            0.9924
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.8788,
+          "mean": 0.8754,
+          "min": 0.8687,
+          "runs": 3,
+          "stdev": 0.0058,
+          "values": [
+            0.8788,
+            0.8788,
+            0.8687
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.8308,
+          "mean": 0.8154,
+          "min": 0.8,
+          "runs": 3,
+          "stdev": 0.0154,
+          "values": [
+            0.8154,
+            0.8308,
+            0.8
+          ]
+        }
+      },
+      "jargon": {
+        "category_macro_f1": {
+          "max": 0.9031,
+          "mean": 0.8945,
+          "min": 0.8856,
+          "runs": 3,
+          "stdev": 0.0088,
+          "values": [
+            0.9031,
+            0.8856,
+            0.8947
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.8743,
+          "mean": 0.8686,
+          "min": 0.8639,
+          "runs": 3,
+          "stdev": 0.0053,
+          "values": [
+            0.8743,
+            0.8675,
+            0.8639
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.8169,
+          "mean": 0.8075,
+          "min": 0.7887,
+          "runs": 3,
+          "stdev": 0.0163,
+          "values": [
+            0.8169,
+            0.8169,
+            0.7887
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "issue_detection.f1": {
+          "max": 0.9917,
+          "mean": 0.9917,
+          "min": 0.9917,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            0.9917,
+            0.9917,
+            0.9917
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.9155,
+          "mean": 0.8967,
+          "min": 0.8732,
+          "runs": 3,
+          "stdev": 0.0215,
+          "values": [
+            0.9014,
+            0.9155,
+            0.8732
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.8333,
+          "mean": 0.8111,
+          "min": 0.7833,
+          "runs": 3,
+          "stdev": 0.0255,
+          "values": [
+            0.8333,
+            0.8167,
+            0.7833
+          ]
+        }
+      },
+      "no_jargon": {
+        "category_macro_f1": {
+          "max": 0.8075,
+          "mean": 0.7934,
+          "min": 0.7669,
+          "runs": 3,
+          "stdev": 0.023,
+          "values": [
+            0.7669,
+            0.8059,
+            0.8075
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.8908,
+          "mean": 0.8759,
+          "min": 0.8583,
+          "runs": 3,
+          "stdev": 0.0164,
+          "values": [
+            0.8583,
+            0.8908,
+            0.8787
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.8318,
+          "mean": 0.8131,
+          "min": 0.7944,
+          "runs": 3,
+          "stdev": 0.0187,
+          "values": [
+            0.7944,
+            0.8318,
+            0.8131
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "issue_detection.f1": {
+          "max": 1.0,
+          "mean": 0.9948,
+          "min": 0.9922,
+          "runs": 3,
+          "stdev": 0.0045,
+          "values": [
+            0.9922,
+            0.9922,
+            1.0
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.7944,
+          "mean": 0.7757,
+          "min": 0.7664,
+          "runs": 3,
+          "stdev": 0.0162,
+          "values": [
+            0.7664,
+            0.7944,
+            0.7664
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.7812,
+          "mean": 0.7708,
+          "min": 0.7656,
+          "runs": 3,
+          "stdev": 0.009,
+          "values": [
+            0.7656,
+            0.7656,
+            0.7812
+          ]
+        }
+      },
+      "slice_enriched": {
+        "category_macro_f1": {
+          "max": 0.874,
+          "mean": 0.8738,
+          "min": 0.8734,
+          "runs": 3,
+          "stdev": 0.0003,
+          "values": [
+            0.874,
+            0.8734,
+            0.874
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.8732,
+          "mean": 0.8702,
+          "min": 0.8652,
+          "runs": 3,
+          "stdev": 0.0044,
+          "values": [
+            0.8652,
+            0.8723,
+            0.8732
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.8083,
+          "mean": 0.7972,
+          "min": 0.7917,
+          "runs": 3,
+          "stdev": 0.0096,
+          "values": [
+            0.7917,
+            0.8083,
+            0.7917
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "issue_detection.f1": {
+          "max": 0.9947,
+          "mean": 0.9912,
+          "min": 0.9894,
+          "runs": 3,
+          "stdev": 0.0031,
+          "values": [
+            0.9894,
+            0.9894,
+            0.9947
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.825,
+          "mean": 0.8028,
+          "min": 0.7833,
+          "runs": 3,
+          "stdev": 0.021,
+          "values": [
+            0.8,
+            0.825,
+            0.7833
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.8065,
+          "mean": 0.7993,
+          "min": 0.7849,
+          "runs": 3,
+          "stdev": 0.0125,
+          "values": [
+            0.8065,
+            0.8065,
+            0.7849
+          ]
+        }
+      },
+      "slice_random": {
+        "category_macro_f1": {
+          "max": 0.8266,
+          "mean": 0.791,
+          "min": 0.7699,
+          "runs": 3,
+          "stdev": 0.031,
+          "values": [
+            0.7699,
+            0.8266,
+            0.7765
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.9016,
+          "mean": 0.8789,
+          "min": 0.864,
+          "runs": 3,
+          "stdev": 0.02,
+          "values": [
+            0.864,
+            0.9016,
+            0.871
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.8621,
+          "mean": 0.8391,
+          "min": 0.8276,
+          "runs": 3,
+          "stdev": 0.0199,
+          "values": [
+            0.8276,
+            0.8621,
+            0.8276
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "issue_detection.f1": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.8793,
+          "mean": 0.8678,
+          "min": 0.8621,
+          "runs": 3,
+          "stdev": 0.0099,
+          "values": [
+            0.8621,
+            0.8793,
+            0.8621
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.7742,
+          "mean": 0.7634,
+          "min": 0.7419,
+          "runs": 3,
+          "stdev": 0.0186,
+          "values": [
+            0.7742,
+            0.7419,
+            0.7742
+          ]
+        }
+      },
+      "stars_1_3": {
+        "category_macro_f1": {
+          "max": 0.8292,
+          "mean": 0.8189,
+          "min": 0.8136,
+          "runs": 3,
+          "stdev": 0.0089,
+          "values": [
+            0.8136,
+            0.8292,
+            0.8138
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.8544,
+          "mean": 0.839,
+          "min": 0.8286,
+          "runs": 3,
+          "stdev": 0.0136,
+          "values": [
+            0.8286,
+            0.8544,
+            0.8341
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.759,
+          "mean": 0.7309,
+          "min": 0.7108,
+          "runs": 3,
+          "stdev": 0.0251,
+          "values": [
+            0.7229,
+            0.759,
+            0.7108
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "mean": null,
+          "runs": 0,
+          "stdev": null,
+          "values": []
+        },
+        "issue_detection.f1": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.7711,
+          "mean": 0.751,
+          "min": 0.7349,
+          "runs": 3,
+          "stdev": 0.0184,
+          "values": [
+            0.747,
+            0.7711,
+            0.7349
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.7683,
+          "mean": 0.7642,
+          "min": 0.7561,
+          "runs": 3,
+          "stdev": 0.007,
+          "values": [
+            0.7683,
+            0.7683,
+            0.7561
+          ]
+        }
+      },
+      "stars_4_5": {
+        "category_macro_f1": {
+          "max": 0.8387,
+          "mean": 0.8351,
+          "min": 0.8326,
+          "runs": 3,
+          "stdev": 0.0032,
+          "values": [
+            0.8387,
+            0.834,
+            0.8326
+          ]
+        },
+        "category_micro.f1": {
+          "max": 0.9137,
+          "mean": 0.9088,
+          "min": 0.9036,
+          "runs": 3,
+          "stdev": 0.0051,
+          "values": [
+            0.9036,
+            0.9091,
+            0.9137
+          ]
+        },
+        "exact_set_match": {
+          "max": 0.8842,
+          "mean": 0.8807,
+          "min": 0.8737,
+          "runs": 3,
+          "stdev": 0.0061,
+          "values": [
+            0.8737,
+            0.8842,
+            0.8842
+          ]
+        },
+        "high_star_issue_recall.recall": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "runs": 3,
+          "stdev": 0.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "issue_detection.f1": {
+          "max": 0.9882,
+          "mean": 0.9805,
+          "min": 0.9767,
+          "runs": 3,
+          "stdev": 0.0066,
+          "values": [
+            0.9767,
+            0.9767,
+            0.9882
+          ]
+        },
+        "jargon_flag_agreement": {
+          "max": 0.9053,
+          "mean": 0.8877,
+          "min": 0.8737,
+          "runs": 3,
+          "stdev": 0.0161,
+          "values": [
+            0.8842,
+            0.9053,
+            0.8737
+          ]
+        },
+        "severity.accuracy": {
+          "max": 0.8571,
+          "mean": 0.8412,
+          "min": 0.8333,
+          "runs": 3,
+          "stdev": 0.0137,
+          "values": [
+            0.8571,
+            0.8333,
+            0.8333
+          ]
+        }
+      }
+    }
+  }
+}

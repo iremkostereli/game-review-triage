@@ -12,6 +12,10 @@ data/interim/
 # Labeling progress files (the finished golden set IS committed)
 data/golden/*.partial.jsonl
 
+# MCP configs the eval runner regenerates on every invocation, and which carry
+# absolute paths from whichever machine last ran it.
+runs/_configs/
+
 # Python
 __pycache__/
 *.py[cod]

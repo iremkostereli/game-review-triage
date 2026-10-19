@@ -8,8 +8,9 @@ by misreading game vocabulary, or by something else entirely?
 
 import sys
 from collections import defaultdict
+from pathlib import Path
 
-sys.path.insert(0, r"C:\Users\user\Desktop\game_review")
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from triage import packs, paths, scoring
 from triage.jsonl_io import read_json, read_jsonl

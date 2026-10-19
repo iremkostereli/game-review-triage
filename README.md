@@ -1,110 +1,113 @@
 # Game review triage
 
-A Claude Code skill plus an MCP server that triages mobile game app reviews into
-actionable LiveOps issues: issue categories, a severity, and grouped issues with
-quoted evidence. Its distinguishing feature is pluggable per-game **jargon
-packs** — one YAML file per game that teaches the skill that game's vocabulary.
+A Claude Code skill plus an MCP server that turns mobile game app reviews into
+actionable LiveOps issues: categories, a severity, and grouped issues with quoted
+evidence. It ships pluggable per-game jargon packs and an eval that measures
+whether they actually help.
 
-The experiment this repo exists to run: the same skill, over the same held-out
-reviews, with the jargon pack **off** and then **on**, scored against a
-hand-labeled golden set.
+## Headline
 
-> **Work in progress.** Results, setup instructions and the full write-up land in
-> the final phase. What follows is the part that is already settled.
+- **The triage works.** Against the corrected answer key it reaches 0.873
+  category micro-F1 and 0.793 severity accuracy, and it separates an actionable
+  issue from praise almost perfectly (0.991 F1).
+- **The jargon pack does not change category accuracy on these two games.**
+  ON minus OFF is +0.000, 95% interval [-0.014, +0.015] - a measured null, not an
+  underpowered one. The pack-off runs already read `town hall`, `builder base` and
+  `gold pass` correctly; their mistakes are category choices, not vocabulary.
+- **The pack slightly hurts the jargon flag.** Agreement with the annotator's
+  hand-set flag falls from 0.875 to 0.824 (-0.051), because ordinary pack terms
+  like `moves`, `lives` and `gold` start getting flagged as game jargon.
 
-## Setup
+178 reviews, three repeat runs per condition, `claude-sonnet-5-5` via headless
+`claude -p`.
+
+| Metric | Pack OFF | Pack ON |
+|---|---|---|
+| Category micro-F1 | 0.873 | 0.873 |
+| Severity accuracy | 0.793 | 0.790 |
+| Issue vs `no_issue` F1 | 0.991 | 0.993 |
+| Jargon-flag agreement | 0.875 | 0.824 |
+
+Original (pre-correction) labels: category micro-F1 0.792. Per-slice tables and
+confidence intervals are in [`results/summary.md`](results/summary.md).
+
+Data: the Kaggle "game-reviews" dataset
+([araraltawil/game-reviews](https://www.kaggle.com/datasets/araraltawil/game-reviews)),
+MIT licensed; how to obtain it is in
+[`docs/METHODOLOGY.md`](docs/METHODOLOGY.md).
+
+## Labeling
+
+One annotator labeled all 180 reviews by hand, with no model involved at any
+point. A blind second pass relabeled a shuffled mix of 46 reviews where every run
+disagreed with the annotator and 30 controls where the runs agreed, with the
+group hidden: 1 of the 30 controls changed and 31 of the 46 queued reviews did,
+giving 32 corrections. `golden_set.jsonl` was never modified, and both answer keys
+are scored and published.
+
+Full detail: [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md).
+
+## Quick start
 
 ```bash
-uv venv --python 3.12
-uv sync --all-extras
+uv venv --python 3.12 && uv sync --all-extras   # setup
+uv run pytest                                   # 130 tests, no model calls
+uv run scripts/score.py                         # recompute every number above
 ```
 
-Everything then runs through `uv run ...`, which keeps this project's
-dependencies out of your global Python environment.
+The last command reproduces the published results from committed artifacts alone:
+no API key, no model, no raw dataset.
 
-## How jargon packs are built
+## Use it
 
-A pack is a glossary with a triage opinion: every term carries a `meaning` and a
-`triage_hint` saying what a mention of it usually signals in taxonomy terms.
+Needs Claude Code, `uv` and Python 3.12. Open the repo in Claude Code: it picks up
+the `review-triage` skill from `.claude/skills/` and the MCP server from
+`.mcp.json` automatically, though a project-scoped server needs approving once -
+run `claude`, accept it, and `claude mcp list` should then show
+`review-triage ... Connected`. Then ask for a triage, for example:
 
-**Term selection rule.** A term goes into a pack if either
+> Use the review-triage skill to triage the first 20 golden-split reviews for
+> Clash of Clans. Run id: my-first-run.
 
-- **(a)** it appears in the **dev split** of the review corpus, or
-- **(b)** the publisher's own documentation names it as a game element — for
-  Candy Crush Saga, anything King's help centre lists as a Booster, a Special
-  Candy or a Blocker; for Clash of Clans, anything Supercell's support pages name.
+The skill calls `get_taxonomy`, `get_jargon_pack`, `get_reviews` and
+`save_triage`, and the results land in `runs/<run id>/output.json`. Set
+`TRIAGE_PACK_MODE=off` in `.mcp.json` to run without the jargon pack.
 
-**Terms are never chosen by reading the golden set.** That is the point of rule
-(b): the publisher's catalogue decides what belongs in the pack, so the pack
-cannot be quietly fitted to the test set. During development this rule caught two
-real mistakes — `striped candy` and `glass candy` had been added from memory, and
-both turn out to occur *only* in held-out golden reviews.
+`get_reviews` only reads the review sets this repo prepares
+(`data/golden/golden_pool.jsonl` and `data/interim/reviews.jsonl`), so pointing
+the tool at your own CSV of reviews is not supported yet - `scripts/prepare_data.py`
+expects the Kaggle dataset's columns and keeps only the two eval games.
 
-**Sourcing.** Meanings are written in our own words. A term is `source:
-official` only when a publisher page actually defines it, and then it cites that
-page's URL. Otherwise it is `source: inferred_from_reviews`, its meaning says
-only what the cited dev reviews show, and it lists those review ids as evidence.
-No URL is ever invented. Local copies of the help-centre pages live in
-`sources/`, which is gitignored because the pages are copyrighted.
+## Limitations
 
-**Aliases.** Player slang and abbreviations map onto the main term. Every alias
-must be attested: present in a dev review, a plain spelling variant of the term,
-or explicitly declared in `source_aliases` as appearing on the cited official
-page. `tests/test_leakage.py` enforces all of this, including that no pack
-evidence id belongs to the golden set.
-
-**Triage hints state possible causes, never verdicts.** Several official pages
-explain that a complaint has a designed cause — trophies reset at season end,
-resources do not disappear on their own. Those explanations are recorded as
-context only. Category and severity always follow what the review itself claims;
-a hint must not be used to dismiss a complaint.
-
-### Adding a game
-
-Write one YAML file in `packs/`. Nothing else: no code changes, no skill changes.
-Games are discovered by scanning the directory, and `tests/test_add_game.py`
-proves it by dropping a pack into a temporary directory and checking the new game
-appears. Start from `packs/_TEMPLATE.yaml`.
-
-### Pack size
-
-The packs are deliberately whole rather than trimmed:
-
-| Game | Terms | Official | Inferred | Approx. tokens |
-|---|---|---|---|---|
-| Candy Crush Saga | 47 | 37 | 10 | ~5,400 |
-| Clash of Clans | 50 | 45 | 5 | ~6,300 |
-
-That means a pack includes documented elements that never appear in any review in
-this corpus. Keeping them is a deliberate trade: selecting only the terms that
-show up would mean choosing terms by looking at the data the system is scored on,
-which is exactly the bias the selection rule above is designed to remove. The
-cost is a larger prompt, and possibly some distraction for the model — which is
-itself something the eval can measure.
-
-## Known limitations
-
-- Candy Crush's official help centre documents boosters, candies, blockers, lives
-  and controls well, but not its live-service features. Terms like *legendary
-  level*, *streak*, *race* and *sweet cinema* are therefore
-  `inferred_from_reviews`, defined only from what players say about them.
-- The Supercell and King help-centre pages are JavaScript-rendered, so their text
-  was read from local copies rather than fetched directly. Each term cites its
-  page so the meaning can be checked against the source.
+- One annotator, so there is no inter-annotator agreement to report.
+- Corrections were made on reviews the system itself flagged, so the corrected
+  score is likely a little optimistic; the 1-in-30 control rate is the evidence
+  they were mostly real.
+- Two games, both extremely well known - the most likely reason the pack shows no
+  effect.
+- One model version; a smaller or older model might depend on the pack.
 
 ## Next steps
 
-- **A selective pack mode.** `get_jargon_pack` currently returns the whole pack.
-  Add a mode that returns only the terms whose name or alias actually occurs in
-  the batch of reviews being triaged, and measure it against the full pack: it
-  should cut prompt size sharply, and the comparison would show whether the
-  unused terms were helping, harmless or actively distracting.
-- Score the grouping step, which is currently produced and shown but not measured.
-- Jargon span labeling, so pack coverage can be measured per phrase.
-- The held-out games: PUBG Mobile first, then Subway Surfers.
-- Fan wiki sources, which are excluded for now.
-- A second annotator, so inter-annotator agreement can be reported.
+- Test the pack on a game the model is unlikely to know well. PUBG Mobile is held
+  out and ready, and needs only a new pack file.
+- Add a selective pack mode that returns only the terms occurring in the batch
+  being triaged, and measure it against the full pack.
+- Score the grouping step, which is produced and shown but not yet measured.
+- Let `get_reviews` read from a user-supplied reviews file, and generalize
+  `scripts/prepare_data.py` with column-mapping flags, so the skill can be
+  pointed at someone else's reviews.
 
-## Hardest part
+## How it works
 
-<!-- To be written by the repo author. -->
+- `.claude/skills/review-triage/SKILL.md` - fetch taxonomy, fetch pack, fetch
+  reviews, triage, group, save.
+- `mcp_server/server.py` - five tools over stdio on the official MCP SDK.
+  `get_jargon_pack` is the only difference between the two conditions.
+- `taxonomy/categories.yaml` - label space, severity rubric and boundary rules,
+  shared by the skill, the labeling tool and the scorer.
+- `packs/*.yaml` - one file per game; adding a game means adding one file, which
+  `tests/test_add_game.py` proves.
+- `scripts/` - `run_eval.py` (resumable runner), `score.py` (offline scoring),
+  `labeler.py` and `relabel.py` (hand labeling).
